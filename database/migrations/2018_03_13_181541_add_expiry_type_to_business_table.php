@@ -13,9 +13,9 @@ class AddExpiryTypeToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->enum('expiry_type', ['add_expiry', 'add_manufacturing'])->after('enable_product_expiry')->default('add_expiry');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->enum('expiry_type', ['add_expiry', 'add_manufacturing'])->after('enable_product_expiry')->default('add_expiry');
+        // });
     }
 
     /**

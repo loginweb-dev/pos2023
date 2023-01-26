@@ -13,9 +13,9 @@ class AddThemeSkinColorColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->char('theme_color', 20)->nullable()->after('ref_no_prefixes');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->char('theme_color', 20)->nullable()->after('ref_no_prefixes');
+        // });
     }
 
     /**

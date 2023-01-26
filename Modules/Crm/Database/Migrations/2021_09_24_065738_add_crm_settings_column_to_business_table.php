@@ -13,9 +13,9 @@ class AddCrmSettingsColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('crm_settings')->nullable()->after('created_by');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('crm_settings')->nullable()->after('created_by');
+        // });
 
         Schema::table('transactions', function (Blueprint $table) {
             $table->boolean('crm_is_order_request')->default(0)->after('created_by');

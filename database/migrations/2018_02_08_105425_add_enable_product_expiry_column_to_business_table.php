@@ -13,9 +13,9 @@ class AddEnableProductExpiryColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->boolean('enable_product_expiry')->default(0)->after('sku_prefix');
-        });
+    //     Schema::table('business', function (Blueprint $table) {
+    //         $table->boolean('enable_product_expiry')->default(0)->after('sku_prefix');
+    //     });
     }
 
     /**

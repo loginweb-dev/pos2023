@@ -13,9 +13,9 @@ class AddCommonSettingsColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('common_settings')->nullable()->after('custom_labels');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('common_settings')->nullable()->after('custom_labels');
+        // });
     }
 
     /**

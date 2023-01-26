@@ -13,9 +13,9 @@ class AddWoocommerceApiSettingsToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('woocommerce_api_settings')->nullable()->after('pos_settings');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('woocommerce_api_settings')->nullable()->after('pos_settings');
+        // });
     }
 
     /**

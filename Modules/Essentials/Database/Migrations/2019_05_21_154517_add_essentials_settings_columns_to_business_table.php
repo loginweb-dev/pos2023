@@ -13,9 +13,9 @@ class AddEssentialsSettingsColumnsToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->longtext('essentials_settings')->after('pos_settings')->nullable();
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->longtext('essentials_settings')->after('pos_settings')->nullable();
+        // });
     }
 
     /**

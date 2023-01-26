@@ -13,9 +13,9 @@ class AddCustomLabelsColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('custom_labels')->nullable()->after('sms_settings');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('custom_labels')->nullable()->after('sms_settings');
+        // });
     }
 
     /**

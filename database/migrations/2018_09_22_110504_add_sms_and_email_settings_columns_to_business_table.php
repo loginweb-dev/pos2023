@@ -13,10 +13,10 @@ class AddSmsAndEmailSettingsColumnsToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('email_settings')->nullable()->after('created_by');
-            $table->text('sms_settings')->nullable()->after('email_settings');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('email_settings')->nullable()->after('created_by');
+        //     $table->text('sms_settings')->nullable()->after('email_settings');
+        // });
     }
 
     /**

@@ -13,9 +13,9 @@ class AddEnableEditingSpFromPurchaseColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->boolean('enable_editing_product_from_purchase')->default(1)->after('keyboard_shortcuts');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->boolean('enable_editing_product_from_purchase')->default(1)->after('keyboard_shortcuts');
+        // });
     }
 
     /**

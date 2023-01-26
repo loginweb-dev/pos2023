@@ -13,9 +13,9 @@ class AddManufacturingSettingsColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('manufacturing_settings')->nullable()->after('pos_settings');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('manufacturing_settings')->nullable()->after('pos_settings');
+        // });
     }
 
     /**

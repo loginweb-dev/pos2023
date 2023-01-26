@@ -13,9 +13,9 @@ class AddProductRacksTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->boolean('enable_racks')->after('default_unit')->default(false);
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->boolean('enable_racks')->after('default_unit')->default(false);
+        // });
 
         Schema::create('product_racks', function (Blueprint $table) {
             $table->increments('id');

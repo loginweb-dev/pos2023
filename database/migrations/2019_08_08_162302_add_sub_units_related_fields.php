@@ -17,9 +17,9 @@ class AddSubUnitsRelatedFields extends Migration
             $table->text('sub_unit_ids')->nullable()->after('unit_id');
         });
 
-        Schema::table('business', function (Blueprint $table) {
-            $table->boolean('enable_sub_units')->default(false)->after('default_unit');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->boolean('enable_sub_units')->default(false)->after('default_unit');
+        // });
     }
 
     /**
@@ -33,8 +33,8 @@ class AddSubUnitsRelatedFields extends Migration
             $table->dropColumn('sub_unit_ids');
         });
 
-        Schema::table('business', function (Blueprint $table) {
-            $table->dropColumn('enable_sub_units');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->dropColumn('enable_sub_units');
+        // });
     }
 }

@@ -13,11 +13,11 @@ class AddEnabledModulesBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('enabled_modules')
-                ->after('currency_symbol_placement')
-                ->nullable();
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('enabled_modules')
+        //         ->after('currency_symbol_placement')
+        //         ->nullable();
+        // });
     }
 
     /**

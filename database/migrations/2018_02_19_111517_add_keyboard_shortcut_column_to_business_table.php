@@ -13,9 +13,9 @@ class AddKeyboardShortcutColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('keyboard_shortcuts')->nullable()->after('stock_expiry_alert_days');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('keyboard_shortcuts')->nullable()->after('stock_expiry_alert_days');
+        // });
     }
 
     /**

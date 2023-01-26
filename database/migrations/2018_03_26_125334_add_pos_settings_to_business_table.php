@@ -13,9 +13,9 @@ class AddPosSettingsToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('pos_settings')->after('keyboard_shortcuts')->nullable();
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('pos_settings')->after('keyboard_shortcuts')->nullable();
+        // });
     }
 
     /**

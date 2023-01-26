@@ -13,12 +13,12 @@ class AddWoocommerceWhOcSecretColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->string('woocommerce_wh_oc_secret')->nullable()->after('woocommerce_api_settings');
-            $table->string('woocommerce_wh_ou_secret')->nullable()->after('woocommerce_wh_oc_secret');
-            $table->string('woocommerce_wh_od_secret')->nullable()->after('woocommerce_wh_ou_secret');
-            $table->string('woocommerce_wh_or_secret')->nullable()->after('woocommerce_wh_od_secret');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->string('woocommerce_wh_oc_secret')->nullable()->after('woocommerce_api_settings');
+        //     $table->string('woocommerce_wh_ou_secret')->nullable()->after('woocommerce_wh_oc_secret');
+        //     $table->string('woocommerce_wh_od_secret')->nullable()->after('woocommerce_wh_ou_secret');
+        //     $table->string('woocommerce_wh_or_secret')->nullable()->after('woocommerce_wh_od_secret');
+        // });
     }
 
     /**

@@ -13,9 +13,9 @@ class AddSalesCommissionAgentColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->enum('sales_cmsn_agnt', ['logged_in_user', 'user', 'cmsn_agnt'])->nullable()->after('enable_editing_product_from_purchase');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->enum('sales_cmsn_agnt', ['logged_in_user', 'user', 'cmsn_agnt'])->nullable()->after('enable_editing_product_from_purchase');
+        // });
     }
 
     /**

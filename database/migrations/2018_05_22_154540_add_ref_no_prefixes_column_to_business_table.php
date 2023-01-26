@@ -13,9 +13,9 @@ class AddRefNoPrefixesColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('ref_no_prefixes')->nullable()->after('time_format');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('ref_no_prefixes')->nullable()->after('time_format');
+        // });
     }
 
     /**

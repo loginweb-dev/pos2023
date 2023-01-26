@@ -13,9 +13,9 @@ class AddRepairSettingsColumnToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('repair_settings')->nullable()->after('created_by');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('repair_settings')->nullable()->after('created_by');
+        // });
     }
 
     /**

@@ -13,10 +13,10 @@ class AddRowsPositionsForProducts extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->boolean('enable_row')->after('enable_racks')->default(false);
-            $table->boolean('enable_position')->after('enable_row')->default(false);
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->boolean('enable_row')->after('enable_racks')->default(false);
+        //     $table->boolean('enable_position')->after('enable_row')->default(false);
+        // });
 
         Schema::table('product_racks', function (Blueprint $table) {
             $table->string('row')->after('rack')->nullable();

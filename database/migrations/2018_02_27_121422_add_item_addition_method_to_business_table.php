@@ -13,9 +13,9 @@ class AddItemAdditionMethodToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->boolean('item_addition_method')->default(1)->after('sales_cmsn_agnt');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->boolean('item_addition_method')->default(1)->after('sales_cmsn_agnt');
+        // });
     }
 
     /**

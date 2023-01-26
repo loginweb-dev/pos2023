@@ -13,10 +13,10 @@ class AddDefaultSalesTaxToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->integer('default_sales_tax')->unsigned()->nullable()->after('tax_label_2');
-            $table->foreign('default_sales_tax')->references('id')->on('tax_rates');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+            // $table->integer('default_sales_tax')->unsigned()->nullable()->after('tax_label_2');
+            // $table->foreign('default_sales_tax')->references('id')->on('tax_rates');
+        // });
     }
 
     /**

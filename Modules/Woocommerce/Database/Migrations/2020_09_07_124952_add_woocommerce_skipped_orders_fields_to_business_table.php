@@ -13,9 +13,9 @@ class AddWoocommerceSkippedOrdersFieldsToBusinessTable extends Migration
      */
     public function up()
     {
-        Schema::table('business', function (Blueprint $table) {
-            $table->text('woocommerce_skipped_orders')->nullable()->after('woocommerce_api_settings');
-        });
+        // Schema::table('business', function (Blueprint $table) {
+        //     $table->text('woocommerce_skipped_orders')->nullable()->after('woocommerce_api_settings');
+        // });
     }
 
     /**
