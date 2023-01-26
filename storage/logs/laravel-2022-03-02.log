@@ -1,0 +1,1 @@
+[2022-03-02 21:46:52] live.EMERGENCY: File:/home/u997099361/domains/nacionalcode.org/public_html/possaas/vendor/spatie/laravel-permission/src/Exceptions/PermissionAlreadyExists.phpLine:11Message:A `supplier.view_own` permission already exists for guard `web`.  

@@ -1,0 +1,2 @@
+[2022-02-22 04:45:46] live.EMERGENCY: File:/home/u997099361/domains/nacionalcode.org/public_html/possaas/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.phpLine:454Message:No query results for model [App\Variation].  
+[2022-02-22 04:45:55] live.EMERGENCY: File:/home/u997099361/domains/nacionalcode.org/public_html/possaas/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.phpLine:454Message:No query results for model [App\Variation].  

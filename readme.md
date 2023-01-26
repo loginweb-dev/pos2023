@@ -3,6 +3,17 @@
 Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.com), a brand of [The Web Fosters](http://thewebfosters.com).
 
 ## Installation & Documentation
+
+### Paso 1
+- clonar el repositorio
+- editar el archivo .env
+- composer install
+
+### paso 2
+- correr sql del archivo system.sql
+- correr php artisan migrate --force
+- corre php artisan db: seed --force
+
 You will find installation guide and documentation in the downloaded zip file.
 Also, For complete updated documentation of the ultimate pos please visit online [documentation guide](http://ultimatefosters.com/ultimate-pos/).
 
