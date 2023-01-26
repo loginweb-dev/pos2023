@@ -14,6 +14,11 @@ Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.c
 - correr php artisan migrate --force
 - corre php artisan db: seed --force
 
+### paso 3
+- desde el frontend crear negocio con usuario luis.flores
+- ingresa con el usuario creado
+- configurar el panel de super admin
+
 You will find installation guide and documentation in the downloaded zip file.
 Also, For complete updated documentation of the ultimate pos please visit online [documentation guide](http://ultimatefosters.com/ultimate-pos/).
 

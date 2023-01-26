@@ -215,6 +215,8 @@ ALTER TABLE `business`
 --
 -- Filtros para la tabla `business`
 --
+
+-- paso ultimo
 -- ALTER TABLE `business`
 --   ADD CONSTRAINT `business_currency_id_foreign` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`),
 --   ADD CONSTRAINT `business_default_sales_tax_foreign` FOREIGN KEY (`default_sales_tax`) REFERENCES `tax_rates` (`id`),
