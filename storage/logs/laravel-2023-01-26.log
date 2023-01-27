@@ -2237,3 +2237,48 @@
 #26 C:\\xampp\\htdocs\\pos\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
 "} 
+[2023-01-26 16:08:52] live.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pos2023.system' doesn't exist (SQL: select * from `system` where `key` = crm_version limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pos2023.system' doesn't exist (SQL: select * from `system` where `key` = crm_version limit 1) at /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pos2023.system' doesn't exist at /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Connection.php:326)
+[stacktrace]
+#0 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2130): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2118): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2604): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2119): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(521): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(505): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Database/Concerns/BuildsQueries.php(77): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 /Users/jonathan/Documents/Proyectos Locales/pos2023/app/System.php(39): Illuminate\\Database\\Eloquent\\Builder->first()
+#10 /Users/jonathan/Documents/Proyectos Locales/pos2023/app/Utils/ModuleUtil.php(28): App\\System::getProperty('crm_version')
+#11 /Users/jonathan/Documents/Proyectos Locales/pos2023/Modules/Crm/Providers/CrmServiceProvider.php(178): App\\Utils\\ModuleUtil->isModuleInstalled('Crm')
+#12 /Users/jonathan/Documents/Proyectos Locales/pos2023/Modules/Crm/Providers/CrmServiceProvider.php(47): Modules\\Crm\\Providers\\CrmServiceProvider->registerScheduleCommands()
+#13 [internal function]: Modules\\Crm\\Providers\\CrmServiceProvider->boot()
+#14 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Container/Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(827): Illuminate\\Container\\Container->call(Array)
+#19 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(Modules\\Crm\\Providers\\CrmServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Modules\\Crm\\Providers\\CrmServiceProvider), 48)
+#21 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(811): array_walk(Array, Object(Closure))
+#22 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 /Users/jonathan/Documents/Proyectos Locales/pos2023/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2023-01-26 16:13:08] live.ERROR: Too many arguments, expected arguments "command". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments, expected arguments \"command\". at /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Input/ArgvInput.php:172)
+[stacktrace]
+#0 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Input/ArgvInput.php(83): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('seed')
+#1 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Input/Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#2 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Command/Command.php(214): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#3 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#4 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Application.php(1021): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Application.php(275): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 /Users/jonathan/Documents/Proyectos Locales/pos2023/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /Users/jonathan/Documents/Proyectos Locales/pos2023/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
