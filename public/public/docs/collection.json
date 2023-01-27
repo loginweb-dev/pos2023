@@ -1,8 +1,8 @@
 {
     "variables": [],
     "info": {
-        "name": "Nacional Code API",
-        "_postman_id": "0057f805-bc0c-4495-9399-63d14572d320",
+        "name": "Ultimate POS API",
+        "_postman_id": "74856471-2e6d-42a5-b844-21510211bb7c",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
     },
@@ -15,8 +15,8 @@
                     "name": "Get Attendance",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/get-attendance\/:user_id",
                             "query": [],
                             "variable": [
@@ -55,8 +55,8 @@
                     "name": "Clock In",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/clock-in",
                             "query": []
                         },
@@ -77,7 +77,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"user_id\": 1,\n    \"clock_in_time\": \"2000-06-13 13:13:00\",\n    \"clock_in_note\": \"vero\",\n    \"ip_address\": \"ut\",\n    \"latitude\": \"ut\",\n    \"longitude\": \"blanditiis\"\n}"
+                            "raw": "{\n    \"user_id\": 1,\n    \"clock_in_time\": \"2000-06-13 13:13:00\",\n    \"clock_in_note\": \"aspernatur\",\n    \"ip_address\": \"dolore\",\n    \"latitude\": \"laudantium\",\n    \"longitude\": \"ut\"\n}"
                         },
                         "description": "[User must have \"essentials.allow_users_for_attendance_from_api\" permission to Clock in]",
                         "response": []
@@ -87,8 +87,8 @@
                     "name": "Clock Out",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/clock-out",
                             "query": []
                         },
@@ -109,7 +109,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"user_id\": 1,\n    \"clock_out_time\": \"2000-06-13 13:13:00\",\n    \"clock_out_note\": \"sunt\",\n    \"latitude\": \"laborum\",\n    \"longitude\": \"deserunt\"\n}"
+                            "raw": "{\n    \"user_id\": 1,\n    \"clock_out_time\": \"2000-06-13 13:13:00\",\n    \"clock_out_note\": \"non\",\n    \"latitude\": \"sequi\",\n    \"longitude\": \"eaque\"\n}"
                         },
                         "description": "[User must have \"essentials.allow_users_for_attendance_from_api\" permission to Clock out]",
                         "response": []
@@ -119,8 +119,8 @@
                     "name": "List Holidays",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/holidays",
                             "query": [
                                 {
@@ -176,8 +176,8 @@
                     "name": "List brands",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/brand",
                             "query": []
                         },
@@ -208,8 +208,8 @@
                     "name": "Get the specified brand",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/brand\/:brand",
                             "query": [],
                             "variable": [
@@ -254,8 +254,8 @@
                     "name": "List business locations",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/business-location",
                             "query": []
                         },
@@ -286,8 +286,8 @@
                     "name": "Get the specified business location",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/business-location\/:business_location",
                             "query": []
                         },
@@ -324,8 +324,8 @@
                     "name": "List Follow ups",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/follow-ups",
                             "query": [
                                 {
@@ -342,13 +342,13 @@
                                 },
                                 {
                                     "key": "status",
-                                    "value": "quas",
+                                    "value": "maxime",
                                     "description": "filter the result through status, get status from getFollowUpResources->statuses",
                                     "disabled": false
                                 },
                                 {
                                     "key": "follow_up_type",
-                                    "value": "quisquam",
+                                    "value": "occaecati",
                                     "description": "filter the result through follow_up_type, get follow_up_type from getFollowUpResources->follow_up_types",
                                     "disabled": false
                                 },
@@ -399,8 +399,8 @@
                     "name": "Add follow up",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/follow-ups",
                             "query": []
                         },
@@ -421,7 +421,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"in\",\n    \"schedule_type\": \"aut\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"allow_notification\": true\n}"
+                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"ratione\",\n    \"schedule_type\": \"sit\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"allow_notification\": true\n}"
                         },
                         "description": "",
                         "response": []
@@ -431,8 +431,8 @@
                     "name": "Get the specified followup",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/follow-ups\/:follow_up",
                             "query": [],
                             "variable": [
@@ -471,8 +471,8 @@
                     "name": "Update follow up",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/follow-ups\/:follow_up",
                             "query": [],
                             "variable": [
@@ -501,7 +501,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"pariatur\",\n    \"schedule_type\": \"porro\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"allow_notification\": true\n}"
+                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"sed\",\n    \"schedule_type\": \"inventore\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"allow_notification\": true\n}"
                         },
                         "description": "",
                         "response": []
@@ -511,8 +511,8 @@
                     "name": "Get follow up resources",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/follow-up-resources",
                             "query": []
                         },
@@ -543,8 +543,8 @@
                     "name": "List lead",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/leads",
                             "query": [
                                 {
@@ -555,31 +555,31 @@
                                 },
                                 {
                                     "key": "name",
-                                    "value": "quis",
+                                    "value": "vel",
                                     "description": "Search term for lead name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "biz_name",
-                                    "value": "officia",
+                                    "value": "quia",
                                     "description": "Search term for lead's business name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "mobile_num",
-                                    "value": "9",
+                                    "value": "8",
                                     "description": "Search term for lead's mobile number",
                                     "disabled": false
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "ut",
+                                    "value": "nam",
                                     "description": "Search term for lead's contact_id. Ex(CO0005)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_by",
-                                    "value": "cumque",
+                                    "value": "atque",
                                     "description": "Column name to sort the result, Column: name, supplier_business_name",
                                     "disabled": false
                                 },
@@ -624,8 +624,8 @@
                     "name": "Save Call Logs",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/crm\/call-logs",
                             "query": []
                         },
@@ -646,7 +646,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"call_logs\": [\n        {\n            \"mobile_number\": \"qui\",\n            \"mobile_name\": \"voluptatem\",\n            \"call_type\": \"call\",\n            \"start_time\": \"dolor\",\n            \"end_time\": \"magni\",\n            \"duration\": \"necessitatibus\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"call_logs\": [\n        {\n            \"mobile_number\": \"ducimus\",\n            \"mobile_name\": \"tempore\",\n            \"call_type\": \"call\",\n            \"start_time\": \"delectus\",\n            \"end_time\": \"iste\",\n            \"duration\": \"minima\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -662,8 +662,8 @@
                     "name": "List Cash Registers",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/cash-register",
                             "query": [
                                 {
@@ -731,8 +731,8 @@
                     "name": "Create Cash Register",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/cash-register",
                             "query": []
                         },
@@ -753,7 +753,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"location_id\": 1,\n    \"initial_amount\": 1930058.1305,\n    \"created_at\": \"2020-5-7 15:20:22\",\n    \"closed_at\": \"2020-5-7 15:20:22\",\n    \"status\": \"close\",\n    \"closing_amount\": 608944121.3444253,\n    \"total_card_slips\": 6,\n    \"total_cheques\": 19,\n    \"closing_note\": \"quod\",\n    \"transaction_ids\": \"1,2,3\"\n}"
+                            "raw": "{\n    \"location_id\": 1,\n    \"initial_amount\": 82.331378,\n    \"created_at\": \"2020-5-7 15:20:22\",\n    \"closed_at\": \"2020-5-7 15:20:22\",\n    \"status\": \"close\",\n    \"closing_amount\": 2.417,\n    \"total_card_slips\": 10,\n    \"total_cheques\": 18,\n    \"closing_note\": \"rerum\",\n    \"transaction_ids\": \"1,2,3\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -763,8 +763,8 @@
                     "name": "Get the specified Register",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/cash-register\/:cash_register",
                             "query": [],
                             "variable": [
@@ -809,49 +809,49 @@
                     "name": "List contact",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/contactapi",
                             "query": [
                                 {
                                     "key": "type",
-                                    "value": "laboriosam",
+                                    "value": "iure",
                                     "description": "Type of contact (supplier, customer)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "facere",
+                                    "value": "provident",
                                     "description": "Search term for contact name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "biz_name",
-                                    "value": "aspernatur",
+                                    "value": "ullam",
                                     "description": "Search term for contact's business name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "mobile_num",
-                                    "value": "18",
+                                    "value": "4",
                                     "description": "Search term for contact's mobile number",
                                     "disabled": false
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "quod",
+                                    "value": "velit",
                                     "description": "Search term for contact's contact_id. Ex(CO0005)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_by",
-                                    "value": "voluptatem",
+                                    "value": "ipsa",
                                     "description": "Column name to sort the result, Column: name, supplier_business_name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "direction",
-                                    "value": "nihil",
+                                    "value": "non",
                                     "description": "Direction to sort the result, Direction: desc, asc",
                                     "disabled": false
                                 },
@@ -890,8 +890,8 @@
                     "name": "Create contact",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/contactapi",
                             "query": []
                         },
@@ -912,7 +912,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"et\",\n    \"prefix\": \"doloremque\",\n    \"first_name\": \"consequuntur\",\n    \"middle_name\": \"sit\",\n    \"last_name\": \"dolores\",\n    \"tax_number\": \"8787fefef\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"4578691009\",\n    \"landline\": \"5487-8454-4145\",\n    \"alternate_number\": \"841847541222\",\n    \"address_line_1\": \"et\",\n    \"address_line_2\": \"error\",\n    \"city\": \"laudantium\",\n    \"state\": \"ut\",\n    \"country\": \"rerum\",\n    \"zip_code\": \"vel\",\n    \"customer_group_id\": \"corrupti\",\n    \"contact_id\": \"repellat\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"non\",\n    \"custom_field2\": \"sequi\",\n    \"custom_field3\": \"occaecati\",\n    \"custom_field4\": \"quis\",\n    \"email\": \"minima\",\n    \"shipping_address\": \"nemo\",\n    \"position\": \"quibusdam\",\n    \"opening_balance\": 0,\n    \"source_id\": 8,\n    \"life_stage_id\": 5,\n    \"assigned_to\": []\n}"
+                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"omnis\",\n    \"prefix\": \"et\",\n    \"first_name\": \"nihil\",\n    \"middle_name\": \"tenetur\",\n    \"last_name\": \"omnis\",\n    \"tax_number\": \"8787fefef\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"4578691009\",\n    \"landline\": \"5487-8454-4145\",\n    \"alternate_number\": \"841847541222\",\n    \"address_line_1\": \"ex\",\n    \"address_line_2\": \"eveniet\",\n    \"city\": \"consequatur\",\n    \"state\": \"minima\",\n    \"country\": \"corporis\",\n    \"zip_code\": \"veniam\",\n    \"customer_group_id\": \"quae\",\n    \"contact_id\": \"qui\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"voluptatibus\",\n    \"custom_field2\": \"pariatur\",\n    \"custom_field3\": \"atque\",\n    \"custom_field4\": \"dolor\",\n    \"email\": \"aliquid\",\n    \"shipping_address\": \"quia\",\n    \"position\": \"harum\",\n    \"opening_balance\": 0,\n    \"source_id\": 2,\n    \"life_stage_id\": 13,\n    \"assigned_to\": []\n}"
                         },
                         "description": "",
                         "response": []
@@ -922,8 +922,8 @@
                     "name": "Get the specified contact",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/contactapi\/:contactapi",
                             "query": []
                         },
@@ -954,8 +954,8 @@
                     "name": "Update contact",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/contactapi\/:contactapi",
                             "query": []
                         },
@@ -976,7 +976,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"non\",\n    \"prefix\": \"minus\",\n    \"first_name\": \"nostrum\",\n    \"middle_name\": \"aliquid\",\n    \"last_name\": \"dolores\",\n    \"tax_number\": \"488744dwd\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"8795461009\",\n    \"landline\": \"65484-848-848\",\n    \"alternate_number\": \"9898795220\",\n    \"address_line_1\": \"in\",\n    \"address_line_2\": \"illum\",\n    \"city\": \"vitae\",\n    \"state\": \"voluptatem\",\n    \"country\": \"consequatur\",\n    \"zip_code\": \"sequi\",\n    \"customer_group_id\": \"quibusdam\",\n    \"contact_id\": \"quo\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"atque\",\n    \"custom_field2\": \"consectetur\",\n    \"custom_field3\": \"quisquam\",\n    \"custom_field4\": \"aut\",\n    \"email\": \"in\",\n    \"shipping_address\": \"et\",\n    \"position\": \"quis\",\n    \"opening_balance\": 10.3,\n    \"source_id\": 2,\n    \"life_stage_id\": 4,\n    \"assigned_to\": []\n}"
+                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"id\",\n    \"prefix\": \"doloribus\",\n    \"first_name\": \"quae\",\n    \"middle_name\": \"ut\",\n    \"last_name\": \"deleniti\",\n    \"tax_number\": \"488744dwd\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"8795461009\",\n    \"landline\": \"65484-848-848\",\n    \"alternate_number\": \"9898795220\",\n    \"address_line_1\": \"repudiandae\",\n    \"address_line_2\": \"molestiae\",\n    \"city\": \"illo\",\n    \"state\": \"labore\",\n    \"country\": \"at\",\n    \"zip_code\": \"sit\",\n    \"customer_group_id\": \"labore\",\n    \"contact_id\": \"eaque\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"nulla\",\n    \"custom_field2\": \"ipsa\",\n    \"custom_field3\": \"totam\",\n    \"custom_field4\": \"voluptas\",\n    \"email\": \"consequuntur\",\n    \"shipping_address\": \"velit\",\n    \"position\": \"vitae\",\n    \"opening_balance\": 10.3,\n    \"source_id\": 15,\n    \"life_stage_id\": 3,\n    \"assigned_to\": []\n}"
                         },
                         "description": "",
                         "response": []
@@ -986,8 +986,8 @@
                     "name": "Contact payment",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/contactapi-payment",
                             "query": []
                         },
@@ -1008,7 +1008,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"contact_id\": 17,\n    \"amount\": 453.13,\n    \"method\": \"cash\",\n    \"paid_on\": \"2020-07-22 15:48:29\",\n    \"account_id\": 13,\n    \"card_number\": \"esse\",\n    \"card_holder_name\": \"quia\",\n    \"card_transaction_number\": \"dolorum\",\n    \"card_type\": \"unde\",\n    \"card_month\": \"est\",\n    \"card_year\": \"tenetur\",\n    \"card_security\": \"saepe\",\n    \"transaction_no_1\": \"quasi\",\n    \"transaction_no_2\": \"velit\",\n    \"transaction_no_3\": \"nesciunt\",\n    \"cheque_number\": \"voluptatum\",\n    \"bank_account_number\": \"inventore\",\n    \"note\": \"et\"\n}"
+                            "raw": "{\n    \"contact_id\": 17,\n    \"amount\": 453.13,\n    \"method\": \"cash\",\n    \"paid_on\": \"2020-07-22 15:48:29\",\n    \"account_id\": 15,\n    \"card_number\": \"optio\",\n    \"card_holder_name\": \"temporibus\",\n    \"card_transaction_number\": \"quam\",\n    \"card_type\": \"veniam\",\n    \"card_month\": \"hic\",\n    \"card_year\": \"assumenda\",\n    \"card_security\": \"placeat\",\n    \"transaction_no_1\": \"distinctio\",\n    \"transaction_no_2\": \"eaque\",\n    \"transaction_no_3\": \"eveniet\",\n    \"cheque_number\": \"consequatur\",\n    \"bank_account_number\": \"voluptatum\",\n    \"note\": \"iste\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -1024,8 +1024,8 @@
                     "name": "List expenses",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/expense",
                             "query": [
                                 {
@@ -1054,7 +1054,7 @@
                                 },
                                 {
                                     "key": "expense_for",
-                                    "value": "cum",
+                                    "value": "ipsum",
                                     "description": "id of the user for which expense is created",
                                     "disabled": false
                                 },
@@ -1093,8 +1093,8 @@
                     "name": "Create expense \/ expense refund",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/expense",
                             "query": []
                         },
@@ -1115,7 +1115,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"location_id\": 1,\n    \"final_total\": 16.56409656,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 12,\n    \"expense_for\": 11,\n    \"contact_id\": 4,\n    \"expense_category_id\": 17,\n    \"expense_sub_category_id\": 20,\n    \"additional_notes\": \"delectus\",\n    \"is_refund\": 0,\n    \"is_recurring\": 0,\n    \"recur_interval\": 6,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"consectetur\",\n    \"recur_repetitions\": 20,\n    \"payment\": [\n        {\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 11,\n            \"card_number\": \"labore\",\n            \"card_holder_name\": \"non\",\n            \"card_transaction_number\": \"tempora\",\n            \"card_type\": \"qui\",\n            \"card_month\": \"laboriosam\",\n            \"card_year\": \"ad\",\n            \"card_security\": \"cupiditate\",\n            \"transaction_no_1\": \"numquam\",\n            \"transaction_no_2\": \"voluptatem\",\n            \"transaction_no_3\": \"aut\",\n            \"note\": \"quo\",\n            \"cheque_number\": \"possimus\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"location_id\": 1,\n    \"final_total\": 294889.10404045,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 12,\n    \"expense_for\": 7,\n    \"contact_id\": 3,\n    \"expense_category_id\": 15,\n    \"expense_sub_category_id\": 2,\n    \"additional_notes\": \"et\",\n    \"is_refund\": 0,\n    \"is_recurring\": 0,\n    \"recur_interval\": 9,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"impedit\",\n    \"recur_repetitions\": 20,\n    \"payment\": [\n        {\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 7,\n            \"card_number\": \"doloribus\",\n            \"card_holder_name\": \"nesciunt\",\n            \"card_transaction_number\": \"numquam\",\n            \"card_type\": \"vel\",\n            \"card_month\": \"est\",\n            \"card_year\": \"dolores\",\n            \"card_security\": \"placeat\",\n            \"transaction_no_1\": \"laudantium\",\n            \"transaction_no_2\": \"quo\",\n            \"transaction_no_3\": \"iure\",\n            \"note\": \"eligendi\",\n            \"cheque_number\": \"praesentium\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -1125,8 +1125,8 @@
                     "name": "Get the specified expense \/ expense refund",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/expense\/:expense",
                             "query": [],
                             "variable": [
@@ -1165,8 +1165,8 @@
                     "name": "Update expense \/ expense refund",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/expense\/:expense",
                             "query": []
                         },
@@ -1187,7 +1187,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"final_total\": 52824,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 19,\n    \"expense_for\": 14,\n    \"contact_id\": 9,\n    \"expense_category_id\": 13,\n    \"expense_sub_category_id\": 20,\n    \"additional_notes\": \"ut\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 3,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"nemo\",\n    \"recur_repetitions\": 1,\n    \"payment\": []\n}"
+                            "raw": "{\n    \"final_total\": 21046.304161,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 2,\n    \"expense_for\": 15,\n    \"contact_id\": 15,\n    \"expense_category_id\": 19,\n    \"expense_sub_category_id\": 3,\n    \"additional_notes\": \"est\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 17,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"iure\",\n    \"recur_repetitions\": 1,\n    \"payment\": []\n}"
                         },
                         "description": "",
                         "response": []
@@ -1197,8 +1197,8 @@
                     "name": "List expense refunds",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/expense-refund",
                             "query": [
                                 {
@@ -1227,7 +1227,7 @@
                                 },
                                 {
                                     "key": "expense_for",
-                                    "value": "magni",
+                                    "value": "soluta",
                                     "description": "id of the user for which expense is created",
                                     "disabled": false
                                 },
@@ -1266,8 +1266,8 @@
                     "name": "List expense categories",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/expense-categories",
                             "query": []
                         },
@@ -1304,25 +1304,25 @@
                     "name": "List visits",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/field-force",
                             "query": [
                                 {
                                     "key": "contact_id",
-                                    "value": "officiis",
+                                    "value": "laudantium",
                                     "description": "id of the contact",
                                     "disabled": false
                                 },
                                 {
                                     "key": "assigned_to",
-                                    "value": "sint",
+                                    "value": "quia",
                                     "description": "id of the assigned user",
                                     "disabled": false
                                 },
                                 {
                                     "key": "status",
-                                    "value": "est",
+                                    "value": "tempora",
                                     "description": "status of the visit (assigned, finished)",
                                     "disabled": false
                                 },
@@ -1379,8 +1379,8 @@
                     "name": "Create Visit",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/field-force\/create",
                             "query": []
                         },
@@ -1401,7 +1401,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"contact_id\": 17,\n    \"visit_to\": \"quia\",\n    \"visit_address\": \"sequi\",\n    \"assigned_to\": 7,\n    \"visit_on\": \"2021-12-28 17:23:00\",\n    \"visit_for\": \"voluptate\"\n}"
+                            "raw": "{\n    \"contact_id\": 16,\n    \"visit_to\": \"repellat\",\n    \"visit_address\": \"sapiente\",\n    \"assigned_to\": 13,\n    \"visit_on\": \"2021-12-28 17:23:00\",\n    \"visit_for\": \"sunt\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -1411,8 +1411,8 @@
                     "name": "Update Visit status",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/field-force\/update-visit-status\/:id",
                             "query": [],
                             "variable": [
@@ -1441,7 +1441,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"status\": \"finished\",\n    \"reason_to_not_meet_contact\": \"aperiam\",\n    \"visited_on\": \"2021-12-28 17:23:00\",\n    \"visited_address\": \"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India\",\n    \"latitude\": \"41.40338\",\n    \"longitude\": \"2.17403\",\n    \"comments\": \"enim\",\n    \"photo\": \"aliquid\"\n}"
+                            "raw": "{\n    \"status\": \"finished\",\n    \"reason_to_not_meet_contact\": \"quidem\",\n    \"visited_on\": \"2021-12-28 17:23:00\",\n    \"visited_address\": \"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India\",\n    \"latitude\": \"41.40338\",\n    \"longitude\": \"2.17403\",\n    \"comments\": \"animi\",\n    \"photo\": \"et\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -1457,37 +1457,37 @@
                     "name": "New List products",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/new_product",
                             "query": [
                                 {
                                     "key": "order_by",
-                                    "value": "in",
+                                    "value": "quos",
                                     "description": "Values: product_name or newest",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_direction",
-                                    "value": "tempore",
+                                    "value": "rerum",
                                     "description": "Values: asc or desc",
                                     "disabled": false
                                 },
                                 {
                                     "key": "location_custom_field_1",
-                                    "value": "similique",
+                                    "value": "aut",
                                     "description": "Custom field 1 of the location",
                                     "disabled": false
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "quibusdam",
+                                    "value": "sed",
                                     "description": "comma separated ids of one or multiple category",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sub_category_id",
-                                    "value": "velit",
+                                    "value": "quis",
                                     "description": "comma separated ids of one or multiple sub-category",
                                     "disabled": false
                                 },
@@ -1499,25 +1499,25 @@
                                 },
                                 {
                                     "key": "not_for_sell",
-                                    "value": "velit",
+                                    "value": "facilis",
                                     "description": "(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_lot_detail",
-                                    "value": "neque",
+                                    "value": "voluptatem",
                                     "description": "Send lot details in each variation location details(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "optio",
+                                    "value": "quibusdam",
                                     "description": "Search term for product name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sku",
-                                    "value": "officiis",
+                                    "value": "illum",
                                     "description": "Search term for product sku",
                                     "disabled": false
                                 },
@@ -1562,8 +1562,8 @@
                     "name": "New List sells",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/new_sell",
                             "query": [
                                 {
@@ -1574,7 +1574,7 @@
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "provident",
+                                    "value": "fugiat",
                                     "description": "id of the customer",
                                     "disabled": false
                                 },
@@ -1598,13 +1598,13 @@
                                 },
                                 {
                                     "key": "user_id",
-                                    "value": "ipsa",
+                                    "value": "omnis",
                                     "description": "id of the user who created the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "service_staff_id",
-                                    "value": "tempora",
+                                    "value": "architecto",
                                     "description": "id of the service staff assigned with the sale",
                                     "disabled": false
                                 },
@@ -1616,55 +1616,55 @@
                                 },
                                 {
                                     "key": "source",
-                                    "value": "sed",
+                                    "value": "amet",
                                     "description": "Source of the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "customer_group_id",
-                                    "value": "dolor",
+                                    "value": "voluptatum",
                                     "description": "id of the customer group",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "nostrum",
+                                    "value": "est",
                                     "description": "name of the product",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_sku",
-                                    "value": "molestias",
+                                    "value": "libero",
                                     "description": "sku of the product or variation",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_custom_field_1",
-                                    "value": "nulla",
+                                    "value": "deserunt",
                                     "description": "custome field 1 of the product",
                                     "disabled": false
                                 },
                                 {
                                     "key": "location_custom_field_1",
-                                    "value": "explicabo",
+                                    "value": "dolorem",
                                     "description": "custome field 1 of the location",
                                     "disabled": false
                                 },
                                 {
                                     "key": "location_invoice_scheme_prefix",
-                                    "value": "aut",
+                                    "value": "id",
                                     "description": "Invoice scheme prefix of the location",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_category_id",
-                                    "value": "eius",
+                                    "value": "et",
                                     "description": "category id of the product",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_sub_category_id",
-                                    "value": "commodi",
+                                    "value": "aut",
                                     "description": "Sub category id of the product",
                                     "disabled": false
                                 },
@@ -1676,13 +1676,13 @@
                                 },
                                 {
                                     "key": "only_subscriptions",
-                                    "value": "laudantium",
+                                    "value": "ullam",
                                     "description": "Filter only subcription invoices (1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_purchase_details",
-                                    "value": "eum",
+                                    "value": "quae",
                                     "description": "Get purchase details of each sell line (1, 0)",
                                     "disabled": false
                                 },
@@ -1727,25 +1727,25 @@
                     "name": "New List contact",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/new_contactapi",
                             "query": [
                                 {
                                     "key": "type",
-                                    "value": "veritatis",
+                                    "value": "quo",
                                     "description": "Type of contact (supplier, customer)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "customer_group_id",
-                                    "value": "eveniet",
+                                    "value": "quis",
                                     "description": "id of the customer group",
                                     "disabled": false
                                 },
                                 {
                                     "key": "custom_field_1",
-                                    "value": "ex",
+                                    "value": "distinctio",
                                     "description": "Custom field 1 of the contact",
                                     "disabled": false
                                 },
@@ -1757,37 +1757,37 @@
                                 },
                                 {
                                     "key": "name",
-                                    "value": "praesentium",
+                                    "value": "voluptatem",
                                     "description": "Search term for contact name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "biz_name",
-                                    "value": "sed",
+                                    "value": "illo",
                                     "description": "Search term for contact's business name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "mobile_num",
-                                    "value": "15",
+                                    "value": "10",
                                     "description": "Search term for contact's mobile number",
                                     "disabled": false
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "voluptatem",
+                                    "value": "et",
                                     "description": "Search term for contact's contact_id. Ex(CO0005)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_by",
-                                    "value": "quos",
+                                    "value": "sint",
                                     "description": "Column name to sort the result, Column: name, supplier_business_name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "direction",
-                                    "value": "voluptatem",
+                                    "value": "laborum",
                                     "description": "Direction to sort the result, Direction: desc, asc",
                                     "disabled": false
                                 },
@@ -1832,37 +1832,37 @@
                     "name": "List products",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/product",
                             "query": [
                                 {
                                     "key": "order_by",
-                                    "value": "non",
+                                    "value": "assumenda",
                                     "description": "Values: product_name or newest",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_direction",
-                                    "value": "omnis",
+                                    "value": "a",
                                     "description": "Values: asc or desc",
                                     "disabled": false
                                 },
                                 {
                                     "key": "brand_id",
-                                    "value": "tempore",
+                                    "value": "hic",
                                     "description": "comma separated ids of one or multiple brands",
                                     "disabled": false
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "omnis",
+                                    "value": "libero",
                                     "description": "comma separated ids of one or multiple category",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sub_category_id",
-                                    "value": "error",
+                                    "value": "non",
                                     "description": "comma separated ids of one or multiple sub-category",
                                     "disabled": false
                                 },
@@ -1874,25 +1874,25 @@
                                 },
                                 {
                                     "key": "selling_price_group",
-                                    "value": "reprehenderit",
+                                    "value": "ab",
                                     "description": "(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_lot_detail",
-                                    "value": "quaerat",
+                                    "value": "sit",
                                     "description": "Send lot details in each variation location details(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "enim",
+                                    "value": "omnis",
                                     "description": "Search term for product name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sku",
-                                    "value": "quia",
+                                    "value": "veniam",
                                     "description": "Search term for product sku",
                                     "disabled": false
                                 },
@@ -1931,19 +1931,19 @@
                     "name": "Get the specified product",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/product\/:product",
                             "query": [
                                 {
                                     "key": "selling_price_group",
-                                    "value": "tempora",
+                                    "value": "omnis",
                                     "description": "(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_lot_detail",
-                                    "value": "qui",
+                                    "value": "repellat",
                                     "description": "Send lot details in each variation location details(1, 0)",
                                     "disabled": false
                                 }
@@ -1984,8 +1984,8 @@
                     "name": "List Selling Price Group",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/selling-price-group",
                             "query": []
                         },
@@ -2016,13 +2016,13 @@
                     "name": "List Variations",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/variation\/:id",
                             "query": [
                                 {
                                     "key": "product_id",
-                                    "value": "maxime",
+                                    "value": "porro",
                                     "description": "Filter by comma separated products ids",
                                     "disabled": false
                                 },
@@ -2034,37 +2034,37 @@
                                 },
                                 {
                                     "key": "brand_id",
-                                    "value": "sit",
+                                    "value": "eos",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "sit",
+                                    "value": "odit",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sub_category_id",
-                                    "value": "quos",
+                                    "value": "et",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "not_for_selling",
-                                    "value": "aut",
+                                    "value": "omnis",
                                     "description": "Values: 0 or 1",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "dolor",
+                                    "value": "aliquam",
                                     "description": "Search term for product name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sku",
-                                    "value": "accusamus",
+                                    "value": "cumque",
                                     "description": "Search term for product sku",
                                     "disabled": false
                                 },
@@ -2109,8 +2109,8 @@
                     "name": "List sells",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/sell",
                             "query": [
                                 {
@@ -2121,7 +2121,7 @@
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "quasi",
+                                    "value": "nobis",
                                     "description": "id of the customer",
                                     "disabled": false
                                 },
@@ -2145,13 +2145,13 @@
                                 },
                                 {
                                     "key": "user_id",
-                                    "value": "consequuntur",
+                                    "value": "sit",
                                     "description": "id of the user who created the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "service_staff_id",
-                                    "value": "architecto",
+                                    "value": "incidunt",
                                     "description": "id of the service staff assigned with the sale",
                                     "disabled": false
                                 },
@@ -2163,19 +2163,19 @@
                                 },
                                 {
                                     "key": "source",
-                                    "value": "tempora",
+                                    "value": "sunt",
                                     "description": "Source of the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "only_subscriptions",
-                                    "value": "alias",
+                                    "value": "aspernatur",
                                     "description": "Filter only subcription invoices (1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_purchase_details",
-                                    "value": "quo",
+                                    "value": "id",
                                     "description": "Get purchase details of each sell line (1, 0)",
                                     "disabled": false
                                 },
@@ -2220,8 +2220,8 @@
                     "name": "Create sell",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/sell",
                             "query": []
                         },
@@ -2242,7 +2242,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"sells\": [\n        {\n            \"location_id\": 1,\n            \"contact_id\": 13,\n            \"transaction_date\": \"2020-07-22 15:48:29\",\n            \"invoice_no\": \"molestiae\",\n            \"source\": \"api, phone, woocommerce\",\n            \"status\": \"final\",\n            \"sub_status\": \"null\",\n            \"is_quotation\": true,\n            \"tax_rate_id\": 12,\n            \"discount_amount\": 10,\n            \"discount_type\": \"fixed\",\n            \"sale_note\": \"in\",\n            \"staff_note\": \"quia\",\n            \"commission_agent\": 17,\n            \"shipping_details\": \"Express Delivery\",\n            \"shipping_address\": \"est\",\n            \"shipping_status\": \"ordered\",\n            \"delivered_to\": \"'Mr robin'\",\n            \"shipping_charges\": 10,\n            \"packing_charge\": 10,\n            \"exchange_rate\": 1,\n            \"selling_price_group_id\": 2,\n            \"pay_term_number\": 3,\n            \"pay_term_type\": \"months\",\n            \"is_suspend\": false,\n            \"is_recurring\": 0,\n            \"recur_interval\": 11,\n            \"recur_interval_type\": \"months\",\n            \"subscription_repeat_on\": 15,\n            \"subscription_no\": \"nobis\",\n            \"recur_repetitions\": 1,\n            \"rp_redeemed\": 16,\n            \"rp_redeemed_amount\": 13.5,\n            \"types_of_service_id\": 18,\n            \"service_custom_field_1\": \"velit\",\n            \"service_custom_field_2\": \"consequatur\",\n            \"service_custom_field_3\": \"velit\",\n            \"service_custom_field_4\": \"veniam\",\n            \"service_custom_field_5\": \"consequatur\",\n            \"service_custom_field_6\": \"qui\",\n            \"round_off_amount\": 80190.35,\n            \"table_id\": 4,\n            \"service_staff_id\": 7,\n            \"change_return\": 0,\n            \"products\": [\n                {\n                    \"product_id\": 17,\n                    \"variation_id\": 58,\n                    \"quantity\": 1,\n                    \"unit_price\": 437.5,\n                    \"tax_rate_id\": 0,\n                    \"discount_amount\": 0,\n                    \"discount_type\": \"percentage\",\n                    \"sub_unit_id\": 15,\n                    \"note\": \"harum\"\n                }\n            ],\n            \"payments\": [\n                {\n                    \"amount\": 453.13,\n                    \"method\": \"cash\",\n                    \"account_id\": 9,\n                    \"card_number\": \"aspernatur\",\n                    \"card_holder_name\": \"nesciunt\",\n                    \"card_transaction_number\": \"molestiae\",\n                    \"card_type\": \"dolor\",\n                    \"card_month\": \"perferendis\",\n                    \"card_year\": \"pariatur\",\n                    \"card_security\": \"maxime\",\n                    \"transaction_no_1\": \"maxime\",\n                    \"transaction_no_2\": \"dolor\",\n                    \"transaction_no_3\": \"et\",\n                    \"bank_account_number\": \"omnis\",\n                    \"note\": \"ullam\",\n                    \"cheque_number\": \"qui\"\n                }\n            ]\n        }\n    ]\n}"
+                            "raw": "{\n    \"sells\": [\n        {\n            \"location_id\": 1,\n            \"contact_id\": 5,\n            \"transaction_date\": \"2020-07-22 15:48:29\",\n            \"invoice_no\": \"id\",\n            \"source\": \"api, phone, woocommerce\",\n            \"status\": \"final\",\n            \"sub_status\": \"null\",\n            \"is_quotation\": true,\n            \"tax_rate_id\": 5,\n            \"discount_amount\": 10,\n            \"discount_type\": \"fixed\",\n            \"sale_note\": \"aut\",\n            \"staff_note\": \"accusamus\",\n            \"commission_agent\": 11,\n            \"shipping_details\": \"Express Delivery\",\n            \"shipping_address\": \"ab\",\n            \"shipping_status\": \"ordered\",\n            \"delivered_to\": \"'Mr robin'\",\n            \"shipping_charges\": 10,\n            \"packing_charge\": 10,\n            \"exchange_rate\": 1,\n            \"selling_price_group_id\": 16,\n            \"pay_term_number\": 3,\n            \"pay_term_type\": \"months\",\n            \"is_suspend\": false,\n            \"is_recurring\": 0,\n            \"recur_interval\": 9,\n            \"recur_interval_type\": \"months\",\n            \"subscription_repeat_on\": 15,\n            \"subscription_no\": \"labore\",\n            \"recur_repetitions\": 14,\n            \"rp_redeemed\": 4,\n            \"rp_redeemed_amount\": 13.5,\n            \"types_of_service_id\": 12,\n            \"service_custom_field_1\": \"iusto\",\n            \"service_custom_field_2\": \"eum\",\n            \"service_custom_field_3\": \"tempore\",\n            \"service_custom_field_4\": \"vero\",\n            \"service_custom_field_5\": \"voluptas\",\n            \"service_custom_field_6\": \"commodi\",\n            \"round_off_amount\": 4.9023637,\n            \"table_id\": 2,\n            \"service_staff_id\": 15,\n            \"change_return\": 0,\n            \"products\": [\n                {\n                    \"product_id\": 17,\n                    \"variation_id\": 58,\n                    \"quantity\": 1,\n                    \"unit_price\": 437.5,\n                    \"tax_rate_id\": 0,\n                    \"discount_amount\": 0,\n                    \"discount_type\": \"percentage\",\n                    \"sub_unit_id\": 5,\n                    \"note\": \"voluptatibus\"\n                }\n            ],\n            \"payments\": [\n                {\n                    \"amount\": 453.13,\n                    \"method\": \"cash\",\n                    \"account_id\": 5,\n                    \"card_number\": \"quisquam\",\n                    \"card_holder_name\": \"cum\",\n                    \"card_transaction_number\": \"libero\",\n                    \"card_type\": \"corporis\",\n                    \"card_month\": \"sit\",\n                    \"card_year\": \"quisquam\",\n                    \"card_security\": \"reprehenderit\",\n                    \"transaction_no_1\": \"et\",\n                    \"transaction_no_2\": \"est\",\n                    \"transaction_no_3\": \"natus\",\n                    \"bank_account_number\": \"totam\",\n                    \"note\": \"possimus\",\n                    \"cheque_number\": \"voluptas\"\n                }\n            ]\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -2252,13 +2252,13 @@
                     "name": "Get the specified sell",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/sell\/:sell",
                             "query": [
                                 {
                                     "key": "send_purchase_details",
-                                    "value": "vitae",
+                                    "value": "optio",
                                     "description": "Get purchase details of each sell line (1, 0)",
                                     "disabled": false
                                 }
@@ -2299,8 +2299,8 @@
                     "name": "Update sell",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/sell\/:sell",
                             "query": [],
                             "variable": [
@@ -2329,7 +2329,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"contact_id\": 19,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"status\": \"final\",\n    \"sub_status\": \"null\",\n    \"is_quotation\": true,\n    \"tax_rate_id\": 3,\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"sale_note\": \"perspiciatis\",\n    \"source\": \"id\",\n    \"staff_note\": \"ea\",\n    \"is_suspend\": false,\n    \"commission_agent\": 14,\n    \"shipping_details\": \"Express Delivery\",\n    \"shipping_address\": \"enim\",\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"Mr Robin\",\n    \"shipping_charges\": 10,\n    \"packing_charge\": 10,\n    \"exchange_rate\": 1,\n    \"selling_price_group_id\": 17,\n    \"pay_term_number\": 15,\n    \"pay_term_type\": \"months\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 18,\n    \"recur_interval_type\": \"days\",\n    \"subscription_repeat_on\": 7,\n    \"subscription_no\": \"rerum\",\n    \"recur_repetitions\": 7,\n    \"rp_redeemed\": 19,\n    \"rp_redeemed_amount\": 13.5,\n    \"types_of_service_id\": 19,\n    \"service_custom_field_1\": \"tenetur\",\n    \"service_custom_field_2\": \"at\",\n    \"service_custom_field_3\": \"nemo\",\n    \"service_custom_field_4\": \"odit\",\n    \"service_custom_field_5\": \"hic\",\n    \"service_custom_field_6\": \"et\",\n    \"round_off_amount\": 127240236.132996,\n    \"table_id\": 2,\n    \"service_staff_id\": 8,\n    \"change_return\": 0,\n    \"change_return_id\": 9,\n    \"products\": [\n        {\n            \"sell_line_id\": 19,\n            \"product_id\": 17,\n            \"variation_id\": 58,\n            \"quantity\": 1,\n            \"unit_price\": 437.5,\n            \"tax_rate_id\": 15,\n            \"discount_amount\": 0,\n            \"discount_type\": \"percentage\",\n            \"sub_unit_id\": 4,\n            \"note\": \"sed\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"payment_id\": 2,\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 19,\n            \"card_number\": \"voluptatibus\",\n            \"card_holder_name\": \"tenetur\",\n            \"card_transaction_number\": \"voluptatibus\",\n            \"card_type\": \"quae\",\n            \"card_month\": \"hic\",\n            \"card_year\": \"aliquid\",\n            \"card_security\": \"occaecati\",\n            \"transaction_no_1\": \"voluptatem\",\n            \"transaction_no_2\": \"quod\",\n            \"transaction_no_3\": \"eius\",\n            \"note\": \"reprehenderit\",\n            \"cheque_number\": \"magnam\",\n            \"bank_account_number\": \"id\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"contact_id\": 16,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"status\": \"final\",\n    \"sub_status\": \"null\",\n    \"is_quotation\": true,\n    \"tax_rate_id\": 19,\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"sale_note\": \"eligendi\",\n    \"source\": \"magni\",\n    \"staff_note\": \"laborum\",\n    \"is_suspend\": false,\n    \"commission_agent\": 7,\n    \"shipping_details\": \"Express Delivery\",\n    \"shipping_address\": \"ducimus\",\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"Mr Robin\",\n    \"shipping_charges\": 10,\n    \"packing_charge\": 10,\n    \"exchange_rate\": 1,\n    \"selling_price_group_id\": 8,\n    \"pay_term_number\": 1,\n    \"pay_term_type\": \"months\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 19,\n    \"recur_interval_type\": \"days\",\n    \"subscription_repeat_on\": 7,\n    \"subscription_no\": \"recusandae\",\n    \"recur_repetitions\": 17,\n    \"rp_redeemed\": 6,\n    \"rp_redeemed_amount\": 13.5,\n    \"types_of_service_id\": 19,\n    \"service_custom_field_1\": \"dolores\",\n    \"service_custom_field_2\": \"veniam\",\n    \"service_custom_field_3\": \"libero\",\n    \"service_custom_field_4\": \"quia\",\n    \"service_custom_field_5\": \"nihil\",\n    \"service_custom_field_6\": \"et\",\n    \"round_off_amount\": 43979.13305,\n    \"table_id\": 5,\n    \"service_staff_id\": 14,\n    \"change_return\": 0,\n    \"change_return_id\": 17,\n    \"products\": [\n        {\n            \"sell_line_id\": 11,\n            \"product_id\": 17,\n            \"variation_id\": 58,\n            \"quantity\": 1,\n            \"unit_price\": 437.5,\n            \"tax_rate_id\": 16,\n            \"discount_amount\": 0,\n            \"discount_type\": \"percentage\",\n            \"sub_unit_id\": 16,\n            \"note\": \"dolorem\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"payment_id\": 14,\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 15,\n            \"card_number\": \"saepe\",\n            \"card_holder_name\": \"neque\",\n            \"card_transaction_number\": \"qui\",\n            \"card_type\": \"corporis\",\n            \"card_month\": \"perferendis\",\n            \"card_year\": \"aut\",\n            \"card_security\": \"porro\",\n            \"transaction_no_1\": \"suscipit\",\n            \"transaction_no_2\": \"sit\",\n            \"transaction_no_3\": \"est\",\n            \"note\": \"quia\",\n            \"cheque_number\": \"eaque\",\n            \"bank_account_number\": \"ullam\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -2339,15 +2339,15 @@
                     "name": "Delete Sell",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/sell\/:sell",
                             "query": [],
                             "variable": [
                                 {
                                     "id": "sell",
                                     "key": "sell",
-                                    "value": "non",
+                                    "value": "reiciendis",
                                     "description": "id of the sell to be deleted"
                                 }
                             ]
@@ -2379,8 +2379,8 @@
                     "name": "Add Sell Return",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/sell-return",
                             "query": []
                         },
@@ -2401,7 +2401,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"transaction_id\": 5,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"invoice_no\": \"sit\",\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"products\": [\n        {\n            \"sell_line_id\": 2,\n            \"quantity\": 1,\n            \"unit_price_inc_tax\": 437.5\n        }\n    ]\n}"
+                            "raw": "{\n    \"transaction_id\": 1,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"invoice_no\": \"non\",\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"products\": [\n        {\n            \"sell_line_id\": 18,\n            \"quantity\": 1,\n            \"unit_price_inc_tax\": 437.5\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -2411,8 +2411,8 @@
                     "name": "List Sell Return",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/list-sell-return",
                             "query": []
                         },
@@ -2443,8 +2443,8 @@
                     "name": "Update shipping status",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/update-shipping-status",
                             "query": []
                         },
@@ -2465,7 +2465,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"id\": 12,\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"nesciunt\"\n}"
+                            "raw": "{\n    \"id\": 8,\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"nemo\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -2481,8 +2481,8 @@
                     "name": "If SaaS installed get active subscription details, else return the enabled modules details in package_details",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/active-subscription",
                             "query": []
                         },
@@ -2513,8 +2513,8 @@
                     "name": "Get Superadmin Package List",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/packages",
                             "query": []
                         },
@@ -2551,8 +2551,8 @@
                     "name": "List tables",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/table",
                             "query": [
                                 {
@@ -2590,8 +2590,8 @@
                     "name": "Show the specified table",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/table\/:table",
                             "query": [],
                             "variable": [
@@ -2636,8 +2636,8 @@
                     "name": "List taxes",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/tax",
                             "query": []
                         },
@@ -2668,8 +2668,8 @@
                     "name": "Get the specified tax",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/tax\/:tax",
                             "query": [],
                             "variable": [
@@ -2714,13 +2714,13 @@
                     "name": "List taxonomy",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/taxonomy",
                             "query": [
                                 {
                                     "key": "type",
-                                    "value": "in",
+                                    "value": "sapiente",
                                     "description": "Type of taxonomy (product, device, hrm_department)",
                                     "disabled": false
                                 }
@@ -2753,8 +2753,8 @@
                     "name": "Get the specified taxonomy",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/taxonomy\/:taxonomy",
                             "query": [],
                             "variable": [
@@ -2799,8 +2799,8 @@
                     "name": "List types of service",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/types-of-service",
                             "query": []
                         },
@@ -2831,8 +2831,8 @@
                     "name": "Get the specified types of service",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/types-of-service\/:types_of_service",
                             "query": [],
                             "variable": [
@@ -2877,8 +2877,8 @@
                     "name": "List units",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/unit",
                             "query": []
                         },
@@ -2909,8 +2909,8 @@
                     "name": "Get the specified unit",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/unit\/:unit",
                             "query": [],
                             "variable": [
@@ -2955,8 +2955,8 @@
                     "name": "Get the loggedin user details.",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/user\/loggedin",
                             "query": []
                         },
@@ -2987,8 +2987,8 @@
                     "name": "Register User",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/user-registration",
                             "query": []
                         },
@@ -3009,7 +3009,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"surname\": \"aperiam\",\n    \"first_name\": \"ullam\",\n    \"last_name\": \"vel\",\n    \"email\": \"molestias\",\n    \"is_active\": \"quidem\",\n    \"user_type\": \"voluptatem\",\n    \"crm_contact_id\": 18,\n    \"allow_login\": true,\n    \"username\": \"sit\",\n    \"password\": \"quo\",\n    \"role\": 10,\n    \"access_all_locations\": true,\n    \"location_permissions\": [],\n    \"cmmsn_percent\": \"labore\",\n    \"max_sales_discount_percent\": \"ipsa\",\n    \"selected_contacts\": true,\n    \"selected_contact_ids\": [],\n    \"dob\": \"dolorum\",\n    \"gender\": \"dignissimos\",\n    \"marital_status\": \"officia\",\n    \"blood_group\": \"voluptas\",\n    \"contact_number\": \"nihil\",\n    \"alt_number\": \"consequatur\",\n    \"family_number\": \"impedit\",\n    \"fb_link\": \"dolorum\",\n    \"twitter_link\": \"explicabo\",\n    \"social_media_1\": \"deleniti\",\n    \"social_media_2\": \"et\",\n    \"custom_field_1\": \"qui\",\n    \"custom_field_2\": \"cumque\",\n    \"custom_field_3\": \"facilis\",\n    \"custom_field_4\": \"officiis\",\n    \"guardian_name\": \"vitae\",\n    \"id_proof_name\": \"expedita\",\n    \"id_proof_number\": \"id\",\n    \"permanent_address\": \"quam\",\n    \"current_address\": \"repudiandae\",\n    \"bank_details\": [\n        {\n            \"account_holder_name\": \"quasi\",\n            \"account_number\": \"dolores\",\n            \"bank_name\": \"ullam\",\n            \"bank_code\": \"in\",\n            \"branch\": \"ab\",\n            \"tax_payer_id\": \"molestiae\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"surname\": \"minus\",\n    \"first_name\": \"illum\",\n    \"last_name\": \"inventore\",\n    \"email\": \"iure\",\n    \"is_active\": \"ut\",\n    \"user_type\": \"aliquid\",\n    \"crm_contact_id\": 15,\n    \"allow_login\": false,\n    \"username\": \"assumenda\",\n    \"password\": \"inventore\",\n    \"role\": 6,\n    \"access_all_locations\": true,\n    \"location_permissions\": [],\n    \"cmmsn_percent\": \"delectus\",\n    \"max_sales_discount_percent\": \"qui\",\n    \"selected_contacts\": true,\n    \"selected_contact_ids\": [],\n    \"dob\": \"id\",\n    \"gender\": \"assumenda\",\n    \"marital_status\": \"ducimus\",\n    \"blood_group\": \"eius\",\n    \"contact_number\": \"eius\",\n    \"alt_number\": \"ut\",\n    \"family_number\": \"est\",\n    \"fb_link\": \"dolorum\",\n    \"twitter_link\": \"qui\",\n    \"social_media_1\": \"dolorem\",\n    \"social_media_2\": \"recusandae\",\n    \"custom_field_1\": \"consectetur\",\n    \"custom_field_2\": \"voluptates\",\n    \"custom_field_3\": \"non\",\n    \"custom_field_4\": \"minima\",\n    \"guardian_name\": \"aliquid\",\n    \"id_proof_name\": \"laborum\",\n    \"id_proof_number\": \"maxime\",\n    \"permanent_address\": \"sit\",\n    \"current_address\": \"unde\",\n    \"bank_details\": [\n        {\n            \"account_holder_name\": \"eos\",\n            \"account_number\": \"ea\",\n            \"bank_name\": \"non\",\n            \"bank_code\": \"cupiditate\",\n            \"branch\": \"aliquam\",\n            \"tax_payer_id\": \"temporibus\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -3019,13 +3019,13 @@
                     "name": "List users",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/user",
                             "query": [
                                 {
                                     "key": "service_staff",
-                                    "value": "rem",
+                                    "value": "velit",
                                     "description": "boolean Filter service staffs from users list (0, 1)",
                                     "disabled": false
                                 }
@@ -3058,8 +3058,8 @@
                     "name": "Get the specified user",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/user\/:user",
                             "query": [],
                             "variable": [
@@ -3098,8 +3098,8 @@
                     "name": "Update user password.",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/update-password",
                             "query": []
                         },
@@ -3120,7 +3120,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"current_password\": \"earum\",\n    \"new_password\": \"et\"\n}"
+                            "raw": "{\n    \"current_password\": \"hic\",\n    \"new_password\": \"dolorem\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -3130,8 +3130,8 @@
                     "name": "Recover forgotten password.",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/forget-password",
                             "query": []
                         },
@@ -3152,7 +3152,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"architecto\"\n}"
+                            "raw": "{\n    \"email\": \"ex\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -3168,8 +3168,8 @@
                     "name": "List payment accounts",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/payment-accounts",
                             "query": []
                         },
@@ -3200,8 +3200,8 @@
                     "name": "List payment methods",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/payment-methods",
                             "query": []
                         },
@@ -3232,8 +3232,8 @@
                     "name": "Get business details",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/business-details",
                             "query": []
                         },
@@ -3264,8 +3264,8 @@
                     "name": "Get profit and loss report",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/profit-loss-report",
                             "query": [
                                 {
@@ -3321,8 +3321,8 @@
                     "name": "Get product current stock",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/product-stock-report",
                             "query": []
                         },
@@ -3353,8 +3353,8 @@
                     "name": "Get notifications",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/notifications",
                             "query": []
                         },
@@ -3385,8 +3385,8 @@
                     "name": "Get location details from coordinates",
                     "request": {
                         "url": {
-                            "protocol": "https",
-                            "host": "nacionalcode.org\/possaas\/public",
+                            "protocol": "http",
+                            "host": "localhost\/pos\/public",
                             "path": "connector\/api\/get-location",
                             "query": []
                         },

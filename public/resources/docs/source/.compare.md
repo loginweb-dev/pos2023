@@ -16,7 +16,7 @@ toc_footers:
 # Info
 
 Welcome to the generated API reference.
-[Get Postman Collection](https://nacionalcode.org/possaas/public/docs/collection.json)
+[Get Postman Collection](http://localhost/pos/public/docs/collection.json)
 
 <!-- END_INFO -->
 
@@ -31,7 +31,7 @@ Welcome to the generated API reference.
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/get-attendance/1" \
+    -G "http://localhost/pos/public/connector/api/get-attendance/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -39,7 +39,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/get-attendance/1"
+    "http://localhost/pos/public/connector/api/get-attendance/1"
 );
 
 let headers = {
@@ -98,17 +98,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/clock-in" \
+    "http://localhost/pos/public/connector/api/clock-in" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"user_id":1,"clock_in_time":"2000-06-13 13:13:00","clock_in_note":"vero","ip_address":"ut","latitude":"ut","longitude":"blanditiis"}'
+    -d '{"user_id":1,"clock_in_time":"2000-06-13 13:13:00","clock_in_note":"aspernatur","ip_address":"dolore","latitude":"laudantium","longitude":"ut"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/clock-in"
+    "http://localhost/pos/public/connector/api/clock-in"
 );
 
 let headers = {
@@ -120,10 +120,10 @@ let headers = {
 let body = {
     "user_id": 1,
     "clock_in_time": "2000-06-13 13:13:00",
-    "clock_in_note": "vero",
-    "ip_address": "ut",
-    "latitude": "ut",
-    "longitude": "blanditiis"
+    "clock_in_note": "aspernatur",
+    "ip_address": "dolore",
+    "latitude": "laudantium",
+    "longitude": "ut"
 }
 
 fetch(url, {
@@ -171,17 +171,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/clock-out" \
+    "http://localhost/pos/public/connector/api/clock-out" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"user_id":1,"clock_out_time":"2000-06-13 13:13:00","clock_out_note":"sunt","latitude":"laborum","longitude":"deserunt"}'
+    -d '{"user_id":1,"clock_out_time":"2000-06-13 13:13:00","clock_out_note":"non","latitude":"sequi","longitude":"eaque"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/clock-out"
+    "http://localhost/pos/public/connector/api/clock-out"
 );
 
 let headers = {
@@ -193,9 +193,9 @@ let headers = {
 let body = {
     "user_id": 1,
     "clock_out_time": "2000-06-13 13:13:00",
-    "clock_out_note": "sunt",
-    "latitude": "laborum",
-    "longitude": "deserunt"
+    "clock_out_note": "non",
+    "latitude": "sequi",
+    "longitude": "eaque"
 }
 
 fetch(url, {
@@ -240,7 +240,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/holidays?location_id=1&start_date=2020-06-25&end_date=2020-06-25" \
+    -G "http://localhost/pos/public/connector/api/holidays?location_id=1&start_date=2020-06-25&end_date=2020-06-25" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -248,7 +248,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/holidays"
+    "http://localhost/pos/public/connector/api/holidays"
 );
 
 let params = {
@@ -318,7 +318,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/brand" \
+    -G "http://localhost/pos/public/connector/api/brand" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -326,7 +326,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/brand"
+    "http://localhost/pos/public/connector/api/brand"
 );
 
 let headers = {
@@ -387,7 +387,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/brand/1" \
+    -G "http://localhost/pos/public/connector/api/brand/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -395,7 +395,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/brand/1"
+    "http://localhost/pos/public/connector/api/brand/1"
 );
 
 let headers = {
@@ -454,7 +454,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/business-location" \
+    -G "http://localhost/pos/public/connector/api/business-location" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -462,7 +462,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/business-location"
+    "http://localhost/pos/public/connector/api/business-location"
 );
 
 let headers = {
@@ -578,7 +578,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/business-location/1" \
+    -G "http://localhost/pos/public/connector/api/business-location/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -586,7 +586,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/business-location/1"
+    "http://localhost/pos/public/connector/api/business-location/1"
 );
 
 let headers = {
@@ -710,7 +710,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups?start_date=2020-12-16&end_date=2020-12-16&status=quas&follow_up_type=quisquam&order_by=start_datetime&direction=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/crm/follow-ups?start_date=2020-12-16&end_date=2020-12-16&status=maxime&follow_up_type=occaecati&order_by=start_datetime&direction=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -718,14 +718,14 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups"
+    "http://localhost/pos/public/connector/api/crm/follow-ups"
 );
 
 let params = {
     "start_date": "2020-12-16",
     "end_date": "2020-12-16",
-    "status": "quas",
-    "follow_up_type": "quisquam",
+    "status": "maxime",
+    "follow_up_type": "occaecati",
     "order_by": "start_datetime",
     "direction": "desc",
     "per_page": "10",
@@ -949,17 +949,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups" \
+    "http://localhost/pos/public/connector/api/crm/follow-ups" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"title":"Meeting with client","contact_id":2,"description":"in","schedule_type":"aut","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","followup_additional_info":"['call duration' => '1 hour']","allow_notification":true}'
+    -d '{"title":"Meeting with client","contact_id":2,"description":"ratione","schedule_type":"sit","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","followup_additional_info":"['call duration' => '1 hour']","allow_notification":true}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups"
+    "http://localhost/pos/public/connector/api/crm/follow-ups"
 );
 
 let headers = {
@@ -971,8 +971,8 @@ let headers = {
 let body = {
     "title": "Meeting with client",
     "contact_id": 2,
-    "description": "in",
-    "schedule_type": "aut",
+    "description": "ratione",
+    "schedule_type": "sit",
     "user_id": "[2,3,5]",
     "notify_before": 5,
     "notify_type": "minute",
@@ -1052,7 +1052,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups/1,2" \
+    -G "http://localhost/pos/public/connector/api/crm/follow-ups/1,2" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1060,7 +1060,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups/1,2"
+    "http://localhost/pos/public/connector/api/crm/follow-ups/1,2"
 );
 
 let headers = {
@@ -1231,17 +1231,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups/20" \
+    "http://localhost/pos/public/connector/api/crm/follow-ups/20" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"title":"Meeting with client","contact_id":2,"description":"pariatur","schedule_type":"porro","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","followup_additional_info":"['call duration' => '1 hour']","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","allow_notification":true}'
+    -d '{"title":"Meeting with client","contact_id":2,"description":"sed","schedule_type":"inventore","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","followup_additional_info":"['call duration' => '1 hour']","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","allow_notification":true}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-ups/20"
+    "http://localhost/pos/public/connector/api/crm/follow-ups/20"
 );
 
 let headers = {
@@ -1253,8 +1253,8 @@ let headers = {
 let body = {
     "title": "Meeting with client",
     "contact_id": 2,
-    "description": "pariatur",
-    "schedule_type": "porro",
+    "description": "sed",
+    "schedule_type": "inventore",
     "user_id": "[2,3,5]",
     "notify_before": 5,
     "notify_type": "minute",
@@ -1341,7 +1341,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/crm/follow-up-resources" \
+    -G "http://localhost/pos/public/connector/api/crm/follow-up-resources" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1349,7 +1349,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/follow-up-resources"
+    "http://localhost/pos/public/connector/api/crm/follow-up-resources"
 );
 
 let headers = {
@@ -1411,7 +1411,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/crm/leads?assigned_to=1%2C2%2C3&name=quis&biz_name=officia&mobile_num=9&contact_id=ut&order_by=cumque&direction=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/crm/leads?assigned_to=1%2C2%2C3&name=vel&biz_name=quia&mobile_num=8&contact_id=nam&order_by=atque&direction=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1419,16 +1419,16 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/leads"
+    "http://localhost/pos/public/connector/api/crm/leads"
 );
 
 let params = {
     "assigned_to": "1,2,3",
-    "name": "quis",
-    "biz_name": "officia",
-    "mobile_num": "9",
-    "contact_id": "ut",
-    "order_by": "cumque",
+    "name": "vel",
+    "biz_name": "quia",
+    "mobile_num": "8",
+    "contact_id": "nam",
+    "order_by": "atque",
     "direction": "desc",
     "per_page": "10",
 };
@@ -1832,17 +1832,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/crm/call-logs" \
+    "http://localhost/pos/public/connector/api/crm/call-logs" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"call_logs":[{"mobile_number":"qui","mobile_name":"voluptatem","call_type":"call","start_time":"dolor","end_time":"magni","duration":"necessitatibus"}]}'
+    -d '{"call_logs":[{"mobile_number":"ducimus","mobile_name":"tempore","call_type":"call","start_time":"delectus","end_time":"iste","duration":"minima"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/crm/call-logs"
+    "http://localhost/pos/public/connector/api/crm/call-logs"
 );
 
 let headers = {
@@ -1854,12 +1854,12 @@ let headers = {
 let body = {
     "call_logs": [
         {
-            "mobile_number": "qui",
-            "mobile_name": "voluptatem",
+            "mobile_number": "ducimus",
+            "mobile_name": "tempore",
             "call_type": "call",
-            "start_time": "dolor",
-            "end_time": "magni",
-            "duration": "necessitatibus"
+            "start_time": "delectus",
+            "end_time": "iste",
+            "duration": "minima"
         }
     ]
 }
@@ -1901,7 +1901,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/cash-register?status=open&user_id=10&start_date=2018-06-25&end_date=2018-06-25&location_id=1&per_page=15" \
+    -G "http://localhost/pos/public/connector/api/cash-register?status=open&user_id=10&start_date=2018-06-25&end_date=2018-06-25&location_id=1&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1909,7 +1909,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/cash-register"
+    "http://localhost/pos/public/connector/api/cash-register"
 );
 
 let params = {
@@ -2049,17 +2049,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/cash-register" \
+    "http://localhost/pos/public/connector/api/cash-register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"location_id":1,"initial_amount":1930058.1305,"created_at":"2020-5-7 15:20:22","closed_at":"2020-5-7 15:20:22","status":"close","closing_amount":608944121.3444253,"total_card_slips":6,"total_cheques":19,"closing_note":"quod","transaction_ids":"1,2,3"}'
+    -d '{"location_id":1,"initial_amount":82.331378,"created_at":"2020-5-7 15:20:22","closed_at":"2020-5-7 15:20:22","status":"close","closing_amount":2.417,"total_card_slips":10,"total_cheques":18,"closing_note":"rerum","transaction_ids":"1,2,3"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/cash-register"
+    "http://localhost/pos/public/connector/api/cash-register"
 );
 
 let headers = {
@@ -2070,14 +2070,14 @@ let headers = {
 
 let body = {
     "location_id": 1,
-    "initial_amount": 1930058.1305,
+    "initial_amount": 82.331378,
     "created_at": "2020-5-7 15:20:22",
     "closed_at": "2020-5-7 15:20:22",
     "status": "close",
-    "closing_amount": 608944121.3444253,
-    "total_card_slips": 6,
-    "total_cheques": 19,
-    "closing_note": "quod",
+    "closing_amount": 2.417,
+    "total_card_slips": 10,
+    "total_cheques": 18,
+    "closing_note": "rerum",
     "transaction_ids": "1,2,3"
 }
 
@@ -2119,7 +2119,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/cash-register/59" \
+    -G "http://localhost/pos/public/connector/api/cash-register/59" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2127,7 +2127,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/cash-register/59"
+    "http://localhost/pos/public/connector/api/cash-register/59"
 );
 
 let headers = {
@@ -2214,7 +2214,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/contactapi?type=laboriosam&name=facere&biz_name=aspernatur&mobile_num=18&contact_id=quod&order_by=voluptatem&direction=nihil&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/contactapi?type=iure&name=provident&biz_name=ullam&mobile_num=4&contact_id=velit&order_by=ipsa&direction=non&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2222,17 +2222,17 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi"
+    "http://localhost/pos/public/connector/api/contactapi"
 );
 
 let params = {
-    "type": "laboriosam",
-    "name": "facere",
-    "biz_name": "aspernatur",
-    "mobile_num": "18",
-    "contact_id": "quod",
-    "order_by": "voluptatem",
-    "direction": "nihil",
+    "type": "iure",
+    "name": "provident",
+    "biz_name": "ullam",
+    "mobile_num": "4",
+    "contact_id": "velit",
+    "order_by": "ipsa",
+    "direction": "non",
     "per_page": "10",
 };
 Object.keys(params)
@@ -2519,17 +2519,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi" \
+    "http://localhost/pos/public/connector/api/contactapi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"type":"customer","supplier_business_name":"et","prefix":"doloremque","first_name":"consequuntur","middle_name":"sit","last_name":"dolores","tax_number":"8787fefef","pay_term_number":3,"pay_term_type":"months","mobile":"4578691009","landline":"5487-8454-4145","alternate_number":"841847541222","address_line_1":"et","address_line_2":"error","city":"laudantium","state":"ut","country":"rerum","zip_code":"vel","customer_group_id":"corrupti","contact_id":"repellat","dob":"2000-06-13","custom_field1":"non","custom_field2":"sequi","custom_field3":"occaecati","custom_field4":"quis","email":"minima","shipping_address":"nemo","position":"quibusdam","opening_balance":0,"source_id":8,"life_stage_id":5,"assigned_to":[]}'
+    -d '{"type":"customer","supplier_business_name":"omnis","prefix":"et","first_name":"nihil","middle_name":"tenetur","last_name":"omnis","tax_number":"8787fefef","pay_term_number":3,"pay_term_type":"months","mobile":"4578691009","landline":"5487-8454-4145","alternate_number":"841847541222","address_line_1":"ex","address_line_2":"eveniet","city":"consequatur","state":"minima","country":"corporis","zip_code":"veniam","customer_group_id":"quae","contact_id":"qui","dob":"2000-06-13","custom_field1":"voluptatibus","custom_field2":"pariatur","custom_field3":"atque","custom_field4":"dolor","email":"aliquid","shipping_address":"quia","position":"harum","opening_balance":0,"source_id":2,"life_stage_id":13,"assigned_to":[]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi"
+    "http://localhost/pos/public/connector/api/contactapi"
 );
 
 let headers = {
@@ -2540,36 +2540,36 @@ let headers = {
 
 let body = {
     "type": "customer",
-    "supplier_business_name": "et",
-    "prefix": "doloremque",
-    "first_name": "consequuntur",
-    "middle_name": "sit",
-    "last_name": "dolores",
+    "supplier_business_name": "omnis",
+    "prefix": "et",
+    "first_name": "nihil",
+    "middle_name": "tenetur",
+    "last_name": "omnis",
     "tax_number": "8787fefef",
     "pay_term_number": 3,
     "pay_term_type": "months",
     "mobile": "4578691009",
     "landline": "5487-8454-4145",
     "alternate_number": "841847541222",
-    "address_line_1": "et",
-    "address_line_2": "error",
-    "city": "laudantium",
-    "state": "ut",
-    "country": "rerum",
-    "zip_code": "vel",
-    "customer_group_id": "corrupti",
-    "contact_id": "repellat",
+    "address_line_1": "ex",
+    "address_line_2": "eveniet",
+    "city": "consequatur",
+    "state": "minima",
+    "country": "corporis",
+    "zip_code": "veniam",
+    "customer_group_id": "quae",
+    "contact_id": "qui",
     "dob": "2000-06-13",
-    "custom_field1": "non",
-    "custom_field2": "sequi",
-    "custom_field3": "occaecati",
-    "custom_field4": "quis",
-    "email": "minima",
-    "shipping_address": "nemo",
-    "position": "quibusdam",
+    "custom_field1": "voluptatibus",
+    "custom_field2": "pariatur",
+    "custom_field3": "atque",
+    "custom_field4": "dolor",
+    "email": "aliquid",
+    "shipping_address": "quia",
+    "position": "harum",
     "opening_balance": 0,
-    "source_id": 8,
-    "life_stage_id": 5,
+    "source_id": 2,
+    "life_stage_id": 13,
     "assigned_to": []
 }
 
@@ -2652,7 +2652,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/contactapi/1" \
+    -G "http://localhost/pos/public/connector/api/contactapi/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2660,7 +2660,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi/1"
+    "http://localhost/pos/public/connector/api/contactapi/1"
 );
 
 let headers = {
@@ -2769,17 +2769,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi/1" \
+    "http://localhost/pos/public/connector/api/contactapi/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"type":"customer","supplier_business_name":"non","prefix":"minus","first_name":"nostrum","middle_name":"aliquid","last_name":"dolores","tax_number":"488744dwd","pay_term_number":3,"pay_term_type":"months","mobile":"8795461009","landline":"65484-848-848","alternate_number":"9898795220","address_line_1":"in","address_line_2":"illum","city":"vitae","state":"voluptatem","country":"consequatur","zip_code":"sequi","customer_group_id":"quibusdam","contact_id":"quo","dob":"2000-06-13","custom_field1":"atque","custom_field2":"consectetur","custom_field3":"quisquam","custom_field4":"aut","email":"in","shipping_address":"et","position":"quis","opening_balance":10.3,"source_id":2,"life_stage_id":4,"assigned_to":[]}'
+    -d '{"type":"customer","supplier_business_name":"id","prefix":"doloribus","first_name":"quae","middle_name":"ut","last_name":"deleniti","tax_number":"488744dwd","pay_term_number":3,"pay_term_type":"months","mobile":"8795461009","landline":"65484-848-848","alternate_number":"9898795220","address_line_1":"repudiandae","address_line_2":"molestiae","city":"illo","state":"labore","country":"at","zip_code":"sit","customer_group_id":"labore","contact_id":"eaque","dob":"2000-06-13","custom_field1":"nulla","custom_field2":"ipsa","custom_field3":"totam","custom_field4":"voluptas","email":"consequuntur","shipping_address":"velit","position":"vitae","opening_balance":10.3,"source_id":15,"life_stage_id":3,"assigned_to":[]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi/1"
+    "http://localhost/pos/public/connector/api/contactapi/1"
 );
 
 let headers = {
@@ -2790,36 +2790,36 @@ let headers = {
 
 let body = {
     "type": "customer",
-    "supplier_business_name": "non",
-    "prefix": "minus",
-    "first_name": "nostrum",
-    "middle_name": "aliquid",
-    "last_name": "dolores",
+    "supplier_business_name": "id",
+    "prefix": "doloribus",
+    "first_name": "quae",
+    "middle_name": "ut",
+    "last_name": "deleniti",
     "tax_number": "488744dwd",
     "pay_term_number": 3,
     "pay_term_type": "months",
     "mobile": "8795461009",
     "landline": "65484-848-848",
     "alternate_number": "9898795220",
-    "address_line_1": "in",
-    "address_line_2": "illum",
-    "city": "vitae",
-    "state": "voluptatem",
-    "country": "consequatur",
-    "zip_code": "sequi",
-    "customer_group_id": "quibusdam",
-    "contact_id": "quo",
+    "address_line_1": "repudiandae",
+    "address_line_2": "molestiae",
+    "city": "illo",
+    "state": "labore",
+    "country": "at",
+    "zip_code": "sit",
+    "customer_group_id": "labore",
+    "contact_id": "eaque",
     "dob": "2000-06-13",
-    "custom_field1": "atque",
-    "custom_field2": "consectetur",
-    "custom_field3": "quisquam",
-    "custom_field4": "aut",
-    "email": "in",
-    "shipping_address": "et",
-    "position": "quis",
+    "custom_field1": "nulla",
+    "custom_field2": "ipsa",
+    "custom_field3": "totam",
+    "custom_field4": "voluptas",
+    "email": "consequuntur",
+    "shipping_address": "velit",
+    "position": "vitae",
     "opening_balance": 10.3,
-    "source_id": 2,
-    "life_stage_id": 4,
+    "source_id": 15,
+    "life_stage_id": 3,
     "assigned_to": []
 }
 
@@ -2944,17 +2944,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi-payment" \
+    "http://localhost/pos/public/connector/api/contactapi-payment" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":17,"amount":453.13,"method":"cash","paid_on":"2020-07-22 15:48:29","account_id":13,"card_number":"esse","card_holder_name":"quia","card_transaction_number":"dolorum","card_type":"unde","card_month":"est","card_year":"tenetur","card_security":"saepe","transaction_no_1":"quasi","transaction_no_2":"velit","transaction_no_3":"nesciunt","cheque_number":"voluptatum","bank_account_number":"inventore","note":"et"}'
+    -d '{"contact_id":17,"amount":453.13,"method":"cash","paid_on":"2020-07-22 15:48:29","account_id":15,"card_number":"optio","card_holder_name":"temporibus","card_transaction_number":"quam","card_type":"veniam","card_month":"hic","card_year":"assumenda","card_security":"placeat","transaction_no_1":"distinctio","transaction_no_2":"eaque","transaction_no_3":"eveniet","cheque_number":"consequatur","bank_account_number":"voluptatum","note":"iste"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/contactapi-payment"
+    "http://localhost/pos/public/connector/api/contactapi-payment"
 );
 
 let headers = {
@@ -2968,20 +2968,20 @@ let body = {
     "amount": 453.13,
     "method": "cash",
     "paid_on": "2020-07-22 15:48:29",
-    "account_id": 13,
-    "card_number": "esse",
-    "card_holder_name": "quia",
-    "card_transaction_number": "dolorum",
-    "card_type": "unde",
-    "card_month": "est",
-    "card_year": "tenetur",
-    "card_security": "saepe",
-    "transaction_no_1": "quasi",
-    "transaction_no_2": "velit",
-    "transaction_no_3": "nesciunt",
-    "cheque_number": "voluptatum",
-    "bank_account_number": "inventore",
-    "note": "et"
+    "account_id": 15,
+    "card_number": "optio",
+    "card_holder_name": "temporibus",
+    "card_transaction_number": "quam",
+    "card_type": "veniam",
+    "card_month": "hic",
+    "card_year": "assumenda",
+    "card_security": "placeat",
+    "transaction_no_1": "distinctio",
+    "transaction_no_2": "eaque",
+    "transaction_no_3": "eveniet",
+    "cheque_number": "consequatur",
+    "bank_account_number": "voluptatum",
+    "note": "iste"
 }
 
 fetch(url, {
@@ -3053,7 +3053,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/expense?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=cum&per_page=15" \
+    -G "http://localhost/pos/public/connector/api/expense?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=ipsum&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3061,7 +3061,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/expense"
+    "http://localhost/pos/public/connector/api/expense"
 );
 
 let params = {
@@ -3069,7 +3069,7 @@ let params = {
     "payment_status": "paid",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "expense_for": "cum",
+    "expense_for": "ipsum",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3203,17 +3203,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/expense" \
+    "http://localhost/pos/public/connector/api/expense" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"location_id":1,"final_total":16.56409656,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":12,"expense_for":11,"contact_id":4,"expense_category_id":17,"expense_sub_category_id":20,"additional_notes":"delectus","is_refund":0,"is_recurring":0,"recur_interval":6,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"consectetur","recur_repetitions":20,"payment":[{"amount":453.13,"method":"cash","account_id":11,"card_number":"labore","card_holder_name":"non","card_transaction_number":"tempora","card_type":"qui","card_month":"laboriosam","card_year":"ad","card_security":"cupiditate","transaction_no_1":"numquam","transaction_no_2":"voluptatem","transaction_no_3":"aut","note":"quo","cheque_number":"possimus"}]}'
+    -d '{"location_id":1,"final_total":294889.10404045,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":12,"expense_for":7,"contact_id":3,"expense_category_id":15,"expense_sub_category_id":2,"additional_notes":"et","is_refund":0,"is_recurring":0,"recur_interval":9,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"impedit","recur_repetitions":20,"payment":[{"amount":453.13,"method":"cash","account_id":7,"card_number":"doloribus","card_holder_name":"nesciunt","card_transaction_number":"numquam","card_type":"vel","card_month":"est","card_year":"dolores","card_security":"placeat","transaction_no_1":"laudantium","transaction_no_2":"quo","transaction_no_3":"iure","note":"eligendi","cheque_number":"praesentium"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/expense"
+    "http://localhost/pos/public/connector/api/expense"
 );
 
 let headers = {
@@ -3224,38 +3224,38 @@ let headers = {
 
 let body = {
     "location_id": 1,
-    "final_total": 16.56409656,
+    "final_total": 294889.10404045,
     "transaction_date": "2020-5-7 15:20:22",
     "tax_rate_id": 12,
-    "expense_for": 11,
-    "contact_id": 4,
-    "expense_category_id": 17,
-    "expense_sub_category_id": 20,
-    "additional_notes": "delectus",
+    "expense_for": 7,
+    "contact_id": 3,
+    "expense_category_id": 15,
+    "expense_sub_category_id": 2,
+    "additional_notes": "et",
     "is_refund": 0,
     "is_recurring": 0,
-    "recur_interval": 6,
+    "recur_interval": 9,
     "recur_interval_type": "months",
     "subscription_repeat_on": 15,
-    "subscription_no": "consectetur",
+    "subscription_no": "impedit",
     "recur_repetitions": 20,
     "payment": [
         {
             "amount": 453.13,
             "method": "cash",
-            "account_id": 11,
-            "card_number": "labore",
-            "card_holder_name": "non",
-            "card_transaction_number": "tempora",
-            "card_type": "qui",
-            "card_month": "laboriosam",
-            "card_year": "ad",
-            "card_security": "cupiditate",
-            "transaction_no_1": "numquam",
-            "transaction_no_2": "voluptatem",
-            "transaction_no_3": "aut",
-            "note": "quo",
-            "cheque_number": "possimus"
+            "account_id": 7,
+            "card_number": "doloribus",
+            "card_holder_name": "nesciunt",
+            "card_transaction_number": "numquam",
+            "card_type": "vel",
+            "card_month": "est",
+            "card_year": "dolores",
+            "card_security": "placeat",
+            "transaction_no_1": "laudantium",
+            "transaction_no_2": "quo",
+            "transaction_no_3": "iure",
+            "note": "eligendi",
+            "cheque_number": "praesentium"
         }
     ]
 }
@@ -3350,7 +3350,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/expense/59" \
+    -G "http://localhost/pos/public/connector/api/expense/59" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3358,7 +3358,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/expense/59"
+    "http://localhost/pos/public/connector/api/expense/59"
 );
 
 let headers = {
@@ -3471,17 +3471,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "https://nacionalcode.org/possaas/public/connector/api/expense/1" \
+    "http://localhost/pos/public/connector/api/expense/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"final_total":52824,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":19,"expense_for":14,"contact_id":9,"expense_category_id":13,"expense_sub_category_id":20,"additional_notes":"ut","is_recurring":0,"recur_interval":3,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"nemo","recur_repetitions":1,"payment":[]}'
+    -d '{"final_total":21046.304161,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":2,"expense_for":15,"contact_id":15,"expense_category_id":19,"expense_sub_category_id":3,"additional_notes":"est","is_recurring":0,"recur_interval":17,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"iure","recur_repetitions":1,"payment":[]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/expense/1"
+    "http://localhost/pos/public/connector/api/expense/1"
 );
 
 let headers = {
@@ -3491,19 +3491,19 @@ let headers = {
 };
 
 let body = {
-    "final_total": 52824,
+    "final_total": 21046.304161,
     "transaction_date": "2020-5-7 15:20:22",
-    "tax_rate_id": 19,
-    "expense_for": 14,
-    "contact_id": 9,
-    "expense_category_id": 13,
-    "expense_sub_category_id": 20,
-    "additional_notes": "ut",
+    "tax_rate_id": 2,
+    "expense_for": 15,
+    "contact_id": 15,
+    "expense_category_id": 19,
+    "expense_sub_category_id": 3,
+    "additional_notes": "est",
     "is_recurring": 0,
-    "recur_interval": 3,
+    "recur_interval": 17,
     "recur_interval_type": "months",
     "subscription_repeat_on": 15,
-    "subscription_no": "nemo",
+    "subscription_no": "iure",
     "recur_repetitions": 1,
     "payment": []
 }
@@ -3583,7 +3583,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/expense-refund?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=magni&per_page=15" \
+    -G "http://localhost/pos/public/connector/api/expense-refund?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=soluta&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3591,7 +3591,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/expense-refund"
+    "http://localhost/pos/public/connector/api/expense-refund"
 );
 
 let params = {
@@ -3599,7 +3599,7 @@ let params = {
     "payment_status": "paid",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "expense_for": "magni",
+    "expense_for": "soluta",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3684,7 +3684,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/expense-categories" \
+    -G "http://localhost/pos/public/connector/api/expense-categories" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3692,7 +3692,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/expense-categories"
+    "http://localhost/pos/public/connector/api/expense-categories"
 );
 
 let headers = {
@@ -3780,7 +3780,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/field-force?contact_id=officiis&assigned_to=sint&status=est&start_date=2018-06-25&end_date=2018-06-25&per_page=15&order_by_date=desc" \
+    -G "http://localhost/pos/public/connector/api/field-force?contact_id=laudantium&assigned_to=quia&status=tempora&start_date=2018-06-25&end_date=2018-06-25&per_page=15&order_by_date=desc" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3788,13 +3788,13 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/field-force"
+    "http://localhost/pos/public/connector/api/field-force"
 );
 
 let params = {
-    "contact_id": "officiis",
-    "assigned_to": "sint",
-    "status": "est",
+    "contact_id": "laudantium",
+    "assigned_to": "quia",
+    "status": "tempora",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
     "per_page": "15",
@@ -3851,17 +3851,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/field-force/create" \
+    "http://localhost/pos/public/connector/api/field-force/create" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":17,"visit_to":"quia","visit_address":"sequi","assigned_to":7,"visit_on":"2021-12-28 17:23:00","visit_for":"voluptate"}'
+    -d '{"contact_id":16,"visit_to":"repellat","visit_address":"sapiente","assigned_to":13,"visit_on":"2021-12-28 17:23:00","visit_for":"sunt"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/field-force/create"
+    "http://localhost/pos/public/connector/api/field-force/create"
 );
 
 let headers = {
@@ -3871,12 +3871,12 @@ let headers = {
 };
 
 let body = {
-    "contact_id": 17,
-    "visit_to": "quia",
-    "visit_address": "sequi",
-    "assigned_to": 7,
+    "contact_id": 16,
+    "visit_to": "repellat",
+    "visit_address": "sapiente",
+    "assigned_to": 13,
     "visit_on": "2021-12-28 17:23:00",
-    "visit_for": "voluptate"
+    "visit_for": "sunt"
 }
 
 fetch(url, {
@@ -3931,17 +3931,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/field-force/update-visit-status/17" \
+    "http://localhost/pos/public/connector/api/field-force/update-visit-status/17" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"status":"finished","reason_to_not_meet_contact":"aperiam","visited_on":"2021-12-28 17:23:00","visited_address":"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India","latitude":"41.40338","longitude":"2.17403","comments":"enim","photo":"aliquid"}'
+    -d '{"status":"finished","reason_to_not_meet_contact":"quidem","visited_on":"2021-12-28 17:23:00","visited_address":"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India","latitude":"41.40338","longitude":"2.17403","comments":"animi","photo":"et"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/field-force/update-visit-status/17"
+    "http://localhost/pos/public/connector/api/field-force/update-visit-status/17"
 );
 
 let headers = {
@@ -3952,13 +3952,13 @@ let headers = {
 
 let body = {
     "status": "finished",
-    "reason_to_not_meet_contact": "aperiam",
+    "reason_to_not_meet_contact": "quidem",
     "visited_on": "2021-12-28 17:23:00",
     "visited_address": "Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India",
     "latitude": "41.40338",
     "longitude": "2.17403",
-    "comments": "enim",
-    "photo": "aliquid"
+    "comments": "animi",
+    "photo": "et"
 }
 
 fetch(url, {
@@ -4024,7 +4024,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/new_product?order_by=in&order_direction=tempore&location_custom_field_1=similique&category_id=quibusdam&sub_category_id=velit&location_id=1&not_for_sell=velit&send_lot_detail=neque&name=optio&sku=officiis&product_ids=1%2C2&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/new_product?order_by=quos&order_direction=rerum&location_custom_field_1=aut&category_id=sed&sub_category_id=quis&location_id=1&not_for_sell=facilis&send_lot_detail=voluptatem&name=quibusdam&sku=illum&product_ids=1%2C2&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4032,20 +4032,20 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/new_product"
+    "http://localhost/pos/public/connector/api/new_product"
 );
 
 let params = {
-    "order_by": "in",
-    "order_direction": "tempore",
-    "location_custom_field_1": "similique",
-    "category_id": "quibusdam",
-    "sub_category_id": "velit",
+    "order_by": "quos",
+    "order_direction": "rerum",
+    "location_custom_field_1": "aut",
+    "category_id": "sed",
+    "sub_category_id": "quis",
     "location_id": "1",
-    "not_for_sell": "velit",
-    "send_lot_detail": "neque",
-    "name": "optio",
-    "sku": "officiis",
+    "not_for_sell": "facilis",
+    "send_lot_detail": "voluptatem",
+    "name": "quibusdam",
+    "sku": "illum",
     "product_ids": "1,2",
     "per_page": "10",
 };
@@ -4354,7 +4354,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/new_sell?location_id=1&contact_id=provident&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=ipsa&service_staff_id=tempora&shipping_status=ordered&source=sed&customer_group_id=dolor&product_name=nostrum&product_sku=molestias&product_custom_field_1=nulla&location_custom_field_1=explicabo&location_invoice_scheme_prefix=aut&product_category_id=eius&product_sub_category_id=commodi&sell_ids=55%2C64&only_subscriptions=laudantium&send_purchase_details=eum&order_by_date=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/new_sell?location_id=1&contact_id=fugiat&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=omnis&service_staff_id=architecto&shipping_status=ordered&source=amet&customer_group_id=voluptatum&product_name=est&product_sku=libero&product_custom_field_1=deserunt&location_custom_field_1=dolorem&location_invoice_scheme_prefix=id&product_category_id=et&product_sub_category_id=aut&sell_ids=55%2C64&only_subscriptions=ullam&send_purchase_details=quae&order_by_date=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4362,30 +4362,30 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/new_sell"
+    "http://localhost/pos/public/connector/api/new_sell"
 );
 
 let params = {
     "location_id": "1",
-    "contact_id": "provident",
+    "contact_id": "fugiat",
     "payment_status": "due,partial",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "user_id": "ipsa",
-    "service_staff_id": "tempora",
+    "user_id": "omnis",
+    "service_staff_id": "architecto",
     "shipping_status": "ordered",
-    "source": "sed",
-    "customer_group_id": "dolor",
-    "product_name": "nostrum",
-    "product_sku": "molestias",
-    "product_custom_field_1": "nulla",
-    "location_custom_field_1": "explicabo",
-    "location_invoice_scheme_prefix": "aut",
-    "product_category_id": "eius",
-    "product_sub_category_id": "commodi",
+    "source": "amet",
+    "customer_group_id": "voluptatum",
+    "product_name": "est",
+    "product_sku": "libero",
+    "product_custom_field_1": "deserunt",
+    "location_custom_field_1": "dolorem",
+    "location_invoice_scheme_prefix": "id",
+    "product_category_id": "et",
+    "product_sub_category_id": "aut",
     "sell_ids": "55,64",
-    "only_subscriptions": "laudantium",
-    "send_purchase_details": "eum",
+    "only_subscriptions": "ullam",
+    "send_purchase_details": "quae",
     "order_by_date": "desc",
     "per_page": "10",
 };
@@ -4625,7 +4625,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/new_contactapi?type=veritatis&customer_group_id=eveniet&custom_field_1=ex&contact_ids=2%2C3&name=praesentium&biz_name=sed&mobile_num=15&contact_id=voluptatem&order_by=quos&direction=voluptatem&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/new_contactapi?type=quo&customer_group_id=quis&custom_field_1=distinctio&contact_ids=2%2C3&name=voluptatem&biz_name=illo&mobile_num=10&contact_id=et&order_by=sint&direction=laborum&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4633,20 +4633,20 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/new_contactapi"
+    "http://localhost/pos/public/connector/api/new_contactapi"
 );
 
 let params = {
-    "type": "veritatis",
-    "customer_group_id": "eveniet",
-    "custom_field_1": "ex",
+    "type": "quo",
+    "customer_group_id": "quis",
+    "custom_field_1": "distinctio",
     "contact_ids": "2,3",
-    "name": "praesentium",
-    "biz_name": "sed",
-    "mobile_num": "15",
-    "contact_id": "voluptatem",
-    "order_by": "quos",
-    "direction": "voluptatem",
+    "name": "voluptatem",
+    "biz_name": "illo",
+    "mobile_num": "10",
+    "contact_id": "et",
+    "order_by": "sint",
+    "direction": "laborum",
     "per_page": "10",
 };
 Object.keys(params)
@@ -4758,7 +4758,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/product?order_by=non&order_direction=omnis&brand_id=tempore&category_id=omnis&sub_category_id=error&location_id=1&selling_price_group=reprehenderit&send_lot_detail=quaerat&name=enim&sku=quia&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/product?order_by=assumenda&order_direction=a&brand_id=hic&category_id=libero&sub_category_id=non&location_id=1&selling_price_group=ab&send_lot_detail=sit&name=omnis&sku=veniam&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4766,20 +4766,20 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/product"
+    "http://localhost/pos/public/connector/api/product"
 );
 
 let params = {
-    "order_by": "non",
-    "order_direction": "omnis",
-    "brand_id": "tempore",
-    "category_id": "omnis",
-    "sub_category_id": "error",
+    "order_by": "assumenda",
+    "order_direction": "a",
+    "brand_id": "hic",
+    "category_id": "libero",
+    "sub_category_id": "non",
     "location_id": "1",
-    "selling_price_group": "reprehenderit",
-    "send_lot_detail": "quaerat",
-    "name": "enim",
-    "sku": "quia",
+    "selling_price_group": "ab",
+    "send_lot_detail": "sit",
+    "name": "omnis",
+    "sku": "veniam",
     "per_page": "10",
 };
 Object.keys(params)
@@ -5079,7 +5079,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/product/1?selling_price_group=tempora&send_lot_detail=qui" \
+    -G "http://localhost/pos/public/connector/api/product/1?selling_price_group=omnis&send_lot_detail=repellat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5087,12 +5087,12 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/product/1"
+    "http://localhost/pos/public/connector/api/product/1"
 );
 
 let params = {
-    "selling_price_group": "tempora",
-    "send_lot_detail": "qui",
+    "selling_price_group": "omnis",
+    "send_lot_detail": "repellat",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -5374,7 +5374,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/selling-price-group" \
+    -G "http://localhost/pos/public/connector/api/selling-price-group" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5382,7 +5382,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/selling-price-group"
+    "http://localhost/pos/public/connector/api/selling-price-group"
 );
 
 let headers = {
@@ -5443,7 +5443,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/variation/2?product_id=maxime&location_id=1&brand_id=sit&category_id=sit&sub_category_id=quos&not_for_selling=aut&name=dolor&sku=accusamus&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/variation/2?product_id=porro&location_id=1&brand_id=eos&category_id=odit&sub_category_id=et&not_for_selling=omnis&name=aliquam&sku=cumque&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5451,18 +5451,18 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/variation/2"
+    "http://localhost/pos/public/connector/api/variation/2"
 );
 
 let params = {
-    "product_id": "maxime",
+    "product_id": "porro",
     "location_id": "1",
-    "brand_id": "sit",
-    "category_id": "sit",
-    "sub_category_id": "quos",
-    "not_for_selling": "aut",
-    "name": "dolor",
-    "sku": "accusamus",
+    "brand_id": "eos",
+    "category_id": "odit",
+    "sub_category_id": "et",
+    "not_for_selling": "omnis",
+    "name": "aliquam",
+    "sku": "cumque",
     "per_page": "10",
 };
 Object.keys(params)
@@ -5758,7 +5758,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/sell?location_id=1&contact_id=quasi&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=consequuntur&service_staff_id=architecto&shipping_status=ordered&source=tempora&only_subscriptions=alias&send_purchase_details=quo&order_by_date=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/sell?location_id=1&contact_id=nobis&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=sit&service_staff_id=incidunt&shipping_status=ordered&source=sunt&only_subscriptions=aspernatur&send_purchase_details=id&order_by_date=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5766,21 +5766,21 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/sell"
+    "http://localhost/pos/public/connector/api/sell"
 );
 
 let params = {
     "location_id": "1",
-    "contact_id": "quasi",
+    "contact_id": "nobis",
     "payment_status": "due,partial",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "user_id": "consequuntur",
-    "service_staff_id": "architecto",
+    "user_id": "sit",
+    "service_staff_id": "incidunt",
     "shipping_status": "ordered",
-    "source": "tempora",
-    "only_subscriptions": "alias",
-    "send_purchase_details": "quo",
+    "source": "sunt",
+    "only_subscriptions": "aspernatur",
+    "send_purchase_details": "id",
     "order_by_date": "desc",
     "per_page": "10",
 };
@@ -6016,17 +6016,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/sell" \
+    "http://localhost/pos/public/connector/api/sell" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"sells":[{"location_id":1,"contact_id":13,"transaction_date":"2020-07-22 15:48:29","invoice_no":"molestiae","source":"api, phone, woocommerce","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":12,"discount_amount":10,"discount_type":"fixed","sale_note":"in","staff_note":"quia","commission_agent":17,"shipping_details":"Express Delivery","shipping_address":"est","shipping_status":"ordered","delivered_to":"'Mr robin'","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":2,"pay_term_number":3,"pay_term_type":"months","is_suspend":false,"is_recurring":0,"recur_interval":11,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"nobis","recur_repetitions":1,"rp_redeemed":16,"rp_redeemed_amount":13.5,"types_of_service_id":18,"service_custom_field_1":"velit","service_custom_field_2":"consequatur","service_custom_field_3":"velit","service_custom_field_4":"veniam","service_custom_field_5":"consequatur","service_custom_field_6":"qui","round_off_amount":80190.35,"table_id":4,"service_staff_id":7,"change_return":0,"products":[{"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":0,"discount_amount":0,"discount_type":"percentage","sub_unit_id":15,"note":"harum"}],"payments":[{"amount":453.13,"method":"cash","account_id":9,"card_number":"aspernatur","card_holder_name":"nesciunt","card_transaction_number":"molestiae","card_type":"dolor","card_month":"perferendis","card_year":"pariatur","card_security":"maxime","transaction_no_1":"maxime","transaction_no_2":"dolor","transaction_no_3":"et","bank_account_number":"omnis","note":"ullam","cheque_number":"qui"}]}]}'
+    -d '{"sells":[{"location_id":1,"contact_id":5,"transaction_date":"2020-07-22 15:48:29","invoice_no":"id","source":"api, phone, woocommerce","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":5,"discount_amount":10,"discount_type":"fixed","sale_note":"aut","staff_note":"accusamus","commission_agent":11,"shipping_details":"Express Delivery","shipping_address":"ab","shipping_status":"ordered","delivered_to":"'Mr robin'","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":16,"pay_term_number":3,"pay_term_type":"months","is_suspend":false,"is_recurring":0,"recur_interval":9,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"labore","recur_repetitions":14,"rp_redeemed":4,"rp_redeemed_amount":13.5,"types_of_service_id":12,"service_custom_field_1":"iusto","service_custom_field_2":"eum","service_custom_field_3":"tempore","service_custom_field_4":"vero","service_custom_field_5":"voluptas","service_custom_field_6":"commodi","round_off_amount":4.9023637,"table_id":2,"service_staff_id":15,"change_return":0,"products":[{"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":0,"discount_amount":0,"discount_type":"percentage","sub_unit_id":5,"note":"voluptatibus"}],"payments":[{"amount":453.13,"method":"cash","account_id":5,"card_number":"quisquam","card_holder_name":"cum","card_transaction_number":"libero","card_type":"corporis","card_month":"sit","card_year":"quisquam","card_security":"reprehenderit","transaction_no_1":"et","transaction_no_2":"est","transaction_no_3":"natus","bank_account_number":"totam","note":"possimus","cheque_number":"voluptas"}]}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/sell"
+    "http://localhost/pos/public/connector/api/sell"
 );
 
 let headers = {
@@ -6039,48 +6039,48 @@ let body = {
     "sells": [
         {
             "location_id": 1,
-            "contact_id": 13,
+            "contact_id": 5,
             "transaction_date": "2020-07-22 15:48:29",
-            "invoice_no": "molestiae",
+            "invoice_no": "id",
             "source": "api, phone, woocommerce",
             "status": "final",
             "sub_status": "null",
             "is_quotation": true,
-            "tax_rate_id": 12,
+            "tax_rate_id": 5,
             "discount_amount": 10,
             "discount_type": "fixed",
-            "sale_note": "in",
-            "staff_note": "quia",
-            "commission_agent": 17,
+            "sale_note": "aut",
+            "staff_note": "accusamus",
+            "commission_agent": 11,
             "shipping_details": "Express Delivery",
-            "shipping_address": "est",
+            "shipping_address": "ab",
             "shipping_status": "ordered",
             "delivered_to": "'Mr robin'",
             "shipping_charges": 10,
             "packing_charge": 10,
             "exchange_rate": 1,
-            "selling_price_group_id": 2,
+            "selling_price_group_id": 16,
             "pay_term_number": 3,
             "pay_term_type": "months",
             "is_suspend": false,
             "is_recurring": 0,
-            "recur_interval": 11,
+            "recur_interval": 9,
             "recur_interval_type": "months",
             "subscription_repeat_on": 15,
-            "subscription_no": "nobis",
-            "recur_repetitions": 1,
-            "rp_redeemed": 16,
+            "subscription_no": "labore",
+            "recur_repetitions": 14,
+            "rp_redeemed": 4,
             "rp_redeemed_amount": 13.5,
-            "types_of_service_id": 18,
-            "service_custom_field_1": "velit",
-            "service_custom_field_2": "consequatur",
-            "service_custom_field_3": "velit",
-            "service_custom_field_4": "veniam",
-            "service_custom_field_5": "consequatur",
-            "service_custom_field_6": "qui",
-            "round_off_amount": 80190.35,
-            "table_id": 4,
-            "service_staff_id": 7,
+            "types_of_service_id": 12,
+            "service_custom_field_1": "iusto",
+            "service_custom_field_2": "eum",
+            "service_custom_field_3": "tempore",
+            "service_custom_field_4": "vero",
+            "service_custom_field_5": "voluptas",
+            "service_custom_field_6": "commodi",
+            "round_off_amount": 4.9023637,
+            "table_id": 2,
+            "service_staff_id": 15,
             "change_return": 0,
             "products": [
                 {
@@ -6091,28 +6091,28 @@ let body = {
                     "tax_rate_id": 0,
                     "discount_amount": 0,
                     "discount_type": "percentage",
-                    "sub_unit_id": 15,
-                    "note": "harum"
+                    "sub_unit_id": 5,
+                    "note": "voluptatibus"
                 }
             ],
             "payments": [
                 {
                     "amount": 453.13,
                     "method": "cash",
-                    "account_id": 9,
-                    "card_number": "aspernatur",
-                    "card_holder_name": "nesciunt",
-                    "card_transaction_number": "molestiae",
-                    "card_type": "dolor",
-                    "card_month": "perferendis",
-                    "card_year": "pariatur",
-                    "card_security": "maxime",
-                    "transaction_no_1": "maxime",
-                    "transaction_no_2": "dolor",
-                    "transaction_no_3": "et",
-                    "bank_account_number": "omnis",
-                    "note": "ullam",
-                    "cheque_number": "qui"
+                    "account_id": 5,
+                    "card_number": "quisquam",
+                    "card_holder_name": "cum",
+                    "card_transaction_number": "libero",
+                    "card_type": "corporis",
+                    "card_month": "sit",
+                    "card_year": "quisquam",
+                    "card_security": "reprehenderit",
+                    "transaction_no_1": "et",
+                    "transaction_no_2": "est",
+                    "transaction_no_3": "natus",
+                    "bank_account_number": "totam",
+                    "note": "possimus",
+                    "cheque_number": "voluptas"
                 }
             ]
         }
@@ -6387,7 +6387,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/sell/55?send_purchase_details=vitae" \
+    -G "http://localhost/pos/public/connector/api/sell/55?send_purchase_details=optio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -6395,11 +6395,11 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/sell/55"
+    "http://localhost/pos/public/connector/api/sell/55"
 );
 
 let params = {
-    "send_purchase_details": "vitae",
+    "send_purchase_details": "optio",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -6613,17 +6613,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "https://nacionalcode.org/possaas/public/connector/api/sell/6" \
+    "http://localhost/pos/public/connector/api/sell/6" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":19,"transaction_date":"2020-5-7 15:20:22","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":3,"discount_amount":10,"discount_type":"fixed","sale_note":"perspiciatis","source":"id","staff_note":"ea","is_suspend":false,"commission_agent":14,"shipping_details":"Express Delivery","shipping_address":"enim","shipping_status":"ordered","delivered_to":"Mr Robin","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":17,"pay_term_number":15,"pay_term_type":"months","is_recurring":0,"recur_interval":18,"recur_interval_type":"days","subscription_repeat_on":7,"subscription_no":"rerum","recur_repetitions":7,"rp_redeemed":19,"rp_redeemed_amount":13.5,"types_of_service_id":19,"service_custom_field_1":"tenetur","service_custom_field_2":"at","service_custom_field_3":"nemo","service_custom_field_4":"odit","service_custom_field_5":"hic","service_custom_field_6":"et","round_off_amount":127240236.132996,"table_id":2,"service_staff_id":8,"change_return":0,"change_return_id":9,"products":[{"sell_line_id":19,"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":15,"discount_amount":0,"discount_type":"percentage","sub_unit_id":4,"note":"sed"}],"payments":[{"payment_id":2,"amount":453.13,"method":"cash","account_id":19,"card_number":"voluptatibus","card_holder_name":"tenetur","card_transaction_number":"voluptatibus","card_type":"quae","card_month":"hic","card_year":"aliquid","card_security":"occaecati","transaction_no_1":"voluptatem","transaction_no_2":"quod","transaction_no_3":"eius","note":"reprehenderit","cheque_number":"magnam","bank_account_number":"id"}]}'
+    -d '{"contact_id":16,"transaction_date":"2020-5-7 15:20:22","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":19,"discount_amount":10,"discount_type":"fixed","sale_note":"eligendi","source":"magni","staff_note":"laborum","is_suspend":false,"commission_agent":7,"shipping_details":"Express Delivery","shipping_address":"ducimus","shipping_status":"ordered","delivered_to":"Mr Robin","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":8,"pay_term_number":1,"pay_term_type":"months","is_recurring":0,"recur_interval":19,"recur_interval_type":"days","subscription_repeat_on":7,"subscription_no":"recusandae","recur_repetitions":17,"rp_redeemed":6,"rp_redeemed_amount":13.5,"types_of_service_id":19,"service_custom_field_1":"dolores","service_custom_field_2":"veniam","service_custom_field_3":"libero","service_custom_field_4":"quia","service_custom_field_5":"nihil","service_custom_field_6":"et","round_off_amount":43979.13305,"table_id":5,"service_staff_id":14,"change_return":0,"change_return_id":17,"products":[{"sell_line_id":11,"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":16,"discount_amount":0,"discount_type":"percentage","sub_unit_id":16,"note":"dolorem"}],"payments":[{"payment_id":14,"amount":453.13,"method":"cash","account_id":15,"card_number":"saepe","card_holder_name":"neque","card_transaction_number":"qui","card_type":"corporis","card_month":"perferendis","card_year":"aut","card_security":"porro","transaction_no_1":"suscipit","transaction_no_2":"sit","transaction_no_3":"est","note":"quia","cheque_number":"eaque","bank_account_number":"ullam"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/sell/6"
+    "http://localhost/pos/public/connector/api/sell/6"
 );
 
 let headers = {
@@ -6633,82 +6633,82 @@ let headers = {
 };
 
 let body = {
-    "contact_id": 19,
+    "contact_id": 16,
     "transaction_date": "2020-5-7 15:20:22",
     "status": "final",
     "sub_status": "null",
     "is_quotation": true,
-    "tax_rate_id": 3,
+    "tax_rate_id": 19,
     "discount_amount": 10,
     "discount_type": "fixed",
-    "sale_note": "perspiciatis",
-    "source": "id",
-    "staff_note": "ea",
+    "sale_note": "eligendi",
+    "source": "magni",
+    "staff_note": "laborum",
     "is_suspend": false,
-    "commission_agent": 14,
+    "commission_agent": 7,
     "shipping_details": "Express Delivery",
-    "shipping_address": "enim",
+    "shipping_address": "ducimus",
     "shipping_status": "ordered",
     "delivered_to": "Mr Robin",
     "shipping_charges": 10,
     "packing_charge": 10,
     "exchange_rate": 1,
-    "selling_price_group_id": 17,
-    "pay_term_number": 15,
+    "selling_price_group_id": 8,
+    "pay_term_number": 1,
     "pay_term_type": "months",
     "is_recurring": 0,
-    "recur_interval": 18,
+    "recur_interval": 19,
     "recur_interval_type": "days",
     "subscription_repeat_on": 7,
-    "subscription_no": "rerum",
-    "recur_repetitions": 7,
-    "rp_redeemed": 19,
+    "subscription_no": "recusandae",
+    "recur_repetitions": 17,
+    "rp_redeemed": 6,
     "rp_redeemed_amount": 13.5,
     "types_of_service_id": 19,
-    "service_custom_field_1": "tenetur",
-    "service_custom_field_2": "at",
-    "service_custom_field_3": "nemo",
-    "service_custom_field_4": "odit",
-    "service_custom_field_5": "hic",
+    "service_custom_field_1": "dolores",
+    "service_custom_field_2": "veniam",
+    "service_custom_field_3": "libero",
+    "service_custom_field_4": "quia",
+    "service_custom_field_5": "nihil",
     "service_custom_field_6": "et",
-    "round_off_amount": 127240236.132996,
-    "table_id": 2,
-    "service_staff_id": 8,
+    "round_off_amount": 43979.13305,
+    "table_id": 5,
+    "service_staff_id": 14,
     "change_return": 0,
-    "change_return_id": 9,
+    "change_return_id": 17,
     "products": [
         {
-            "sell_line_id": 19,
+            "sell_line_id": 11,
             "product_id": 17,
             "variation_id": 58,
             "quantity": 1,
             "unit_price": 437.5,
-            "tax_rate_id": 15,
+            "tax_rate_id": 16,
             "discount_amount": 0,
             "discount_type": "percentage",
-            "sub_unit_id": 4,
-            "note": "sed"
+            "sub_unit_id": 16,
+            "note": "dolorem"
         }
     ],
     "payments": [
         {
-            "payment_id": 2,
+            "payment_id": 14,
             "amount": 453.13,
             "method": "cash",
-            "account_id": 19,
-            "card_number": "voluptatibus",
-            "card_holder_name": "tenetur",
-            "card_transaction_number": "voluptatibus",
-            "card_type": "quae",
-            "card_month": "hic",
-            "card_year": "aliquid",
-            "card_security": "occaecati",
-            "transaction_no_1": "voluptatem",
-            "transaction_no_2": "quod",
-            "transaction_no_3": "eius",
-            "note": "reprehenderit",
-            "cheque_number": "magnam",
-            "bank_account_number": "id"
+            "account_id": 15,
+            "card_number": "saepe",
+            "card_holder_name": "neque",
+            "card_transaction_number": "qui",
+            "card_type": "corporis",
+            "card_month": "perferendis",
+            "card_year": "aut",
+            "card_security": "porro",
+            "transaction_no_1": "suscipit",
+            "transaction_no_2": "sit",
+            "transaction_no_3": "est",
+            "note": "quia",
+            "cheque_number": "eaque",
+            "bank_account_number": "ullam"
         }
     ]
 }
@@ -6958,7 +6958,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X DELETE \
-    "https://nacionalcode.org/possaas/public/connector/api/sell/non" \
+    "http://localhost/pos/public/connector/api/sell/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -6966,7 +6966,7 @@ curl -X DELETE \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/sell/non"
+    "http://localhost/pos/public/connector/api/sell/reiciendis"
 );
 
 let headers = {
@@ -7004,17 +7004,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/sell-return" \
+    "http://localhost/pos/public/connector/api/sell-return" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"transaction_id":5,"transaction_date":"2020-5-7 15:20:22","invoice_no":"sit","discount_amount":10,"discount_type":"fixed","products":[{"sell_line_id":2,"quantity":1,"unit_price_inc_tax":437.5}]}'
+    -d '{"transaction_id":1,"transaction_date":"2020-5-7 15:20:22","invoice_no":"non","discount_amount":10,"discount_type":"fixed","products":[{"sell_line_id":18,"quantity":1,"unit_price_inc_tax":437.5}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/sell-return"
+    "http://localhost/pos/public/connector/api/sell-return"
 );
 
 let headers = {
@@ -7024,14 +7024,14 @@ let headers = {
 };
 
 let body = {
-    "transaction_id": 5,
+    "transaction_id": 1,
     "transaction_date": "2020-5-7 15:20:22",
-    "invoice_no": "sit",
+    "invoice_no": "non",
     "discount_amount": 10,
     "discount_type": "fixed",
     "products": [
         {
-            "sell_line_id": 2,
+            "sell_line_id": 18,
             "quantity": 1,
             "unit_price_inc_tax": 437.5
         }
@@ -7179,7 +7179,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/list-sell-return" \
+    -G "http://localhost/pos/public/connector/api/list-sell-return" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7187,7 +7187,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/list-sell-return"
+    "http://localhost/pos/public/connector/api/list-sell-return"
 );
 
 let headers = {
@@ -7506,17 +7506,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/update-shipping-status" \
+    "http://localhost/pos/public/connector/api/update-shipping-status" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"id":12,"shipping_status":"ordered","delivered_to":"nesciunt"}'
+    -d '{"id":8,"shipping_status":"ordered","delivered_to":"nemo"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/update-shipping-status"
+    "http://localhost/pos/public/connector/api/update-shipping-status"
 );
 
 let headers = {
@@ -7526,9 +7526,9 @@ let headers = {
 };
 
 let body = {
-    "id": 12,
+    "id": 8,
     "shipping_status": "ordered",
-    "delivered_to": "nesciunt"
+    "delivered_to": "nemo"
 }
 
 fetch(url, {
@@ -7565,7 +7565,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/active-subscription" \
+    -G "http://localhost/pos/public/connector/api/active-subscription" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7573,7 +7573,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/active-subscription"
+    "http://localhost/pos/public/connector/api/active-subscription"
 );
 
 let headers = {
@@ -7641,7 +7641,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/packages" \
+    -G "http://localhost/pos/public/connector/api/packages" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7649,7 +7649,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/packages"
+    "http://localhost/pos/public/connector/api/packages"
 );
 
 let headers = {
@@ -7802,7 +7802,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/table?location_id=1" \
+    -G "http://localhost/pos/public/connector/api/table?location_id=1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7810,7 +7810,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/table"
+    "http://localhost/pos/public/connector/api/table"
 );
 
 let params = {
@@ -7873,7 +7873,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/table/5" \
+    -G "http://localhost/pos/public/connector/api/table/5" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7881,7 +7881,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/table/5"
+    "http://localhost/pos/public/connector/api/table/5"
 );
 
 let headers = {
@@ -7941,7 +7941,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/tax" \
+    -G "http://localhost/pos/public/connector/api/tax" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7949,7 +7949,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/tax"
+    "http://localhost/pos/public/connector/api/tax"
 );
 
 let headers = {
@@ -8038,7 +8038,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/tax/1" \
+    -G "http://localhost/pos/public/connector/api/tax/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8046,7 +8046,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/tax/1"
+    "http://localhost/pos/public/connector/api/tax/1"
 );
 
 let headers = {
@@ -8107,7 +8107,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/taxonomy?type=in" \
+    -G "http://localhost/pos/public/connector/api/taxonomy?type=sapiente" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8115,11 +8115,11 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/taxonomy"
+    "http://localhost/pos/public/connector/api/taxonomy"
 );
 
 let params = {
-    "type": "in",
+    "type": "sapiente",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -8230,7 +8230,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/taxonomy/1" \
+    -G "http://localhost/pos/public/connector/api/taxonomy/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8238,7 +8238,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/taxonomy/1"
+    "http://localhost/pos/public/connector/api/taxonomy/1"
 );
 
 let headers = {
@@ -8334,7 +8334,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/types-of-service" \
+    -G "http://localhost/pos/public/connector/api/types-of-service" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8342,7 +8342,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/types-of-service"
+    "http://localhost/pos/public/connector/api/types-of-service"
 );
 
 let headers = {
@@ -8397,7 +8397,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/types-of-service/1" \
+    -G "http://localhost/pos/public/connector/api/types-of-service/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8405,7 +8405,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/types-of-service/1"
+    "http://localhost/pos/public/connector/api/types-of-service/1"
 );
 
 let headers = {
@@ -8468,7 +8468,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/unit" \
+    -G "http://localhost/pos/public/connector/api/unit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8476,7 +8476,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/unit"
+    "http://localhost/pos/public/connector/api/unit"
 );
 
 let headers = {
@@ -8571,7 +8571,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/unit/1" \
+    -G "http://localhost/pos/public/connector/api/unit/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8579,7 +8579,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/unit/1"
+    "http://localhost/pos/public/connector/api/unit/1"
 );
 
 let headers = {
@@ -8642,7 +8642,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/user/loggedin" \
+    -G "http://localhost/pos/public/connector/api/user/loggedin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8650,7 +8650,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/user/loggedin"
+    "http://localhost/pos/public/connector/api/user/loggedin"
 );
 
 let headers = {
@@ -8733,17 +8733,17 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/user-registration" \
+    "http://localhost/pos/public/connector/api/user-registration" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"surname":"aperiam","first_name":"ullam","last_name":"vel","email":"molestias","is_active":"quidem","user_type":"voluptatem","crm_contact_id":18,"allow_login":true,"username":"sit","password":"quo","role":10,"access_all_locations":true,"location_permissions":[],"cmmsn_percent":"labore","max_sales_discount_percent":"ipsa","selected_contacts":true,"selected_contact_ids":[],"dob":"dolorum","gender":"dignissimos","marital_status":"officia","blood_group":"voluptas","contact_number":"nihil","alt_number":"consequatur","family_number":"impedit","fb_link":"dolorum","twitter_link":"explicabo","social_media_1":"deleniti","social_media_2":"et","custom_field_1":"qui","custom_field_2":"cumque","custom_field_3":"facilis","custom_field_4":"officiis","guardian_name":"vitae","id_proof_name":"expedita","id_proof_number":"id","permanent_address":"quam","current_address":"repudiandae","bank_details":[{"account_holder_name":"quasi","account_number":"dolores","bank_name":"ullam","bank_code":"in","branch":"ab","tax_payer_id":"molestiae"}]}'
+    -d '{"surname":"minus","first_name":"illum","last_name":"inventore","email":"iure","is_active":"ut","user_type":"aliquid","crm_contact_id":15,"allow_login":false,"username":"assumenda","password":"inventore","role":6,"access_all_locations":true,"location_permissions":[],"cmmsn_percent":"delectus","max_sales_discount_percent":"qui","selected_contacts":true,"selected_contact_ids":[],"dob":"id","gender":"assumenda","marital_status":"ducimus","blood_group":"eius","contact_number":"eius","alt_number":"ut","family_number":"est","fb_link":"dolorum","twitter_link":"qui","social_media_1":"dolorem","social_media_2":"recusandae","custom_field_1":"consectetur","custom_field_2":"voluptates","custom_field_3":"non","custom_field_4":"minima","guardian_name":"aliquid","id_proof_name":"laborum","id_proof_number":"maxime","permanent_address":"sit","current_address":"unde","bank_details":[{"account_holder_name":"eos","account_number":"ea","bank_name":"non","bank_code":"cupiditate","branch":"aliquam","tax_payer_id":"temporibus"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/user-registration"
+    "http://localhost/pos/public/connector/api/user-registration"
 );
 
 let headers = {
@@ -8753,51 +8753,51 @@ let headers = {
 };
 
 let body = {
-    "surname": "aperiam",
-    "first_name": "ullam",
-    "last_name": "vel",
-    "email": "molestias",
-    "is_active": "quidem",
-    "user_type": "voluptatem",
-    "crm_contact_id": 18,
-    "allow_login": true,
-    "username": "sit",
-    "password": "quo",
-    "role": 10,
+    "surname": "minus",
+    "first_name": "illum",
+    "last_name": "inventore",
+    "email": "iure",
+    "is_active": "ut",
+    "user_type": "aliquid",
+    "crm_contact_id": 15,
+    "allow_login": false,
+    "username": "assumenda",
+    "password": "inventore",
+    "role": 6,
     "access_all_locations": true,
     "location_permissions": [],
-    "cmmsn_percent": "labore",
-    "max_sales_discount_percent": "ipsa",
+    "cmmsn_percent": "delectus",
+    "max_sales_discount_percent": "qui",
     "selected_contacts": true,
     "selected_contact_ids": [],
-    "dob": "dolorum",
-    "gender": "dignissimos",
-    "marital_status": "officia",
-    "blood_group": "voluptas",
-    "contact_number": "nihil",
-    "alt_number": "consequatur",
-    "family_number": "impedit",
+    "dob": "id",
+    "gender": "assumenda",
+    "marital_status": "ducimus",
+    "blood_group": "eius",
+    "contact_number": "eius",
+    "alt_number": "ut",
+    "family_number": "est",
     "fb_link": "dolorum",
-    "twitter_link": "explicabo",
-    "social_media_1": "deleniti",
-    "social_media_2": "et",
-    "custom_field_1": "qui",
-    "custom_field_2": "cumque",
-    "custom_field_3": "facilis",
-    "custom_field_4": "officiis",
-    "guardian_name": "vitae",
-    "id_proof_name": "expedita",
-    "id_proof_number": "id",
-    "permanent_address": "quam",
-    "current_address": "repudiandae",
+    "twitter_link": "qui",
+    "social_media_1": "dolorem",
+    "social_media_2": "recusandae",
+    "custom_field_1": "consectetur",
+    "custom_field_2": "voluptates",
+    "custom_field_3": "non",
+    "custom_field_4": "minima",
+    "guardian_name": "aliquid",
+    "id_proof_name": "laborum",
+    "id_proof_number": "maxime",
+    "permanent_address": "sit",
+    "current_address": "unde",
     "bank_details": [
         {
-            "account_holder_name": "quasi",
-            "account_number": "dolores",
-            "bank_name": "ullam",
-            "bank_code": "in",
-            "branch": "ab",
-            "tax_payer_id": "molestiae"
+            "account_holder_name": "eos",
+            "account_number": "ea",
+            "bank_name": "non",
+            "bank_code": "cupiditate",
+            "branch": "aliquam",
+            "tax_payer_id": "temporibus"
         }
     ]
 }
@@ -8920,7 +8920,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/user?service_staff=rem" \
+    -G "http://localhost/pos/public/connector/api/user?service_staff=velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8928,11 +8928,11 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/user"
+    "http://localhost/pos/public/connector/api/user"
 );
 
 let params = {
-    "service_staff": "rem",
+    "service_staff": "velit",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -9024,7 +9024,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/user/1" \
+    -G "http://localhost/pos/public/connector/api/user/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9032,7 +9032,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/user/1"
+    "http://localhost/pos/public/connector/api/user/1"
 );
 
 let headers = {
@@ -9122,17 +9122,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/update-password" \
+    "http://localhost/pos/public/connector/api/update-password" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"current_password":"earum","new_password":"et"}'
+    -d '{"current_password":"hic","new_password":"dolorem"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/update-password"
+    "http://localhost/pos/public/connector/api/update-password"
 );
 
 let headers = {
@@ -9142,8 +9142,8 @@ let headers = {
 };
 
 let body = {
-    "current_password": "earum",
-    "new_password": "et"
+    "current_password": "hic",
+    "new_password": "dolorem"
 }
 
 fetch(url, {
@@ -9184,17 +9184,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "https://nacionalcode.org/possaas/public/connector/api/forget-password" \
+    "http://localhost/pos/public/connector/api/forget-password" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"email":"architecto"}'
+    -d '{"email":"ex"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/forget-password"
+    "http://localhost/pos/public/connector/api/forget-password"
 );
 
 let headers = {
@@ -9204,7 +9204,7 @@ let headers = {
 };
 
 let body = {
-    "email": "architecto"
+    "email": "ex"
 }
 
 fetch(url, {
@@ -9247,7 +9247,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/payment-accounts" \
+    -G "http://localhost/pos/public/connector/api/payment-accounts" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9255,7 +9255,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/payment-accounts"
+    "http://localhost/pos/public/connector/api/payment-accounts"
 );
 
 let headers = {
@@ -9309,7 +9309,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/payment-methods" \
+    -G "http://localhost/pos/public/connector/api/payment-methods" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9317,7 +9317,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/payment-methods"
+    "http://localhost/pos/public/connector/api/payment-methods"
 );
 
 let headers = {
@@ -9364,7 +9364,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/business-details" \
+    -G "http://localhost/pos/public/connector/api/business-details" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9372,7 +9372,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/business-details"
+    "http://localhost/pos/public/connector/api/business-details"
 );
 
 let headers = {
@@ -9717,7 +9717,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/profit-loss-report?location_id=1&start_date=2018-06-25&end_date=2018-06-25&user_id=1" \
+    -G "http://localhost/pos/public/connector/api/profit-loss-report?location_id=1&start_date=2018-06-25&end_date=2018-06-25&user_id=1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9725,7 +9725,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/profit-loss-report"
+    "http://localhost/pos/public/connector/api/profit-loss-report"
 );
 
 let params = {
@@ -9815,7 +9815,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/product-stock-report" \
+    -G "http://localhost/pos/public/connector/api/product-stock-report" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9823,7 +9823,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/product-stock-report"
+    "http://localhost/pos/public/connector/api/product-stock-report"
 );
 
 let headers = {
@@ -9936,7 +9936,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/notifications" \
+    -G "http://localhost/pos/public/connector/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9944,7 +9944,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/notifications"
+    "http://localhost/pos/public/connector/api/notifications"
 );
 
 let headers = {
@@ -9992,7 +9992,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "https://nacionalcode.org/possaas/public/connector/api/get-location" \
+    -G "http://localhost/pos/public/connector/api/get-location" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
@@ -10002,7 +10002,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "https://nacionalcode.org/possaas/public/connector/api/get-location"
+    "http://localhost/pos/public/connector/api/get-location"
 );
 
 let headers = {

@@ -204,6 +204,13 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->registerCommands();
+
+        if (config('app.debug')) {
+            error_reporting(E_ALL & ~E_USER_DEPRECATED);
+        } else {
+            error_reporting(0);
+        }
+        
     }
 
     /**

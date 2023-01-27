@@ -12,7 +12,7 @@ Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.c
 ### paso 2
 - correr sql del archivo system.sql
 - correr php artisan migrate --force
-- corre php artisan db: seed --force
+- corre php artisan db:seed
 
 ### paso 3
 - desde el frontend crear negocio con usuario luis.flores
