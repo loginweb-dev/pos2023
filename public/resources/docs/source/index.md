@@ -102,7 +102,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"user_id":1,"clock_in_time":"2000-06-13 13:13:00","clock_in_note":"aspernatur","ip_address":"dolore","latitude":"laudantium","longitude":"ut"}'
+    -d '{"user_id":1,"clock_in_time":"2000-06-13 13:13:00","clock_in_note":"eos","ip_address":"numquam","latitude":"sit","longitude":"et"}'
 
 ```
 
@@ -120,10 +120,10 @@ let headers = {
 let body = {
     "user_id": 1,
     "clock_in_time": "2000-06-13 13:13:00",
-    "clock_in_note": "aspernatur",
-    "ip_address": "dolore",
-    "latitude": "laudantium",
-    "longitude": "ut"
+    "clock_in_note": "eos",
+    "ip_address": "numquam",
+    "latitude": "sit",
+    "longitude": "et"
 }
 
 fetch(url, {
@@ -175,7 +175,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"user_id":1,"clock_out_time":"2000-06-13 13:13:00","clock_out_note":"non","latitude":"sequi","longitude":"eaque"}'
+    -d '{"user_id":1,"clock_out_time":"2000-06-13 13:13:00","clock_out_note":"beatae","latitude":"facere","longitude":"sint"}'
 
 ```
 
@@ -193,9 +193,9 @@ let headers = {
 let body = {
     "user_id": 1,
     "clock_out_time": "2000-06-13 13:13:00",
-    "clock_out_note": "non",
-    "latitude": "sequi",
-    "longitude": "eaque"
+    "clock_out_note": "beatae",
+    "latitude": "facere",
+    "longitude": "sint"
 }
 
 fetch(url, {
@@ -710,7 +710,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/crm/follow-ups?start_date=2020-12-16&end_date=2020-12-16&status=maxime&follow_up_type=occaecati&order_by=start_datetime&direction=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/crm/follow-ups?start_date=2020-12-16&end_date=2020-12-16&status=et&follow_up_type=magni&order_by=start_datetime&direction=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -724,8 +724,8 @@ const url = new URL(
 let params = {
     "start_date": "2020-12-16",
     "end_date": "2020-12-16",
-    "status": "maxime",
-    "follow_up_type": "occaecati",
+    "status": "et",
+    "follow_up_type": "magni",
     "order_by": "start_datetime",
     "direction": "desc",
     "per_page": "10",
@@ -953,7 +953,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"title":"Meeting with client","contact_id":2,"description":"ratione","schedule_type":"sit","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","followup_additional_info":"['call duration' => '1 hour']","allow_notification":true}'
+    -d '{"title":"Meeting with client","contact_id":2,"description":"suscipit","schedule_type":"at","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","followup_additional_info":"['call duration' => '1 hour']","allow_notification":true}'
 
 ```
 
@@ -971,8 +971,8 @@ let headers = {
 let body = {
     "title": "Meeting with client",
     "contact_id": 2,
-    "description": "ratione",
-    "schedule_type": "sit",
+    "description": "suscipit",
+    "schedule_type": "at",
     "user_id": "[2,3,5]",
     "notify_before": 5,
     "notify_type": "minute",
@@ -1235,7 +1235,7 @@ curl -X PUT \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"title":"Meeting with client","contact_id":2,"description":"sed","schedule_type":"inventore","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","followup_additional_info":"['call duration' => '1 hour']","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","allow_notification":true}'
+    -d '{"title":"Meeting with client","contact_id":2,"description":"sed","schedule_type":"mollitia","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","followup_additional_info":"['call duration' => '1 hour']","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","allow_notification":true}'
 
 ```
 
@@ -1254,7 +1254,7 @@ let body = {
     "title": "Meeting with client",
     "contact_id": 2,
     "description": "sed",
-    "schedule_type": "inventore",
+    "schedule_type": "mollitia",
     "user_id": "[2,3,5]",
     "notify_before": 5,
     "notify_type": "minute",
@@ -1411,7 +1411,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/crm/leads?assigned_to=1%2C2%2C3&name=vel&biz_name=quia&mobile_num=8&contact_id=nam&order_by=atque&direction=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/crm/leads?assigned_to=1%2C2%2C3&name=qui&biz_name=ut&mobile_num=2&contact_id=nulla&order_by=adipisci&direction=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1424,11 +1424,11 @@ const url = new URL(
 
 let params = {
     "assigned_to": "1,2,3",
-    "name": "vel",
-    "biz_name": "quia",
-    "mobile_num": "8",
-    "contact_id": "nam",
-    "order_by": "atque",
+    "name": "qui",
+    "biz_name": "ut",
+    "mobile_num": "2",
+    "contact_id": "nulla",
+    "order_by": "adipisci",
     "direction": "desc",
     "per_page": "10",
 };
@@ -1836,7 +1836,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"call_logs":[{"mobile_number":"ducimus","mobile_name":"tempore","call_type":"call","start_time":"delectus","end_time":"iste","duration":"minima"}]}'
+    -d '{"call_logs":[{"mobile_number":"aliquam","mobile_name":"fugiat","call_type":"call","start_time":"dolorum","end_time":"aut","duration":"in"}]}'
 
 ```
 
@@ -1854,12 +1854,12 @@ let headers = {
 let body = {
     "call_logs": [
         {
-            "mobile_number": "ducimus",
-            "mobile_name": "tempore",
+            "mobile_number": "aliquam",
+            "mobile_name": "fugiat",
             "call_type": "call",
-            "start_time": "delectus",
-            "end_time": "iste",
-            "duration": "minima"
+            "start_time": "dolorum",
+            "end_time": "aut",
+            "duration": "in"
         }
     ]
 }
@@ -2053,7 +2053,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"location_id":1,"initial_amount":82.331378,"created_at":"2020-5-7 15:20:22","closed_at":"2020-5-7 15:20:22","status":"close","closing_amount":2.417,"total_card_slips":10,"total_cheques":18,"closing_note":"rerum","transaction_ids":"1,2,3"}'
+    -d '{"location_id":1,"initial_amount":1734.79548842,"created_at":"2020-5-7 15:20:22","closed_at":"2020-5-7 15:20:22","status":"close","closing_amount":1.3849,"total_card_slips":3,"total_cheques":20,"closing_note":"accusantium","transaction_ids":"1,2,3"}'
 
 ```
 
@@ -2070,14 +2070,14 @@ let headers = {
 
 let body = {
     "location_id": 1,
-    "initial_amount": 82.331378,
+    "initial_amount": 1734.79548842,
     "created_at": "2020-5-7 15:20:22",
     "closed_at": "2020-5-7 15:20:22",
     "status": "close",
-    "closing_amount": 2.417,
-    "total_card_slips": 10,
-    "total_cheques": 18,
-    "closing_note": "rerum",
+    "closing_amount": 1.3849,
+    "total_card_slips": 3,
+    "total_cheques": 20,
+    "closing_note": "accusantium",
     "transaction_ids": "1,2,3"
 }
 
@@ -2214,7 +2214,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/contactapi?type=iure&name=provident&biz_name=ullam&mobile_num=4&contact_id=velit&order_by=ipsa&direction=non&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/contactapi?type=officiis&name=qui&biz_name=officia&mobile_num=3&contact_id=ipsum&order_by=libero&direction=impedit&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2226,13 +2226,13 @@ const url = new URL(
 );
 
 let params = {
-    "type": "iure",
-    "name": "provident",
-    "biz_name": "ullam",
-    "mobile_num": "4",
-    "contact_id": "velit",
-    "order_by": "ipsa",
-    "direction": "non",
+    "type": "officiis",
+    "name": "qui",
+    "biz_name": "officia",
+    "mobile_num": "3",
+    "contact_id": "ipsum",
+    "order_by": "libero",
+    "direction": "impedit",
     "per_page": "10",
 };
 Object.keys(params)
@@ -2523,7 +2523,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"type":"customer","supplier_business_name":"omnis","prefix":"et","first_name":"nihil","middle_name":"tenetur","last_name":"omnis","tax_number":"8787fefef","pay_term_number":3,"pay_term_type":"months","mobile":"4578691009","landline":"5487-8454-4145","alternate_number":"841847541222","address_line_1":"ex","address_line_2":"eveniet","city":"consequatur","state":"minima","country":"corporis","zip_code":"veniam","customer_group_id":"quae","contact_id":"qui","dob":"2000-06-13","custom_field1":"voluptatibus","custom_field2":"pariatur","custom_field3":"atque","custom_field4":"dolor","email":"aliquid","shipping_address":"quia","position":"harum","opening_balance":0,"source_id":2,"life_stage_id":13,"assigned_to":[]}'
+    -d '{"type":"customer","supplier_business_name":"cumque","prefix":"ut","first_name":"modi","middle_name":"magni","last_name":"delectus","tax_number":"8787fefef","pay_term_number":3,"pay_term_type":"months","mobile":"4578691009","landline":"5487-8454-4145","alternate_number":"841847541222","address_line_1":"accusantium","address_line_2":"eos","city":"reiciendis","state":"dolorem","country":"laboriosam","zip_code":"et","customer_group_id":"rem","contact_id":"est","dob":"2000-06-13","custom_field1":"non","custom_field2":"modi","custom_field3":"aut","custom_field4":"corrupti","email":"eveniet","shipping_address":"eum","position":"repellendus","opening_balance":0,"source_id":5,"life_stage_id":16,"assigned_to":[]}'
 
 ```
 
@@ -2540,36 +2540,36 @@ let headers = {
 
 let body = {
     "type": "customer",
-    "supplier_business_name": "omnis",
-    "prefix": "et",
-    "first_name": "nihil",
-    "middle_name": "tenetur",
-    "last_name": "omnis",
+    "supplier_business_name": "cumque",
+    "prefix": "ut",
+    "first_name": "modi",
+    "middle_name": "magni",
+    "last_name": "delectus",
     "tax_number": "8787fefef",
     "pay_term_number": 3,
     "pay_term_type": "months",
     "mobile": "4578691009",
     "landline": "5487-8454-4145",
     "alternate_number": "841847541222",
-    "address_line_1": "ex",
-    "address_line_2": "eveniet",
-    "city": "consequatur",
-    "state": "minima",
-    "country": "corporis",
-    "zip_code": "veniam",
-    "customer_group_id": "quae",
-    "contact_id": "qui",
+    "address_line_1": "accusantium",
+    "address_line_2": "eos",
+    "city": "reiciendis",
+    "state": "dolorem",
+    "country": "laboriosam",
+    "zip_code": "et",
+    "customer_group_id": "rem",
+    "contact_id": "est",
     "dob": "2000-06-13",
-    "custom_field1": "voluptatibus",
-    "custom_field2": "pariatur",
-    "custom_field3": "atque",
-    "custom_field4": "dolor",
-    "email": "aliquid",
-    "shipping_address": "quia",
-    "position": "harum",
+    "custom_field1": "non",
+    "custom_field2": "modi",
+    "custom_field3": "aut",
+    "custom_field4": "corrupti",
+    "email": "eveniet",
+    "shipping_address": "eum",
+    "position": "repellendus",
     "opening_balance": 0,
-    "source_id": 2,
-    "life_stage_id": 13,
+    "source_id": 5,
+    "life_stage_id": 16,
     "assigned_to": []
 }
 
@@ -2773,7 +2773,7 @@ curl -X PUT \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"type":"customer","supplier_business_name":"id","prefix":"doloribus","first_name":"quae","middle_name":"ut","last_name":"deleniti","tax_number":"488744dwd","pay_term_number":3,"pay_term_type":"months","mobile":"8795461009","landline":"65484-848-848","alternate_number":"9898795220","address_line_1":"repudiandae","address_line_2":"molestiae","city":"illo","state":"labore","country":"at","zip_code":"sit","customer_group_id":"labore","contact_id":"eaque","dob":"2000-06-13","custom_field1":"nulla","custom_field2":"ipsa","custom_field3":"totam","custom_field4":"voluptas","email":"consequuntur","shipping_address":"velit","position":"vitae","opening_balance":10.3,"source_id":15,"life_stage_id":3,"assigned_to":[]}'
+    -d '{"type":"customer","supplier_business_name":"vitae","prefix":"natus","first_name":"exercitationem","middle_name":"ea","last_name":"quo","tax_number":"488744dwd","pay_term_number":3,"pay_term_type":"months","mobile":"8795461009","landline":"65484-848-848","alternate_number":"9898795220","address_line_1":"suscipit","address_line_2":"quia","city":"eius","state":"suscipit","country":"dignissimos","zip_code":"rerum","customer_group_id":"voluptas","contact_id":"est","dob":"2000-06-13","custom_field1":"laudantium","custom_field2":"voluptas","custom_field3":"voluptas","custom_field4":"facere","email":"et","shipping_address":"odit","position":"quae","opening_balance":10.3,"source_id":15,"life_stage_id":18,"assigned_to":[]}'
 
 ```
 
@@ -2790,36 +2790,36 @@ let headers = {
 
 let body = {
     "type": "customer",
-    "supplier_business_name": "id",
-    "prefix": "doloribus",
-    "first_name": "quae",
-    "middle_name": "ut",
-    "last_name": "deleniti",
+    "supplier_business_name": "vitae",
+    "prefix": "natus",
+    "first_name": "exercitationem",
+    "middle_name": "ea",
+    "last_name": "quo",
     "tax_number": "488744dwd",
     "pay_term_number": 3,
     "pay_term_type": "months",
     "mobile": "8795461009",
     "landline": "65484-848-848",
     "alternate_number": "9898795220",
-    "address_line_1": "repudiandae",
-    "address_line_2": "molestiae",
-    "city": "illo",
-    "state": "labore",
-    "country": "at",
-    "zip_code": "sit",
-    "customer_group_id": "labore",
-    "contact_id": "eaque",
+    "address_line_1": "suscipit",
+    "address_line_2": "quia",
+    "city": "eius",
+    "state": "suscipit",
+    "country": "dignissimos",
+    "zip_code": "rerum",
+    "customer_group_id": "voluptas",
+    "contact_id": "est",
     "dob": "2000-06-13",
-    "custom_field1": "nulla",
-    "custom_field2": "ipsa",
-    "custom_field3": "totam",
-    "custom_field4": "voluptas",
-    "email": "consequuntur",
-    "shipping_address": "velit",
-    "position": "vitae",
+    "custom_field1": "laudantium",
+    "custom_field2": "voluptas",
+    "custom_field3": "voluptas",
+    "custom_field4": "facere",
+    "email": "et",
+    "shipping_address": "odit",
+    "position": "quae",
     "opening_balance": 10.3,
     "source_id": 15,
-    "life_stage_id": 3,
+    "life_stage_id": 18,
     "assigned_to": []
 }
 
@@ -2948,7 +2948,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":17,"amount":453.13,"method":"cash","paid_on":"2020-07-22 15:48:29","account_id":15,"card_number":"optio","card_holder_name":"temporibus","card_transaction_number":"quam","card_type":"veniam","card_month":"hic","card_year":"assumenda","card_security":"placeat","transaction_no_1":"distinctio","transaction_no_2":"eaque","transaction_no_3":"eveniet","cheque_number":"consequatur","bank_account_number":"voluptatum","note":"iste"}'
+    -d '{"contact_id":17,"amount":453.13,"method":"cash","paid_on":"2020-07-22 15:48:29","account_id":14,"card_number":"ratione","card_holder_name":"quia","card_transaction_number":"cumque","card_type":"labore","card_month":"ea","card_year":"praesentium","card_security":"aut","transaction_no_1":"soluta","transaction_no_2":"temporibus","transaction_no_3":"minima","cheque_number":"qui","bank_account_number":"laborum","note":"repellendus"}'
 
 ```
 
@@ -2968,20 +2968,20 @@ let body = {
     "amount": 453.13,
     "method": "cash",
     "paid_on": "2020-07-22 15:48:29",
-    "account_id": 15,
-    "card_number": "optio",
-    "card_holder_name": "temporibus",
-    "card_transaction_number": "quam",
-    "card_type": "veniam",
-    "card_month": "hic",
-    "card_year": "assumenda",
-    "card_security": "placeat",
-    "transaction_no_1": "distinctio",
-    "transaction_no_2": "eaque",
-    "transaction_no_3": "eveniet",
-    "cheque_number": "consequatur",
-    "bank_account_number": "voluptatum",
-    "note": "iste"
+    "account_id": 14,
+    "card_number": "ratione",
+    "card_holder_name": "quia",
+    "card_transaction_number": "cumque",
+    "card_type": "labore",
+    "card_month": "ea",
+    "card_year": "praesentium",
+    "card_security": "aut",
+    "transaction_no_1": "soluta",
+    "transaction_no_2": "temporibus",
+    "transaction_no_3": "minima",
+    "cheque_number": "qui",
+    "bank_account_number": "laborum",
+    "note": "repellendus"
 }
 
 fetch(url, {
@@ -3053,7 +3053,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/expense?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=ipsum&per_page=15" \
+    -G "http://localhost/pos/public/connector/api/expense?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=eos&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3069,7 +3069,7 @@ let params = {
     "payment_status": "paid",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "expense_for": "ipsum",
+    "expense_for": "eos",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3207,7 +3207,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"location_id":1,"final_total":294889.10404045,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":12,"expense_for":7,"contact_id":3,"expense_category_id":15,"expense_sub_category_id":2,"additional_notes":"et","is_refund":0,"is_recurring":0,"recur_interval":9,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"impedit","recur_repetitions":20,"payment":[{"amount":453.13,"method":"cash","account_id":7,"card_number":"doloribus","card_holder_name":"nesciunt","card_transaction_number":"numquam","card_type":"vel","card_month":"est","card_year":"dolores","card_security":"placeat","transaction_no_1":"laudantium","transaction_no_2":"quo","transaction_no_3":"iure","note":"eligendi","cheque_number":"praesentium"}]}'
+    -d '{"location_id":1,"final_total":58862.1649,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":17,"expense_for":5,"contact_id":14,"expense_category_id":3,"expense_sub_category_id":3,"additional_notes":"voluptates","is_refund":0,"is_recurring":0,"recur_interval":11,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"at","recur_repetitions":19,"payment":[{"amount":453.13,"method":"cash","account_id":10,"card_number":"fuga","card_holder_name":"excepturi","card_transaction_number":"amet","card_type":"et","card_month":"neque","card_year":"nesciunt","card_security":"in","transaction_no_1":"eius","transaction_no_2":"accusamus","transaction_no_3":"dolores","note":"reprehenderit","cheque_number":"sint"}]}'
 
 ```
 
@@ -3224,38 +3224,38 @@ let headers = {
 
 let body = {
     "location_id": 1,
-    "final_total": 294889.10404045,
+    "final_total": 58862.1649,
     "transaction_date": "2020-5-7 15:20:22",
-    "tax_rate_id": 12,
-    "expense_for": 7,
-    "contact_id": 3,
-    "expense_category_id": 15,
-    "expense_sub_category_id": 2,
-    "additional_notes": "et",
+    "tax_rate_id": 17,
+    "expense_for": 5,
+    "contact_id": 14,
+    "expense_category_id": 3,
+    "expense_sub_category_id": 3,
+    "additional_notes": "voluptates",
     "is_refund": 0,
     "is_recurring": 0,
-    "recur_interval": 9,
+    "recur_interval": 11,
     "recur_interval_type": "months",
     "subscription_repeat_on": 15,
-    "subscription_no": "impedit",
-    "recur_repetitions": 20,
+    "subscription_no": "at",
+    "recur_repetitions": 19,
     "payment": [
         {
             "amount": 453.13,
             "method": "cash",
-            "account_id": 7,
-            "card_number": "doloribus",
-            "card_holder_name": "nesciunt",
-            "card_transaction_number": "numquam",
-            "card_type": "vel",
-            "card_month": "est",
-            "card_year": "dolores",
-            "card_security": "placeat",
-            "transaction_no_1": "laudantium",
-            "transaction_no_2": "quo",
-            "transaction_no_3": "iure",
-            "note": "eligendi",
-            "cheque_number": "praesentium"
+            "account_id": 10,
+            "card_number": "fuga",
+            "card_holder_name": "excepturi",
+            "card_transaction_number": "amet",
+            "card_type": "et",
+            "card_month": "neque",
+            "card_year": "nesciunt",
+            "card_security": "in",
+            "transaction_no_1": "eius",
+            "transaction_no_2": "accusamus",
+            "transaction_no_3": "dolores",
+            "note": "reprehenderit",
+            "cheque_number": "sint"
         }
     ]
 }
@@ -3475,7 +3475,7 @@ curl -X PUT \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"final_total":21046.304161,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":2,"expense_for":15,"contact_id":15,"expense_category_id":19,"expense_sub_category_id":3,"additional_notes":"est","is_recurring":0,"recur_interval":17,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"iure","recur_repetitions":1,"payment":[]}'
+    -d '{"final_total":321.495161358,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":14,"expense_for":16,"contact_id":3,"expense_category_id":20,"expense_sub_category_id":6,"additional_notes":"autem","is_recurring":0,"recur_interval":12,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"animi","recur_repetitions":2,"payment":[]}'
 
 ```
 
@@ -3491,20 +3491,20 @@ let headers = {
 };
 
 let body = {
-    "final_total": 21046.304161,
+    "final_total": 321.495161358,
     "transaction_date": "2020-5-7 15:20:22",
-    "tax_rate_id": 2,
-    "expense_for": 15,
-    "contact_id": 15,
-    "expense_category_id": 19,
-    "expense_sub_category_id": 3,
-    "additional_notes": "est",
+    "tax_rate_id": 14,
+    "expense_for": 16,
+    "contact_id": 3,
+    "expense_category_id": 20,
+    "expense_sub_category_id": 6,
+    "additional_notes": "autem",
     "is_recurring": 0,
-    "recur_interval": 17,
+    "recur_interval": 12,
     "recur_interval_type": "months",
     "subscription_repeat_on": 15,
-    "subscription_no": "iure",
-    "recur_repetitions": 1,
+    "subscription_no": "animi",
+    "recur_repetitions": 2,
     "payment": []
 }
 
@@ -3583,7 +3583,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/expense-refund?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=soluta&per_page=15" \
+    -G "http://localhost/pos/public/connector/api/expense-refund?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=non&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3599,7 +3599,7 @@ let params = {
     "payment_status": "paid",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "expense_for": "soluta",
+    "expense_for": "non",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3780,7 +3780,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/field-force?contact_id=laudantium&assigned_to=quia&status=tempora&start_date=2018-06-25&end_date=2018-06-25&per_page=15&order_by_date=desc" \
+    -G "http://localhost/pos/public/connector/api/field-force?contact_id=consequuntur&assigned_to=voluptatibus&status=atque&start_date=2018-06-25&end_date=2018-06-25&per_page=15&order_by_date=desc" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3792,9 +3792,9 @@ const url = new URL(
 );
 
 let params = {
-    "contact_id": "laudantium",
-    "assigned_to": "quia",
-    "status": "tempora",
+    "contact_id": "consequuntur",
+    "assigned_to": "voluptatibus",
+    "status": "atque",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
     "per_page": "15",
@@ -3855,7 +3855,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":16,"visit_to":"repellat","visit_address":"sapiente","assigned_to":13,"visit_on":"2021-12-28 17:23:00","visit_for":"sunt"}'
+    -d '{"contact_id":16,"visit_to":"occaecati","visit_address":"aspernatur","assigned_to":16,"visit_on":"2021-12-28 17:23:00","visit_for":"aspernatur"}'
 
 ```
 
@@ -3872,11 +3872,11 @@ let headers = {
 
 let body = {
     "contact_id": 16,
-    "visit_to": "repellat",
-    "visit_address": "sapiente",
-    "assigned_to": 13,
+    "visit_to": "occaecati",
+    "visit_address": "aspernatur",
+    "assigned_to": 16,
     "visit_on": "2021-12-28 17:23:00",
-    "visit_for": "sunt"
+    "visit_for": "aspernatur"
 }
 
 fetch(url, {
@@ -3935,7 +3935,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"status":"finished","reason_to_not_meet_contact":"quidem","visited_on":"2021-12-28 17:23:00","visited_address":"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India","latitude":"41.40338","longitude":"2.17403","comments":"animi","photo":"et"}'
+    -d '{"status":"finished","reason_to_not_meet_contact":"est","visited_on":"2021-12-28 17:23:00","visited_address":"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India","latitude":"41.40338","longitude":"2.17403","comments":"quasi","photo":"quibusdam"}'
 
 ```
 
@@ -3952,13 +3952,13 @@ let headers = {
 
 let body = {
     "status": "finished",
-    "reason_to_not_meet_contact": "quidem",
+    "reason_to_not_meet_contact": "est",
     "visited_on": "2021-12-28 17:23:00",
     "visited_address": "Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India",
     "latitude": "41.40338",
     "longitude": "2.17403",
-    "comments": "animi",
-    "photo": "et"
+    "comments": "quasi",
+    "photo": "quibusdam"
 }
 
 fetch(url, {
@@ -4024,7 +4024,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/new_product?order_by=quos&order_direction=rerum&location_custom_field_1=aut&category_id=sed&sub_category_id=quis&location_id=1&not_for_sell=facilis&send_lot_detail=voluptatem&name=quibusdam&sku=illum&product_ids=1%2C2&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/new_product?order_by=sunt&order_direction=in&location_custom_field_1=et&category_id=voluptates&sub_category_id=ea&location_id=1&not_for_sell=molestiae&send_lot_detail=laboriosam&name=inventore&sku=laudantium&product_ids=1%2C2&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4036,16 +4036,16 @@ const url = new URL(
 );
 
 let params = {
-    "order_by": "quos",
-    "order_direction": "rerum",
-    "location_custom_field_1": "aut",
-    "category_id": "sed",
-    "sub_category_id": "quis",
+    "order_by": "sunt",
+    "order_direction": "in",
+    "location_custom_field_1": "et",
+    "category_id": "voluptates",
+    "sub_category_id": "ea",
     "location_id": "1",
-    "not_for_sell": "facilis",
-    "send_lot_detail": "voluptatem",
-    "name": "quibusdam",
-    "sku": "illum",
+    "not_for_sell": "molestiae",
+    "send_lot_detail": "laboriosam",
+    "name": "inventore",
+    "sku": "laudantium",
     "product_ids": "1,2",
     "per_page": "10",
 };
@@ -4354,7 +4354,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/new_sell?location_id=1&contact_id=fugiat&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=omnis&service_staff_id=architecto&shipping_status=ordered&source=amet&customer_group_id=voluptatum&product_name=est&product_sku=libero&product_custom_field_1=deserunt&location_custom_field_1=dolorem&location_invoice_scheme_prefix=id&product_category_id=et&product_sub_category_id=aut&sell_ids=55%2C64&only_subscriptions=ullam&send_purchase_details=quae&order_by_date=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/new_sell?location_id=1&contact_id=praesentium&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=qui&service_staff_id=sit&shipping_status=ordered&source=dolorum&customer_group_id=accusamus&product_name=aut&product_sku=qui&product_custom_field_1=quia&location_custom_field_1=aspernatur&location_invoice_scheme_prefix=facilis&product_category_id=quae&product_sub_category_id=dolore&sell_ids=55%2C64&only_subscriptions=commodi&send_purchase_details=harum&order_by_date=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4367,25 +4367,25 @@ const url = new URL(
 
 let params = {
     "location_id": "1",
-    "contact_id": "fugiat",
+    "contact_id": "praesentium",
     "payment_status": "due,partial",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "user_id": "omnis",
-    "service_staff_id": "architecto",
+    "user_id": "qui",
+    "service_staff_id": "sit",
     "shipping_status": "ordered",
-    "source": "amet",
-    "customer_group_id": "voluptatum",
-    "product_name": "est",
-    "product_sku": "libero",
-    "product_custom_field_1": "deserunt",
-    "location_custom_field_1": "dolorem",
-    "location_invoice_scheme_prefix": "id",
-    "product_category_id": "et",
-    "product_sub_category_id": "aut",
+    "source": "dolorum",
+    "customer_group_id": "accusamus",
+    "product_name": "aut",
+    "product_sku": "qui",
+    "product_custom_field_1": "quia",
+    "location_custom_field_1": "aspernatur",
+    "location_invoice_scheme_prefix": "facilis",
+    "product_category_id": "quae",
+    "product_sub_category_id": "dolore",
     "sell_ids": "55,64",
-    "only_subscriptions": "ullam",
-    "send_purchase_details": "quae",
+    "only_subscriptions": "commodi",
+    "send_purchase_details": "harum",
     "order_by_date": "desc",
     "per_page": "10",
 };
@@ -4625,7 +4625,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/new_contactapi?type=quo&customer_group_id=quis&custom_field_1=distinctio&contact_ids=2%2C3&name=voluptatem&biz_name=illo&mobile_num=10&contact_id=et&order_by=sint&direction=laborum&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/new_contactapi?type=numquam&customer_group_id=omnis&custom_field_1=nulla&contact_ids=2%2C3&name=qui&biz_name=sequi&mobile_num=18&contact_id=eos&order_by=et&direction=non&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4637,16 +4637,16 @@ const url = new URL(
 );
 
 let params = {
-    "type": "quo",
-    "customer_group_id": "quis",
-    "custom_field_1": "distinctio",
+    "type": "numquam",
+    "customer_group_id": "omnis",
+    "custom_field_1": "nulla",
     "contact_ids": "2,3",
-    "name": "voluptatem",
-    "biz_name": "illo",
-    "mobile_num": "10",
-    "contact_id": "et",
-    "order_by": "sint",
-    "direction": "laborum",
+    "name": "qui",
+    "biz_name": "sequi",
+    "mobile_num": "18",
+    "contact_id": "eos",
+    "order_by": "et",
+    "direction": "non",
     "per_page": "10",
 };
 Object.keys(params)
@@ -4758,7 +4758,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/product?order_by=assumenda&order_direction=a&brand_id=hic&category_id=libero&sub_category_id=non&location_id=1&selling_price_group=ab&send_lot_detail=sit&name=omnis&sku=veniam&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/product?order_by=qui&order_direction=aspernatur&brand_id=ab&category_id=dignissimos&sub_category_id=laboriosam&location_id=1&selling_price_group=ut&send_lot_detail=incidunt&name=non&sku=maxime&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4770,16 +4770,16 @@ const url = new URL(
 );
 
 let params = {
-    "order_by": "assumenda",
-    "order_direction": "a",
-    "brand_id": "hic",
-    "category_id": "libero",
-    "sub_category_id": "non",
+    "order_by": "qui",
+    "order_direction": "aspernatur",
+    "brand_id": "ab",
+    "category_id": "dignissimos",
+    "sub_category_id": "laboriosam",
     "location_id": "1",
-    "selling_price_group": "ab",
-    "send_lot_detail": "sit",
-    "name": "omnis",
-    "sku": "veniam",
+    "selling_price_group": "ut",
+    "send_lot_detail": "incidunt",
+    "name": "non",
+    "sku": "maxime",
     "per_page": "10",
 };
 Object.keys(params)
@@ -5079,7 +5079,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/product/1?selling_price_group=omnis&send_lot_detail=repellat" \
+    -G "http://localhost/pos/public/connector/api/product/1?selling_price_group=vero&send_lot_detail=sapiente" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5091,8 +5091,8 @@ const url = new URL(
 );
 
 let params = {
-    "selling_price_group": "omnis",
-    "send_lot_detail": "repellat",
+    "selling_price_group": "vero",
+    "send_lot_detail": "sapiente",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -5443,7 +5443,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/variation/2?product_id=porro&location_id=1&brand_id=eos&category_id=odit&sub_category_id=et&not_for_selling=omnis&name=aliquam&sku=cumque&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/variation/2?product_id=voluptate&location_id=1&brand_id=sunt&category_id=impedit&sub_category_id=ut&not_for_selling=deleniti&name=deleniti&sku=voluptatem&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5455,14 +5455,14 @@ const url = new URL(
 );
 
 let params = {
-    "product_id": "porro",
+    "product_id": "voluptate",
     "location_id": "1",
-    "brand_id": "eos",
-    "category_id": "odit",
-    "sub_category_id": "et",
-    "not_for_selling": "omnis",
-    "name": "aliquam",
-    "sku": "cumque",
+    "brand_id": "sunt",
+    "category_id": "impedit",
+    "sub_category_id": "ut",
+    "not_for_selling": "deleniti",
+    "name": "deleniti",
+    "sku": "voluptatem",
     "per_page": "10",
 };
 Object.keys(params)
@@ -5758,7 +5758,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/sell?location_id=1&contact_id=nobis&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=sit&service_staff_id=incidunt&shipping_status=ordered&source=sunt&only_subscriptions=aspernatur&send_purchase_details=id&order_by_date=desc&per_page=10" \
+    -G "http://localhost/pos/public/connector/api/sell?location_id=1&contact_id=id&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=ut&service_staff_id=nihil&shipping_status=ordered&source=sed&only_subscriptions=harum&send_purchase_details=nesciunt&order_by_date=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5771,16 +5771,16 @@ const url = new URL(
 
 let params = {
     "location_id": "1",
-    "contact_id": "nobis",
+    "contact_id": "id",
     "payment_status": "due,partial",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "user_id": "sit",
-    "service_staff_id": "incidunt",
+    "user_id": "ut",
+    "service_staff_id": "nihil",
     "shipping_status": "ordered",
-    "source": "sunt",
-    "only_subscriptions": "aspernatur",
-    "send_purchase_details": "id",
+    "source": "sed",
+    "only_subscriptions": "harum",
+    "send_purchase_details": "nesciunt",
     "order_by_date": "desc",
     "per_page": "10",
 };
@@ -6020,7 +6020,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"sells":[{"location_id":1,"contact_id":5,"transaction_date":"2020-07-22 15:48:29","invoice_no":"id","source":"api, phone, woocommerce","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":5,"discount_amount":10,"discount_type":"fixed","sale_note":"aut","staff_note":"accusamus","commission_agent":11,"shipping_details":"Express Delivery","shipping_address":"ab","shipping_status":"ordered","delivered_to":"'Mr robin'","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":16,"pay_term_number":3,"pay_term_type":"months","is_suspend":false,"is_recurring":0,"recur_interval":9,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"labore","recur_repetitions":14,"rp_redeemed":4,"rp_redeemed_amount":13.5,"types_of_service_id":12,"service_custom_field_1":"iusto","service_custom_field_2":"eum","service_custom_field_3":"tempore","service_custom_field_4":"vero","service_custom_field_5":"voluptas","service_custom_field_6":"commodi","round_off_amount":4.9023637,"table_id":2,"service_staff_id":15,"change_return":0,"products":[{"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":0,"discount_amount":0,"discount_type":"percentage","sub_unit_id":5,"note":"voluptatibus"}],"payments":[{"amount":453.13,"method":"cash","account_id":5,"card_number":"quisquam","card_holder_name":"cum","card_transaction_number":"libero","card_type":"corporis","card_month":"sit","card_year":"quisquam","card_security":"reprehenderit","transaction_no_1":"et","transaction_no_2":"est","transaction_no_3":"natus","bank_account_number":"totam","note":"possimus","cheque_number":"voluptas"}]}]}'
+    -d '{"sells":[{"location_id":1,"contact_id":7,"transaction_date":"2020-07-22 15:48:29","invoice_no":"nisi","source":"api, phone, woocommerce","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":17,"discount_amount":10,"discount_type":"fixed","sale_note":"recusandae","staff_note":"voluptatem","commission_agent":6,"shipping_details":"Express Delivery","shipping_address":"blanditiis","shipping_status":"ordered","delivered_to":"'Mr robin'","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":6,"pay_term_number":3,"pay_term_type":"months","is_suspend":false,"is_recurring":0,"recur_interval":8,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"rem","recur_repetitions":19,"rp_redeemed":2,"rp_redeemed_amount":13.5,"types_of_service_id":4,"service_custom_field_1":"sed","service_custom_field_2":"vitae","service_custom_field_3":"sed","service_custom_field_4":"aliquam","service_custom_field_5":"enim","service_custom_field_6":"nulla","round_off_amount":1519.3338,"table_id":12,"service_staff_id":19,"change_return":0,"products":[{"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":0,"discount_amount":0,"discount_type":"percentage","sub_unit_id":15,"note":"qui"}],"payments":[{"amount":453.13,"method":"cash","account_id":18,"card_number":"maiores","card_holder_name":"animi","card_transaction_number":"aut","card_type":"occaecati","card_month":"et","card_year":"doloribus","card_security":"dolore","transaction_no_1":"ea","transaction_no_2":"est","transaction_no_3":"ad","bank_account_number":"quis","note":"eaque","cheque_number":"voluptas"}]}]}'
 
 ```
 
@@ -6039,48 +6039,48 @@ let body = {
     "sells": [
         {
             "location_id": 1,
-            "contact_id": 5,
+            "contact_id": 7,
             "transaction_date": "2020-07-22 15:48:29",
-            "invoice_no": "id",
+            "invoice_no": "nisi",
             "source": "api, phone, woocommerce",
             "status": "final",
             "sub_status": "null",
             "is_quotation": true,
-            "tax_rate_id": 5,
+            "tax_rate_id": 17,
             "discount_amount": 10,
             "discount_type": "fixed",
-            "sale_note": "aut",
-            "staff_note": "accusamus",
-            "commission_agent": 11,
+            "sale_note": "recusandae",
+            "staff_note": "voluptatem",
+            "commission_agent": 6,
             "shipping_details": "Express Delivery",
-            "shipping_address": "ab",
+            "shipping_address": "blanditiis",
             "shipping_status": "ordered",
             "delivered_to": "'Mr robin'",
             "shipping_charges": 10,
             "packing_charge": 10,
             "exchange_rate": 1,
-            "selling_price_group_id": 16,
+            "selling_price_group_id": 6,
             "pay_term_number": 3,
             "pay_term_type": "months",
             "is_suspend": false,
             "is_recurring": 0,
-            "recur_interval": 9,
+            "recur_interval": 8,
             "recur_interval_type": "months",
             "subscription_repeat_on": 15,
-            "subscription_no": "labore",
-            "recur_repetitions": 14,
-            "rp_redeemed": 4,
+            "subscription_no": "rem",
+            "recur_repetitions": 19,
+            "rp_redeemed": 2,
             "rp_redeemed_amount": 13.5,
-            "types_of_service_id": 12,
-            "service_custom_field_1": "iusto",
-            "service_custom_field_2": "eum",
-            "service_custom_field_3": "tempore",
-            "service_custom_field_4": "vero",
-            "service_custom_field_5": "voluptas",
-            "service_custom_field_6": "commodi",
-            "round_off_amount": 4.9023637,
-            "table_id": 2,
-            "service_staff_id": 15,
+            "types_of_service_id": 4,
+            "service_custom_field_1": "sed",
+            "service_custom_field_2": "vitae",
+            "service_custom_field_3": "sed",
+            "service_custom_field_4": "aliquam",
+            "service_custom_field_5": "enim",
+            "service_custom_field_6": "nulla",
+            "round_off_amount": 1519.3338,
+            "table_id": 12,
+            "service_staff_id": 19,
             "change_return": 0,
             "products": [
                 {
@@ -6091,27 +6091,27 @@ let body = {
                     "tax_rate_id": 0,
                     "discount_amount": 0,
                     "discount_type": "percentage",
-                    "sub_unit_id": 5,
-                    "note": "voluptatibus"
+                    "sub_unit_id": 15,
+                    "note": "qui"
                 }
             ],
             "payments": [
                 {
                     "amount": 453.13,
                     "method": "cash",
-                    "account_id": 5,
-                    "card_number": "quisquam",
-                    "card_holder_name": "cum",
-                    "card_transaction_number": "libero",
-                    "card_type": "corporis",
-                    "card_month": "sit",
-                    "card_year": "quisquam",
-                    "card_security": "reprehenderit",
-                    "transaction_no_1": "et",
+                    "account_id": 18,
+                    "card_number": "maiores",
+                    "card_holder_name": "animi",
+                    "card_transaction_number": "aut",
+                    "card_type": "occaecati",
+                    "card_month": "et",
+                    "card_year": "doloribus",
+                    "card_security": "dolore",
+                    "transaction_no_1": "ea",
                     "transaction_no_2": "est",
-                    "transaction_no_3": "natus",
-                    "bank_account_number": "totam",
-                    "note": "possimus",
+                    "transaction_no_3": "ad",
+                    "bank_account_number": "quis",
+                    "note": "eaque",
                     "cheque_number": "voluptas"
                 }
             ]
@@ -6387,7 +6387,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/sell/55?send_purchase_details=optio" \
+    -G "http://localhost/pos/public/connector/api/sell/55?send_purchase_details=dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -6399,7 +6399,7 @@ const url = new URL(
 );
 
 let params = {
-    "send_purchase_details": "optio",
+    "send_purchase_details": "dolores",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -6617,7 +6617,7 @@ curl -X PUT \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":16,"transaction_date":"2020-5-7 15:20:22","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":19,"discount_amount":10,"discount_type":"fixed","sale_note":"eligendi","source":"magni","staff_note":"laborum","is_suspend":false,"commission_agent":7,"shipping_details":"Express Delivery","shipping_address":"ducimus","shipping_status":"ordered","delivered_to":"Mr Robin","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":8,"pay_term_number":1,"pay_term_type":"months","is_recurring":0,"recur_interval":19,"recur_interval_type":"days","subscription_repeat_on":7,"subscription_no":"recusandae","recur_repetitions":17,"rp_redeemed":6,"rp_redeemed_amount":13.5,"types_of_service_id":19,"service_custom_field_1":"dolores","service_custom_field_2":"veniam","service_custom_field_3":"libero","service_custom_field_4":"quia","service_custom_field_5":"nihil","service_custom_field_6":"et","round_off_amount":43979.13305,"table_id":5,"service_staff_id":14,"change_return":0,"change_return_id":17,"products":[{"sell_line_id":11,"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":16,"discount_amount":0,"discount_type":"percentage","sub_unit_id":16,"note":"dolorem"}],"payments":[{"payment_id":14,"amount":453.13,"method":"cash","account_id":15,"card_number":"saepe","card_holder_name":"neque","card_transaction_number":"qui","card_type":"corporis","card_month":"perferendis","card_year":"aut","card_security":"porro","transaction_no_1":"suscipit","transaction_no_2":"sit","transaction_no_3":"est","note":"quia","cheque_number":"eaque","bank_account_number":"ullam"}]}'
+    -d '{"contact_id":9,"transaction_date":"2020-5-7 15:20:22","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":15,"discount_amount":10,"discount_type":"fixed","sale_note":"quia","source":"facilis","staff_note":"tenetur","is_suspend":false,"commission_agent":10,"shipping_details":"Express Delivery","shipping_address":"dolore","shipping_status":"ordered","delivered_to":"Mr Robin","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":17,"pay_term_number":7,"pay_term_type":"months","is_recurring":0,"recur_interval":4,"recur_interval_type":"days","subscription_repeat_on":7,"subscription_no":"quia","recur_repetitions":11,"rp_redeemed":4,"rp_redeemed_amount":13.5,"types_of_service_id":15,"service_custom_field_1":"velit","service_custom_field_2":"ex","service_custom_field_3":"nostrum","service_custom_field_4":"voluptas","service_custom_field_5":"culpa","service_custom_field_6":"consequatur","round_off_amount":114.55078,"table_id":3,"service_staff_id":9,"change_return":0,"change_return_id":20,"products":[{"sell_line_id":6,"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":1,"discount_amount":0,"discount_type":"percentage","sub_unit_id":7,"note":"ab"}],"payments":[{"payment_id":8,"amount":453.13,"method":"cash","account_id":11,"card_number":"ratione","card_holder_name":"sed","card_transaction_number":"ut","card_type":"et","card_month":"qui","card_year":"veritatis","card_security":"earum","transaction_no_1":"sequi","transaction_no_2":"dolorem","transaction_no_3":"aut","note":"beatae","cheque_number":"aut","bank_account_number":"corporis"}]}'
 
 ```
 
@@ -6633,82 +6633,82 @@ let headers = {
 };
 
 let body = {
-    "contact_id": 16,
+    "contact_id": 9,
     "transaction_date": "2020-5-7 15:20:22",
     "status": "final",
     "sub_status": "null",
     "is_quotation": true,
-    "tax_rate_id": 19,
+    "tax_rate_id": 15,
     "discount_amount": 10,
     "discount_type": "fixed",
-    "sale_note": "eligendi",
-    "source": "magni",
-    "staff_note": "laborum",
+    "sale_note": "quia",
+    "source": "facilis",
+    "staff_note": "tenetur",
     "is_suspend": false,
-    "commission_agent": 7,
+    "commission_agent": 10,
     "shipping_details": "Express Delivery",
-    "shipping_address": "ducimus",
+    "shipping_address": "dolore",
     "shipping_status": "ordered",
     "delivered_to": "Mr Robin",
     "shipping_charges": 10,
     "packing_charge": 10,
     "exchange_rate": 1,
-    "selling_price_group_id": 8,
-    "pay_term_number": 1,
+    "selling_price_group_id": 17,
+    "pay_term_number": 7,
     "pay_term_type": "months",
     "is_recurring": 0,
-    "recur_interval": 19,
+    "recur_interval": 4,
     "recur_interval_type": "days",
     "subscription_repeat_on": 7,
-    "subscription_no": "recusandae",
-    "recur_repetitions": 17,
-    "rp_redeemed": 6,
+    "subscription_no": "quia",
+    "recur_repetitions": 11,
+    "rp_redeemed": 4,
     "rp_redeemed_amount": 13.5,
-    "types_of_service_id": 19,
-    "service_custom_field_1": "dolores",
-    "service_custom_field_2": "veniam",
-    "service_custom_field_3": "libero",
-    "service_custom_field_4": "quia",
-    "service_custom_field_5": "nihil",
-    "service_custom_field_6": "et",
-    "round_off_amount": 43979.13305,
-    "table_id": 5,
-    "service_staff_id": 14,
+    "types_of_service_id": 15,
+    "service_custom_field_1": "velit",
+    "service_custom_field_2": "ex",
+    "service_custom_field_3": "nostrum",
+    "service_custom_field_4": "voluptas",
+    "service_custom_field_5": "culpa",
+    "service_custom_field_6": "consequatur",
+    "round_off_amount": 114.55078,
+    "table_id": 3,
+    "service_staff_id": 9,
     "change_return": 0,
-    "change_return_id": 17,
+    "change_return_id": 20,
     "products": [
         {
-            "sell_line_id": 11,
+            "sell_line_id": 6,
             "product_id": 17,
             "variation_id": 58,
             "quantity": 1,
             "unit_price": 437.5,
-            "tax_rate_id": 16,
+            "tax_rate_id": 1,
             "discount_amount": 0,
             "discount_type": "percentage",
-            "sub_unit_id": 16,
-            "note": "dolorem"
+            "sub_unit_id": 7,
+            "note": "ab"
         }
     ],
     "payments": [
         {
-            "payment_id": 14,
+            "payment_id": 8,
             "amount": 453.13,
             "method": "cash",
-            "account_id": 15,
-            "card_number": "saepe",
-            "card_holder_name": "neque",
-            "card_transaction_number": "qui",
-            "card_type": "corporis",
-            "card_month": "perferendis",
-            "card_year": "aut",
-            "card_security": "porro",
-            "transaction_no_1": "suscipit",
-            "transaction_no_2": "sit",
-            "transaction_no_3": "est",
-            "note": "quia",
-            "cheque_number": "eaque",
-            "bank_account_number": "ullam"
+            "account_id": 11,
+            "card_number": "ratione",
+            "card_holder_name": "sed",
+            "card_transaction_number": "ut",
+            "card_type": "et",
+            "card_month": "qui",
+            "card_year": "veritatis",
+            "card_security": "earum",
+            "transaction_no_1": "sequi",
+            "transaction_no_2": "dolorem",
+            "transaction_no_3": "aut",
+            "note": "beatae",
+            "cheque_number": "aut",
+            "bank_account_number": "corporis"
         }
     ]
 }
@@ -6958,7 +6958,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X DELETE \
-    "http://localhost/pos/public/connector/api/sell/reiciendis" \
+    "http://localhost/pos/public/connector/api/sell/veniam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -6966,7 +6966,7 @@ curl -X DELETE \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell/reiciendis"
+    "http://localhost/pos/public/connector/api/sell/veniam"
 );
 
 let headers = {
@@ -7008,7 +7008,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"transaction_id":1,"transaction_date":"2020-5-7 15:20:22","invoice_no":"non","discount_amount":10,"discount_type":"fixed","products":[{"sell_line_id":18,"quantity":1,"unit_price_inc_tax":437.5}]}'
+    -d '{"transaction_id":17,"transaction_date":"2020-5-7 15:20:22","invoice_no":"cumque","discount_amount":10,"discount_type":"fixed","products":[{"sell_line_id":9,"quantity":1,"unit_price_inc_tax":437.5}]}'
 
 ```
 
@@ -7024,14 +7024,14 @@ let headers = {
 };
 
 let body = {
-    "transaction_id": 1,
+    "transaction_id": 17,
     "transaction_date": "2020-5-7 15:20:22",
-    "invoice_no": "non",
+    "invoice_no": "cumque",
     "discount_amount": 10,
     "discount_type": "fixed",
     "products": [
         {
-            "sell_line_id": 18,
+            "sell_line_id": 9,
             "quantity": 1,
             "unit_price_inc_tax": 437.5
         }
@@ -7510,7 +7510,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"id":8,"shipping_status":"ordered","delivered_to":"nemo"}'
+    -d '{"id":3,"shipping_status":"ordered","delivered_to":"accusamus"}'
 
 ```
 
@@ -7526,9 +7526,9 @@ let headers = {
 };
 
 let body = {
-    "id": 8,
+    "id": 3,
     "shipping_status": "ordered",
-    "delivered_to": "nemo"
+    "delivered_to": "accusamus"
 }
 
 fetch(url, {
@@ -8107,7 +8107,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/taxonomy?type=sapiente" \
+    -G "http://localhost/pos/public/connector/api/taxonomy?type=maiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8119,7 +8119,7 @@ const url = new URL(
 );
 
 let params = {
-    "type": "sapiente",
+    "type": "maiores",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -8737,7 +8737,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"surname":"minus","first_name":"illum","last_name":"inventore","email":"iure","is_active":"ut","user_type":"aliquid","crm_contact_id":15,"allow_login":false,"username":"assumenda","password":"inventore","role":6,"access_all_locations":true,"location_permissions":[],"cmmsn_percent":"delectus","max_sales_discount_percent":"qui","selected_contacts":true,"selected_contact_ids":[],"dob":"id","gender":"assumenda","marital_status":"ducimus","blood_group":"eius","contact_number":"eius","alt_number":"ut","family_number":"est","fb_link":"dolorum","twitter_link":"qui","social_media_1":"dolorem","social_media_2":"recusandae","custom_field_1":"consectetur","custom_field_2":"voluptates","custom_field_3":"non","custom_field_4":"minima","guardian_name":"aliquid","id_proof_name":"laborum","id_proof_number":"maxime","permanent_address":"sit","current_address":"unde","bank_details":[{"account_holder_name":"eos","account_number":"ea","bank_name":"non","bank_code":"cupiditate","branch":"aliquam","tax_payer_id":"temporibus"}]}'
+    -d '{"surname":"est","first_name":"voluptas","last_name":"omnis","email":"ipsum","is_active":"facilis","user_type":"officia","crm_contact_id":18,"allow_login":true,"username":"qui","password":"vel","role":5,"access_all_locations":true,"location_permissions":[],"cmmsn_percent":"veniam","max_sales_discount_percent":"fugiat","selected_contacts":true,"selected_contact_ids":[],"dob":"eveniet","gender":"dolorem","marital_status":"sunt","blood_group":"commodi","contact_number":"iusto","alt_number":"magnam","family_number":"nobis","fb_link":"iure","twitter_link":"repellendus","social_media_1":"quia","social_media_2":"rerum","custom_field_1":"officiis","custom_field_2":"dignissimos","custom_field_3":"architecto","custom_field_4":"quia","guardian_name":"veritatis","id_proof_name":"adipisci","id_proof_number":"rerum","permanent_address":"aspernatur","current_address":"eius","bank_details":[{"account_holder_name":"velit","account_number":"rerum","bank_name":"temporibus","bank_code":"modi","branch":"ex","tax_payer_id":"nisi"}]}'
 
 ```
 
@@ -8753,51 +8753,51 @@ let headers = {
 };
 
 let body = {
-    "surname": "minus",
-    "first_name": "illum",
-    "last_name": "inventore",
-    "email": "iure",
-    "is_active": "ut",
-    "user_type": "aliquid",
-    "crm_contact_id": 15,
-    "allow_login": false,
-    "username": "assumenda",
-    "password": "inventore",
-    "role": 6,
+    "surname": "est",
+    "first_name": "voluptas",
+    "last_name": "omnis",
+    "email": "ipsum",
+    "is_active": "facilis",
+    "user_type": "officia",
+    "crm_contact_id": 18,
+    "allow_login": true,
+    "username": "qui",
+    "password": "vel",
+    "role": 5,
     "access_all_locations": true,
     "location_permissions": [],
-    "cmmsn_percent": "delectus",
-    "max_sales_discount_percent": "qui",
+    "cmmsn_percent": "veniam",
+    "max_sales_discount_percent": "fugiat",
     "selected_contacts": true,
     "selected_contact_ids": [],
-    "dob": "id",
-    "gender": "assumenda",
-    "marital_status": "ducimus",
-    "blood_group": "eius",
-    "contact_number": "eius",
-    "alt_number": "ut",
-    "family_number": "est",
-    "fb_link": "dolorum",
-    "twitter_link": "qui",
-    "social_media_1": "dolorem",
-    "social_media_2": "recusandae",
-    "custom_field_1": "consectetur",
-    "custom_field_2": "voluptates",
-    "custom_field_3": "non",
-    "custom_field_4": "minima",
-    "guardian_name": "aliquid",
-    "id_proof_name": "laborum",
-    "id_proof_number": "maxime",
-    "permanent_address": "sit",
-    "current_address": "unde",
+    "dob": "eveniet",
+    "gender": "dolorem",
+    "marital_status": "sunt",
+    "blood_group": "commodi",
+    "contact_number": "iusto",
+    "alt_number": "magnam",
+    "family_number": "nobis",
+    "fb_link": "iure",
+    "twitter_link": "repellendus",
+    "social_media_1": "quia",
+    "social_media_2": "rerum",
+    "custom_field_1": "officiis",
+    "custom_field_2": "dignissimos",
+    "custom_field_3": "architecto",
+    "custom_field_4": "quia",
+    "guardian_name": "veritatis",
+    "id_proof_name": "adipisci",
+    "id_proof_number": "rerum",
+    "permanent_address": "aspernatur",
+    "current_address": "eius",
     "bank_details": [
         {
-            "account_holder_name": "eos",
-            "account_number": "ea",
-            "bank_name": "non",
-            "bank_code": "cupiditate",
-            "branch": "aliquam",
-            "tax_payer_id": "temporibus"
+            "account_holder_name": "velit",
+            "account_number": "rerum",
+            "bank_name": "temporibus",
+            "bank_code": "modi",
+            "branch": "ex",
+            "tax_payer_id": "nisi"
         }
     ]
 }
@@ -8920,7 +8920,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/user?service_staff=velit" \
+    -G "http://localhost/pos/public/connector/api/user?service_staff=vero" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8932,7 +8932,7 @@ const url = new URL(
 );
 
 let params = {
-    "service_staff": "velit",
+    "service_staff": "vero",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -9126,7 +9126,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"current_password":"hic","new_password":"dolorem"}'
+    -d '{"current_password":"iusto","new_password":"amet"}'
 
 ```
 
@@ -9142,8 +9142,8 @@ let headers = {
 };
 
 let body = {
-    "current_password": "hic",
-    "new_password": "dolorem"
+    "current_password": "iusto",
+    "new_password": "amet"
 }
 
 fetch(url, {
@@ -9188,7 +9188,7 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"email":"ex"}'
+    -d '{"email":"ut"}'
 
 ```
 
@@ -9204,7 +9204,7 @@ let headers = {
 };
 
 let body = {
-    "email": "ex"
+    "email": "ut"
 }
 
 fetch(url, {

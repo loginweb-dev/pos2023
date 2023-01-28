@@ -1,3 +1,7 @@
+@php
+    $negocios = App\BusinessLocation::where("is_active", true)->get();
+@endphp
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -171,7 +175,7 @@
         <ons-carousel-item>
           <img src="{{ asset('app/banner1.jpg') }}" alt="" style="width: 100%; height: 120px;">
         </ons-carousel-item>
-        <ons-carousel-item style="background-color: #D38312;">
+        <ons-carousel-item>
           <ons-carousel-item>
             <img src="{{ asset('app/banner3.jpg') }}" alt="" style="width: 100%; height: 120px;">
           </ons-carousel-item>
@@ -179,13 +183,23 @@
       </ons-carousel>
       
       <p class="intro">
-        This is a kitchen sink example that shows off the components of Onsen UI.<br><br>
+        Merdico Digital Exclusivo para Bolivia.<br>Negocios Activos<br>
       </p>
-  
+    <hr>
+      @foreach ($negocios as $item)          
+        <ons-card onclick="fn.pushPage({'id': 'negocio.html', 'title': '{{ $item->name }}'})">
+          <div class="title">{{ $item->name }}</div>
+          <div class="content">{{ $item->city }}</div>
+        </ons-card>
+      @endforeach
+
+      <hr>
+
       <ons-card onclick="fn.pushPage({'id': 'pullHook.html', 'title': 'PullHook'})">
         <div class="title">Pull Hook</div>
         <div class="content">Simple "pull to refresh" functionality to update data.</div>
       </ons-card>
+
       <ons-card onclick="fn.pushPage({'id': 'dialogs.html', 'title': 'Dialogs'})">
         <div class="title">Dialogs</div>
         <div class="content">Components and utility methods to display many types of dialogs.</div>
@@ -1154,36 +1168,63 @@
     </ons-page>
   </template>
   
-  <style>
+
+  {{-- pagina negocio --}}
+  <template id="negocio.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Atras</ons-back-button>
+        </div>
+        <div class="center"></div>
+      </ons-toolbar>
+ 
+      <script>
+          ons.getScriptPage().onInit = function () {
+            this.querySelector('ons-toolbar div.center').textContent = this.data.title;
+          }
+      </script>
+    </ons-page>
+  </template>
+
+   <style>
     ons-splitter-side[animation=overlay] {
       border-left: 1px solid #bbb;
     }
   </style>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
   <script>
-window.fn = {};
+    window.fn = {};
+    window.fn.toggleMenu = function () {
+      document.getElementById('appSplitter').right.toggle();
+    };
+    
+    window.fn.loadView = function (index) {
+      document.getElementById('appTabbar').setActiveTab(index);
+      document.getElementById('sidemenu').close();
+    };
 
-window.fn.toggleMenu = function () {
-  document.getElementById('appSplitter').right.toggle();
-};
+    window.fn.loadLink = function (url) {
+      window.open(url, '_blank');
+    };
 
-window.fn.loadView = function (index) {
-  document.getElementById('appTabbar').setActiveTab(index);
-  document.getElementById('sidemenu').close();
-};
+    window.fn.pushPage = function (page, anim) {
+      if (anim) {
+        document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
+      } else {
+        document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title } });
+      }
+    };
 
-window.fn.loadLink = function (url) {
-  window.open(url, '_blank');
-};
-
-window.fn.pushPage = function (page, anim) {
-  if (anim) {
-    document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
-  } else {
-    document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title } });
-  }
-};
+    $(document).ready(function () {
+      minegocios()
+    });
+    async function minegocios() {
+      const config = { headers: { 'Content-Type': 'multipart/form-data', 'Accept': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjExNjc1NTNjNWRlMDZmYTkyOGE1MjYyOGZjNjgxYzRlYTM0MzY5YmE2OTBlYTQ2NmMyYzY1YjE5ZGNiYjI4NTUwZjM1YjhkZmIxNWY0YTkzIn0.eyJhdWQiOiIxIiwianRpIjoiMTE2NzU1M2M1ZGUwNmZhOTI4YTUyNjI4ZmM2ODFjNGVhMzQzNjliYTY5MGVhNDY2YzJjNjViMTlkY2JiMjg1NTBmMzViOGRmYjE1ZjRhOTMiLCJpYXQiOjE2NzQ5NDMwNzUsIm5iZiI6MTY3NDk0MzA3NSwiZXhwIjoxNzA2NDc5MDc1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZtO5ruv_P0HuvECUsvKR3gOSVKNUBK87SqQ_K28wzKzKlyVFKYMDZxm8l_I4tYJsVBTik9WnTtNeamJ_Moqr2naEFWMinaCUAamJbfFgSvViGJHCZiwtkkwFput5d3IPDimDt0oFRR4T0rI4r0TLjLnE5SMixCW8AiaoNsXHB5HCfHU9zJM7T1p_gA78ePEGQWt_PPpjobbNFvOoQ5R4by7_T4-QkqkgvIIdD9OL5lNXeTg-DzZDOb1yXclOyt-8EA0Ag4ANcpBIFpqSJ8ETpLbwnQFrQeN8FSKjwyo1cOnqUtMF46aq0Um3etd_mctLhSb-yqtMh6z5_HMD8ccouUHJH2NeMf9uT_tbzipzs0IM1JVXkGttRA82Dxangvb8yNGpNXSFOmwXok6pAv_8liI0l2KiXyHTs8ZHsCsgMALZnTketnMV7HdW_aqTrG4ziLEq7DmBf6xXUq3EztyoGqdDqCBcqlW40l001NmYCsrrPVzzUg5ddOAWPhspGgX25XoXhsReHBGbn1qmhwUPKiFbnDoNoReEdxA-MMdE-X_0V7MnksNKNtYpxYO0PS9WS4umGNkaUvCu7-GqRd22X29K_MVXEnPuH8iTADQTsjPujpvcKpajYVHJJAeYP-f7KEdmPD1kkKMyIYVQclRZtw-RjrmRqK5j3T_d8FxXJCU'} };
+      var negocios = await axios.get("http://localhost/pos/public/connector/api/active-subscription", config)
+      console.log(negocios.data.length)
+    }
   </script>
 </body>
 </html>

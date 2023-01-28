@@ -19,6 +19,24 @@ Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.c
 - ingresa con el usuario creado
 - configurar el panel de super admin
 
+### Documentacion
+- https://www.youtube.com/watch?v=wtAmMuXYUb8    (api)
+- /docs  (api)
+
+### Get Token
+- https://pos.loginweb.dev/oauth/token   (url)
+> grant_type : password
+<br>
+> client_id : 1
+<br>
+> username : luis.flores
+> password : 123456
+<br>
+> client_secret : 2hjmCE4kB6OZng8YRjSOATEv4GQna3QNY2KQTgGT
+<br>
+- Luego de obtener el token, puede realizar consultas a la api, lee el manual
+
+
 You will find installation guide and documentation in the downloaded zip file.
 Also, For complete updated documentation of the ultimate pos please visit online [documentation guide](http://ultimatefosters.com/ultimate-pos/).
 
