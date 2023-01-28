@@ -409,3 +409,11 @@ Route::middleware(['setData', 'auth', 'SetSessionData', 'language', 'timezone'])
     Route::get('/sells/invoice-url/{id}', 'SellPosController@showInvoiceUrl');
     Route::get('/show-notification/{id}', 'HomeController@showNotification');
 });
+
+//rutas de las app
+Route::prefix('app')->group(function () {
+    Route::get('/marketplace', function () {
+        // return "hola";
+        return view("mobiles.marketplace.index");
+    });
+});
