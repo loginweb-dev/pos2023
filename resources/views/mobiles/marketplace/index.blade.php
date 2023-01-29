@@ -1,5 +1,5 @@
 @php
-    $negocios = App\BusinessLocation::where("is_active", true)->get();
+    $negocios = App\Business::where("id", ">", 0)->with("owner")->get();
 @endphp
 
 <!DOCTYPE html>
@@ -183,13 +183,15 @@
       </ons-carousel>
       
       <p class="intro">
-        Merdico Digital Exclusivo para Bolivia.<br>Negocios Activos<br>
+        Mercado Digital Exclusivo para Bolivia.<br>Negocios Activos<br>
       </p>
     <hr>
+
       @foreach ($negocios as $item)          
+      {{-- {{ $item->owner }} --}}
         <ons-card onclick="fn.pushPage({'id': 'negocio.html', 'title': '{{ $item->name }}'})">
-          <div class="title">{{ $item->name }}</div>
-          <div class="content">{{ $item->city }}</div>
+          <div class="title">{{ $item->name }} <span class="notification notification--material">{{ $item->owner->username }}</span></div>
+          <div class="content">{{ $item->id.' - '.$item->created_at }}</div>
         </ons-card>
       @endforeach
 
@@ -1218,11 +1220,11 @@
     };
 
     $(document).ready(function () {
-      minegocios()
+      // minegocios()
     });
     async function minegocios() {
       const config = { headers: { 'Content-Type': 'multipart/form-data', 'Accept': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjExNjc1NTNjNWRlMDZmYTkyOGE1MjYyOGZjNjgxYzRlYTM0MzY5YmE2OTBlYTQ2NmMyYzY1YjE5ZGNiYjI4NTUwZjM1YjhkZmIxNWY0YTkzIn0.eyJhdWQiOiIxIiwianRpIjoiMTE2NzU1M2M1ZGUwNmZhOTI4YTUyNjI4ZmM2ODFjNGVhMzQzNjliYTY5MGVhNDY2YzJjNjViMTlkY2JiMjg1NTBmMzViOGRmYjE1ZjRhOTMiLCJpYXQiOjE2NzQ5NDMwNzUsIm5iZiI6MTY3NDk0MzA3NSwiZXhwIjoxNzA2NDc5MDc1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZtO5ruv_P0HuvECUsvKR3gOSVKNUBK87SqQ_K28wzKzKlyVFKYMDZxm8l_I4tYJsVBTik9WnTtNeamJ_Moqr2naEFWMinaCUAamJbfFgSvViGJHCZiwtkkwFput5d3IPDimDt0oFRR4T0rI4r0TLjLnE5SMixCW8AiaoNsXHB5HCfHU9zJM7T1p_gA78ePEGQWt_PPpjobbNFvOoQ5R4by7_T4-QkqkgvIIdD9OL5lNXeTg-DzZDOb1yXclOyt-8EA0Ag4ANcpBIFpqSJ8ETpLbwnQFrQeN8FSKjwyo1cOnqUtMF46aq0Um3etd_mctLhSb-yqtMh6z5_HMD8ccouUHJH2NeMf9uT_tbzipzs0IM1JVXkGttRA82Dxangvb8yNGpNXSFOmwXok6pAv_8liI0l2KiXyHTs8ZHsCsgMALZnTketnMV7HdW_aqTrG4ziLEq7DmBf6xXUq3EztyoGqdDqCBcqlW40l001NmYCsrrPVzzUg5ddOAWPhspGgX25XoXhsReHBGbn1qmhwUPKiFbnDoNoReEdxA-MMdE-X_0V7MnksNKNtYpxYO0PS9WS4umGNkaUvCu7-GqRd22X29K_MVXEnPuH8iTADQTsjPujpvcKpajYVHJJAeYP-f7KEdmPD1kkKMyIYVQclRZtw-RjrmRqK5j3T_d8FxXJCU'} };
-      var negocios = await axios.get("http://localhost/pos/public/connector/api/active-subscription", config)
+      var negocios = await axios.get("/connector/api/active-subscription", config)
       console.log(negocios.data.length)
     }
   </script>
