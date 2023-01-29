@@ -24,7 +24,7 @@
   <template id="tabbar.html">
     <ons-page id="tabbar-page">
       <ons-toolbar>
-        <div class="center">Home</div>
+        <div class="center">Inicio</div>
         <div class="right">
           <ons-toolbar-button onclick="fn.toggleMenu()">
             <ons-icon icon="ion-ios-menu, material:md-menu"></ons-icon>
@@ -32,9 +32,9 @@
         </div>
       </ons-toolbar>
       <ons-tabbar swipeable id="appTabbar" position="auto">
-        <ons-tab label="Home" icon="ion-ios-home" page="home.html" active></ons-tab>
-        <ons-tab label="Forms" icon="ion-ios-create" page="forms.html"></ons-tab>
-        <ons-tab label="Animations" icon="ion-ios-film" page="animations.html"></ons-tab>
+        <ons-tab label="Inicio" icon="ion-ios-home" page="home.html" active></ons-tab>
+        <ons-tab label="Carrito" icon="ion-ios-create" page="forms.html"></ons-tab>
+        <ons-tab label="Perfil" icon="ion-ios-film" page="animations.html"></ons-tab>
       </ons-tabbar>
   
       <script>
@@ -60,7 +60,7 @@
             <ons-icon fixed-width class="list-item__icon" icon="ion-ios-home, material:md-home"></ons-icon>
           </div>
           <div class="center">
-            Home
+            Inicio
           </div>
           <div class="right">
             <ons-icon icon="fa-link"></ons-icon>
@@ -494,7 +494,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Home</ons-back-button>
+          <ons-back-button>Home1</ons-back-button>
         </div>
         <div class="center"></div>
       </ons-toolbar>
@@ -591,7 +591,7 @@
     <ons-page id="dialogs-page">
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Home</ons-back-button>
+          <ons-back-button>Home2</ons-back-button>
         </div>
         <div class="center"></div>
         <div class="right">
@@ -787,7 +787,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Home</ons-back-button>
+          <ons-back-button>Inicio</ons-back-button>
         </div>
         <div class="center"></div>
       </ons-toolbar>
@@ -851,7 +851,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Home</ons-back-button>
+          <ons-back-button>Home5</ons-back-button>
         </div>
         <div class="center"></div>
       </ons-toolbar>
@@ -1019,7 +1019,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Home</ons-back-button>
+          <ons-back-button>Home3</ons-back-button>
         </div>
         <div class="center"></div>
       </ons-toolbar>
@@ -1041,7 +1041,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Home</ons-back-button>
+          <ons-back-button>Home4</ons-back-button>
         </div>
         <div class="center"></div>
       </ons-toolbar>

@@ -1,4 +1,4 @@
-## About Ultimate POS
+## Sobre Ultimate POS
 
 Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.com), a brand of [The Web Fosters](http://thewebfosters.com).
 
@@ -25,25 +25,13 @@ Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.c
 
 ### Get Token
 - https://pos.loginweb.dev/oauth/token   (url)
-> grant_type : password
-<br>
-> client_id : 1
-<br>
-> username : luis.flores
-> password : 123456
-<br>
-> client_secret : 2hjmCE4kB6OZng8YRjSOATEv4GQna3QNY2KQTgGT
-<br>
+- grant_type : password
+- client_id : 1
+- username : luis.flores
+- password : 123456
+- client_secret : {token}
 - Luego de obtener el token, puede realizar consultas a la api, lee el manual
-
-
-You will find installation guide and documentation in the downloaded zip file.
-Also, For complete updated documentation of the ultimate pos please visit online [documentation guide](http://ultimatefosters.com/ultimate-pos/).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within ultimate POS, please send an e-mail to support at thewebfosters@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Ultimate POS software is licensed under the [Codecanyon license](https://codecanyon.net/licenses/standard).
+The Ultimate POS software is licensed by goSystem @2023.
