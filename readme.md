@@ -1,6 +1,7 @@
 ## Sobre Ultimate POS
 
-Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.com), a brand of [The Web Fosters](http://thewebfosters.com).
+Un Sistema POS (punto de venta) es un sistema de software de computadora que los minoristas usan para llevar el seguimiento de los pedidos, realizar transacciones, manejar inventarios y registrar datos de clientes. Estos sistemas suelen ser utilizados en tiendas minoristas, restaurantes, hoteles, bares y otros establecimientos comerciales. Los sistemas varían en tamaño y complejidad, desde sistemas de tarjetas de crédito sencillos hasta programación
+
 
 ## Installation & Documentation
 
@@ -18,6 +19,9 @@ Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.c
 - desde el frontend crear negocio con usuario luis.flores
 - ingresa con el usuario creado
 - configurar el panel de super admin
+
+### Video Tutoriales
+- https://youtube.com/playlist?list=PL2SoOLWxHIbEHmCyNIR0hY-gY7nnGyUpu
 
 ### Documentacion
 - https://www.youtube.com/watch?v=wtAmMuXYUb8    (api)
