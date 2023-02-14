@@ -416,4 +416,9 @@ Route::prefix('app')->group(function () {
         // return "hola";
         return view("mobiles.marketplace.index");
     });
+
+    Route::get('/skot', function () {
+        // return "hola";
+        return view("mobiles.skot.index");
+    });
 });

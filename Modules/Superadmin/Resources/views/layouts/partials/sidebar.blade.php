@@ -7,7 +7,6 @@
 	            <i class="fa fa-angle-left pull-right"></i>
 	        </span>
 	    </a>
-
 	    <ul class="treeview-menu">
 			<li class="{{ empty($request->segment(2)) ? 'active active-sub' : '' }}">
 				<a href="{{action('\Modules\Superadmin\Http\Controllers\SuperadminController@index')}}">
@@ -42,14 +41,14 @@
 			  	</a>
 			</li>
 
-			{{-- <li class="{{ $request->segment(2) == 'frontend-pages' ? 'active active-sub' : '' }}">
+			<li class="{{ $request->segment(2) == 'frontend-pages' ? 'active active-sub' : '' }}">
 				<a href="{{action('\Modules\Superadmin\Http\Controllers\PageController@index')}}">
 					<i class="fa fa-clone"></i>
 					<span class="title">
 						@lang('superadmin::lang.frontend_pages')
 					</span>
 			  	</a>
-			</li> --}}
+			</li>
 
 			<li class="{{ $request->segment(2) == 'settings' ? 'active active-sub' : '' }}">
 				<a href="{{action('\Modules\Superadmin\Http\Controllers\SuperadminSettingsController@edit')}}">

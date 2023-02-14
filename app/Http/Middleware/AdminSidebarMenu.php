@@ -743,6 +743,10 @@ class AdminSidebarMenu
                     ['icon' => 'fa fas fa-cog', 'id' => 'tour_step3']
                 )->order(85);
             }
+
+            //chatbot
+            // $menu->url(action('BackUpController@index'), 'Chatbot', ['icon' => 'fa fas fa-hdd', 'active' => 1])->order(1);
+
         });
         
         //Add menus from modules

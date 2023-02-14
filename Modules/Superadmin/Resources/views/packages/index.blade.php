@@ -27,6 +27,7 @@
         </div>
 
         <div class="box-body">
+			{{ $packages }}
         	@foreach ($packages as $package)
                 <div class="col-md-4">
                 	
