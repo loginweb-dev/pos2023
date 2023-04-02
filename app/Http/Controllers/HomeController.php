@@ -57,6 +57,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function chatbot()
+     {
+        return view("chatbot.index");
+     }
     public function index()
     {
         $business_id = request()->session()->get('user.business_id');

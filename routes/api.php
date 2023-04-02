@@ -17,6 +17,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::prefix('business')->group(function () {
+    Route::get('/id/{id}', function ($id) {
+        $bussine = App\Business::where('id', $id)->with('locations')->first();
+        return $bussine->locations;
+    });
+
+});
+
+
 //rutas de productos
 Route::prefix('productos')->group(function () {
     Route::get('/id/{id}', function ($id) {
@@ -33,4 +43,24 @@ Route::prefix('extras')->group(function () {
         return $extras;
     });
 
+});
+
+//rutas de chatbots
+Route::prefix('chatbots')->group(function () {
+    Route::get('/busine/start/{id}', function ($id) {
+        return App\Chatbots::where('busine_id', $id)->where('type', 'start')->first();
+    });
+
+    Route::post('/save', function (Request $request) {
+        // return $request;
+        App\Chatbots::create([
+            'phone' => $request->phone,
+            'message' => $request->message,
+            'type' => $request->type,
+            'busine_id' => $request->busine_id,
+        ]);
+        return App\Chatbots::where("phone", $request->phone)->get();
+    });
+
+    
 });

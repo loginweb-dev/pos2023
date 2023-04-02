@@ -13,6 +13,11 @@ return [
         'zurbmenu' => \Nwidart\Menus\Presenters\Foundation\ZurbMenuPresenter::class,
         'adminltecustom' => \App\Http\AdminlteCustomPresenter::class,
     ],
+    [
+        'url' => '/ruta/nuevo/item',
+        'title' => 'Nuevo ítem',
+        'icon' => 'fa fa-plus',
+    ],
 
     'ordering' => true,
 

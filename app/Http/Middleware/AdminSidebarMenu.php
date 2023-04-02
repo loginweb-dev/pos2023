@@ -745,7 +745,11 @@ class AdminSidebarMenu
             }
 
             //chatbot
-            // $menu->url(action('BackUpController@index'), 'Chatbot', ['icon' => 'fa fas fa-hdd', 'active' => 1])->order(1);
+            $menu->url(action('HomeController@chatbot'), "goSystem", ['icon' => 'fa fas fa-envelope', 'active' => request()->segment(1) == 'chatbot'])->order(120);
+
+            //$menu->url(action('HomeController@index'), 'Chatbot2', ['icon' => 'fa fas fa-hdd', 'active' => 1])->order(100);
+            //$menu->url(action('HomeController@index'), __('home.home'), ['icon' => 'fa fas fa-tachometer-alt', 'active' => request()->segment(1) == 'home2'])->order(10);
+
 
         });
         

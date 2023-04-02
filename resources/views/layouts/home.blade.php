@@ -12,7 +12,7 @@
 
         <!-- Fonts -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,600" rel="stylesheet" type="text/css"> -->
-        
+        <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png" sizes="16x16"> 
         <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
 
         <!-- Styles -->

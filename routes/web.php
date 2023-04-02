@@ -39,6 +39,9 @@ Route::middleware(['setData'])->group(function () {
 //Routes for authenticated users only
 Route::middleware(['setData', 'auth', 'SetSessionData', 'language', 'timezone', 'AdminSidebarMenu', 'CheckUserLogin'])->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/home/chatbot', 'HomeController@chatbot');
+
     Route::get('/home/get-totals', 'HomeController@getTotals');
     Route::get('/home/product-stock-alert', 'HomeController@getProductStockAlert');
     Route::get('/home/purchase-payment-dues', 'HomeController@getPurchasePaymentDues');
@@ -421,4 +424,7 @@ Route::prefix('app')->group(function () {
         // return "hola";
         return view("mobiles.skot.index");
     });
+
+
+
 });
