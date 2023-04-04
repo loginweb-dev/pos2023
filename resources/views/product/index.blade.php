@@ -162,7 +162,7 @@
                 processing: true,
                 serverSide: true,
                 aaSorting: [[3, 'asc']],
-                scrollY:        "75vh",
+                scrollY:        "260vh",
                 scrollX:        true,
                 scrollCollapse: true,
                 "ajax": {
@@ -188,16 +188,16 @@
                     }
                 },
                 columnDefs: [ {
-                    "targets": [0, 1, 2],
+                    "targets": [0, 1],
                     "orderable": false,
                     "searchable": false
                 } ],
                 columns: [
                         { data: 'mass_delete'  },
-                        { data: 'image', name: 'products.image'  },
+                        // { data: 'image', name: 'products.image'  },
                         { data: 'action', name: 'action'},
                         { data: 'product', name: 'products.name'  },
-                        { data: 'product_locations', name: 'product_locations'  },
+                        // { data: 'product_locations', name: 'product_locations'  },
                         @can('view_purchase_price')
                             { data: 'purchase_price', name: 'max_purchase_price', searchable: false},
                         @endcan
@@ -205,15 +205,15 @@
                             { data: 'selling_price', name: 'max_price', searchable: false},
                         @endcan
                         { data: 'current_stock', searchable: false},
-                        { data: 'type', name: 'products.type'},
+                        // { data: 'type', name: 'products.type'},
                         { data: 'category', name: 'c1.name'},
                         { data: 'brand', name: 'brands.name'},
-                        { data: 'tax', name: 'tax_rates.name', searchable: false},
+                        // { data: 'tax', name: 'tax_rates.name', searchable: false},
                         { data: 'sku', name: 'products.sku'},
-                        { data: 'product_custom_field1', name: 'products.product_custom_field1'  },
-                        { data: 'product_custom_field2', name: 'products.product_custom_field2'  },
-                        { data: 'product_custom_field3', name: 'products.product_custom_field3'  },
-                        { data: 'product_custom_field4', name: 'products.product_custom_field4'  }
+                        // { data: 'product_custom_field1', name: 'products.product_custom_field1'  },
+                        // { data: 'product_custom_field2', name: 'products.product_custom_field2'  },
+                        // { data: 'product_custom_field3', name: 'products.product_custom_field3'  },
+                        // { data: 'product_custom_field4', name: 'products.product_custom_field4'  }
                         
                     ],
                     createdRow: function( row, data, dataIndex ) {
@@ -486,7 +486,7 @@
                     stock_report_table = $('#stock_report_table').DataTable({
                         processing: true,
                         serverSide: true,
-                        scrollY: "75vh",
+                        scrollY: "190vh",
                         scrollX:        true,
                         scrollCollapse: true,
                         ajax: {

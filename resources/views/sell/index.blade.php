@@ -41,30 +41,31 @@
                     <tr>
                         <th>@lang('messages.action')</th>
                         <th>@lang('messages.date')</th>
-                        <th>@lang('sale.invoice_no')</th>
+                        {{-- <th>@lang('sale.invoice_no')</th> --}}<th>Codigo</th>
+                        
                         <th>@lang('sale.customer_name')</th>
-                        <th>@lang('lang_v1.contact_no')</th>
-                        <th>@lang('sale.location')</th>
-                        <th>@lang('sale.payment_status')</th>
-                        <th>@lang('lang_v1.payment_method')</th>
-                        <th>@lang('sale.total_amount')</th>
-                        <th>@lang('sale.total_paid')</th>
-                        <th>@lang('lang_v1.sell_due')</th>
-                        <th>@lang('lang_v1.sell_return_due')</th>
-                        <th>@lang('lang_v1.shipping_status')</th>
-                        <th>@lang('lang_v1.total_items')</th>
+                        {{-- <th>@lang('lang_v1.contact_no')</th> --}}
+                        {{-- <th>@lang('sale.location')</th> --}}
+                        {{-- <th>@lang('sale.payment_status')</th> --}}<th>Estado</th>
+                        {{-- <th>@lang('lang_v1.payment_method')</th> --}}
+                        {{-- <th>@lang('sale.total_amount')</th> --}}<th>Total</th>
+                        {{-- <th>@lang('sale.total_paid')</th> --}}
+                        {{-- <th>@lang('lang_v1.sell_due')</th> --}}
+                        {{-- <th>@lang('lang_v1.sell_return_due')</th>
+                        <th>@lang('lang_v1.shipping_status')</th> --}}
+                        {{-- <th>@lang('lang_v1.total_items')</th> --}}<th>Productos</th>
                         <th>@lang('lang_v1.types_of_service')</th>
                         <th>{{ $custom_labels['types_of_service']['custom_field_1'] ?? __('lang_v1.service_custom_field_1' )}}</th>
-                        <th>@lang('lang_v1.added_by')</th>
+                        {{-- <th>@lang('lang_v1.added_by')</th>
                         <th>@lang('sale.sell_note')</th>
                         <th>@lang('sale.staff_note')</th>
                         <th>@lang('sale.shipping_details')</th>
                         <th>@lang('restaurant.table')</th>
-                        <th>@lang('restaurant.service_staff')</th>
+                        <th>@lang('restaurant.service_staff')</th> --}}
                     </tr>
                 </thead>
                 <tbody></tbody>
-                <tfoot>
+                {{-- <tfoot>
                     <tr class="bg-gray font-17 footer-total text-center">
                         <td colspan="6"><strong>@lang('sale.total'):</strong></td>
                         <td class="footer_payment_status_count"></td>
@@ -75,9 +76,9 @@
                         <td class="footer_total_sell_return_due"></td>
                         <td colspan="2"></td>
                         <td class="service_type_count"></td>
-                        <td colspan="7"></td>
+                        <td colspan="1"></td>
                     </tr>
-                </tfoot>
+                </tfoot> --}}
             </table>
         @endif
     @endcomponent
@@ -150,7 +151,7 @@ $(document).ready( function(){
                 d = __datatable_ajax_callback(d);
             }
         },
-        scrollY:        "75vh",
+        scrollY:        "220vh",
         scrollX:        true,
         scrollCollapse: true,
         columns: [
@@ -158,24 +159,24 @@ $(document).ready( function(){
             { data: 'transaction_date', name: 'transaction_date'  },
             { data: 'invoice_no', name: 'invoice_no'},
             { data: 'conatct_name', name: 'conatct_name'},
-            { data: 'mobile', name: 'contacts.mobile'},
-            { data: 'business_location', name: 'bl.name'},
+            // { data: 'mobile', name: 'contacts.mobile'},
+            // { data: 'business_location', name: 'bl.name'},
             { data: 'payment_status', name: 'payment_status'},
-            { data: 'payment_methods', orderable: false, "searchable": false},
+            // { data: 'payment_methods', orderable: false, "searchable": false},
             { data: 'final_total', name: 'final_total'},
-            { data: 'total_paid', name: 'total_paid', "searchable": false},
-            { data: 'total_remaining', name: 'total_remaining'},
-            { data: 'return_due', orderable: false, "searchable": false},
-            { data: 'shipping_status', name: 'shipping_status'},
+            // { data: 'total_paid', name: 'total_paid', "searchable": false},
+            // { data: 'total_remaining', name: 'total_remaining'},
+            // { data: 'return_due', orderable: false, "searchable": false},
+            // { data: 'shipping_status', name: 'shipping_status'},
             { data: 'total_items', name: 'total_items', "searchable": false},
             { data: 'types_of_service_name', name: 'tos.name', @if(empty($is_types_service_enabled)) visible: false @endif},
             { data: 'service_custom_field_1', name: 'service_custom_field_1', @if(empty($is_types_service_enabled)) visible: false @endif},
-            { data: 'added_by', name: 'u.first_name'},
-            { data: 'additional_notes', name: 'additional_notes'},
-            { data: 'staff_note', name: 'staff_note'},
-            { data: 'shipping_details', name: 'shipping_details'},
-            { data: 'table_name', name: 'tables.name', @if(empty($is_tables_enabled)) visible: false @endif },
-            { data: 'waiter', name: 'ss.first_name', @if(empty($is_service_staff_enabled)) visible: false @endif },
+            // { data: 'added_by', name: 'u.first_name'},
+            // { data: 'additional_notes', name: 'additional_notes'},
+            // { data: 'staff_note', name: 'staff_note'},
+            // { data: 'shipping_details', name: 'shipping_details'},
+            // { data: 'table_name', name: 'tables.name', @if(empty($is_tables_enabled)) visible: false @endif },
+            // { data: 'waiter', name: 'ss.first_name', @if(empty($is_service_staff_enabled)) visible: false @endif },
         ],
         "fnDrawCallback": function (oSettings) {
             __currency_convert_recursively($('#sell_table'));

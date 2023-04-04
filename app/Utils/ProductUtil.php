@@ -1538,6 +1538,8 @@ class ProductUtil extends Util
                 ->active()
                 ->whereNull('variations.deleted_at')
                 ->leftjoin('units as U', 'products.unit_id', '=', 'U.id')
+                ->leftjoin('categories as C', 'products.category_id', '=', 'C.id')
+                ->leftjoin('brands as B', 'products.brand_id', '=', 'B.id')
                 ->leftjoin(
                     'variation_location_details AS VLD',
                     function ($join) use ($location_id) {
@@ -1655,6 +1657,10 @@ class ProductUtil extends Util
         $query->select(
                 'products.id as product_id',
                 'products.name',
+                'product_custom_field1',
+                'product_custom_field2',
+                'C.name as category_id',
+                'B.name as brand_id',
                 'products.type',
                 'products.enable_stock',
                 'variations.id as variation_id',

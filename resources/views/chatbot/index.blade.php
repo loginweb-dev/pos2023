@@ -3,48 +3,93 @@
 @section('content')
 <section class="content-header">
     <h1>{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
+     <br> Negocio #{{ $business_id }}
     </h1>
-    {{-- <img src="{{ asset("chatbot/qrwb.png") }}" alt=""> --}}
-    <div id="ele"></div>
+    <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Whatsapp</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Campañas</a></li>
+          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active text-center" id="home">
+            <div id="title"></div>
+            <div id="body"></div>
+            <div id="footer"></div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="profile"></div>
+
+          <div role="tabpanel" class="tab-pane" id="settings">...</div>
+        </div>
+      
+      </div>
 </section>
 
 
 @endsection
 
 @section('javascript')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{{-- <script src="{{ asset('chatbot/qrcode.js') }}"></script> --}}
+<script type="text/javascript" src="https://cdn.rawgit.com/KeeeX/qrcodejs/master/qrcode.min.js"></script>
 <script>
-  //const count = 1;
-    //setTimeout(transition, 2000);
+  
+  Echo.channel('home')
+    .listen('NewMessage', (e) => {
+        // console.log(e.type);
+        // console.log(e.busine);
+        // console.log(e.message);
+        // console.log(e.phone);
+  
+        if ("{{ $business_id }}" == e.busine) {
+          // console.log(e.busine);
+          switch (e.type) {
+            case "qr":
+              $("#title").html("<h2>Escanea el QR para fucionar tu tienda con tu whatsapp</h2><hr />")
+              var qrcode = new QRCode(document.getElementById("body"), {
+                text: e.message,
+                width: 256,
+                height: 256,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+              });
 
-    async function transition() {
-        var micount = micount + 1
-        //$('#ele').html('variation 2');
-        console.log("micount")
-        // if(count == 1) {
-        //     $('#ele').html('variation 2');
-        //     var count = 2;
-
-        // } else if(count == 2) {
-        //     $('#ele').html('variation 3');
-        //     var count = 3;
-
-        // } else if(count == 3) {
-        //     $('#ele').html('variation 1');
-        //     var count = 1;
-        // }
-
-        // setTimeout(transition, 2000);
-
-        var mibusine = await axios("http://localhost:8000/api/chatbots/busine/start/1")
-
-            if(mibusine.data){
-                $('#ele').html('el chatbot esta listo');
-
-            }else{
-                $('#ele').html('escanea el qr');
-            }
-    }
-    setInterval(transition, 10000);
+              break;
+              case "ready":
+                // $("#title").html("<h2>Ya estas listo para enviar mensaje</h2><hr />")
+                $("#body").html("resisa tu celular")
+                // $("#footer").html("<hr />")
+              break;
+              case "authenticated":
+                $("#title").html("<h2>Ya estas listo para recibir mensaje</h2><hr />")
+                $("#body").html(e.message)
+                $("#footer").html("<hr />")
+              break;
+              case "loading_screen":
+                // $("#title").html("<h2>Ya estas listo para recibir mensaje</h2><hr />")
+                $("#body").html(e.message)
+                // $("#footer").html("<hr />")
+              break;
+              case "msg_input":
+                $("#title").html("<h2>Ya estas listo para recibir mensaje</h2><hr />")
+                $("#body").html("<h4>Mensaje de entrada<span class='badge badge-primary'>"+e.message+"</span></h4>")
+                // $("#footer").html("<hr />")
+              break;
+              case "msg_output":
+                // $("#title").html("<h2>Mensaje de salida</h2><hr />")
+                $("#footer").html("<hr /><h4>Mensaje de salida <span class='badge badge-success'>"+e.message+"</span></h24")
+                // $("#footer").html("<hr />")
+              break;
+            default:
+              break;
+          }
+        } else {
+            
+        }
+    })
 </script>
 @endsection

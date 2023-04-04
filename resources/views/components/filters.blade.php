@@ -11,7 +11,8 @@
       $closed = true;
     }
   @endphp
-  <div id="collapseFilter" class="panel-collapse active collapse @if(empty($closed)) in @endif" aria-expanded="true">
+  {{-- <div id="collapseFilter" class="panel-collapse active collapse @if(empty($closed)) in @endif" aria-expanded="true"> --}}
+  <div id="collapseFilter" class="panel-collapse active collapse" aria-expanded="true">
     <div class="box-body">
       {{$slot}}
     </div>

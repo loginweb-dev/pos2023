@@ -2,7 +2,7 @@
     "variables": [],
     "info": {
         "name": "Ultimate POS API",
-        "_postman_id": "63f1c8e3-8fa5-435d-93bf-dc1ea284607d",
+        "_postman_id": "b990c48a-5451-497d-8757-f70c53146e3f",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
     },
@@ -16,7 +16,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/get-attendance\/:user_id",
                             "query": [],
                             "variable": [
@@ -56,7 +56,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/clock-in",
                             "query": []
                         },
@@ -77,7 +77,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"user_id\": 1,\n    \"clock_in_time\": \"2000-06-13 13:13:00\",\n    \"clock_in_note\": \"eos\",\n    \"ip_address\": \"numquam\",\n    \"latitude\": \"sit\",\n    \"longitude\": \"et\"\n}"
+                            "raw": "{\n    \"user_id\": 1,\n    \"clock_in_time\": \"2000-06-13 13:13:00\",\n    \"clock_in_note\": \"laboriosam\",\n    \"ip_address\": \"ad\",\n    \"latitude\": \"ipsa\",\n    \"longitude\": \"et\"\n}"
                         },
                         "description": "[User must have \"essentials.allow_users_for_attendance_from_api\" permission to Clock in]",
                         "response": []
@@ -88,7 +88,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/clock-out",
                             "query": []
                         },
@@ -109,7 +109,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"user_id\": 1,\n    \"clock_out_time\": \"2000-06-13 13:13:00\",\n    \"clock_out_note\": \"beatae\",\n    \"latitude\": \"facere\",\n    \"longitude\": \"sint\"\n}"
+                            "raw": "{\n    \"user_id\": 1,\n    \"clock_out_time\": \"2000-06-13 13:13:00\",\n    \"clock_out_note\": \"quia\",\n    \"latitude\": \"explicabo\",\n    \"longitude\": \"voluptatem\"\n}"
                         },
                         "description": "[User must have \"essentials.allow_users_for_attendance_from_api\" permission to Clock out]",
                         "response": []
@@ -120,7 +120,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/holidays",
                             "query": [
                                 {
@@ -177,7 +177,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/brand",
                             "query": []
                         },
@@ -209,7 +209,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/brand\/:brand",
                             "query": [],
                             "variable": [
@@ -255,7 +255,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/business-location",
                             "query": []
                         },
@@ -287,7 +287,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/business-location\/:business_location",
                             "query": []
                         },
@@ -325,7 +325,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/follow-ups",
                             "query": [
                                 {
@@ -348,7 +348,7 @@
                                 },
                                 {
                                     "key": "follow_up_type",
-                                    "value": "magni",
+                                    "value": "magnam",
                                     "description": "filter the result through follow_up_type, get follow_up_type from getFollowUpResources->follow_up_types",
                                     "disabled": false
                                 },
@@ -400,7 +400,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/follow-ups",
                             "query": []
                         },
@@ -421,7 +421,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"suscipit\",\n    \"schedule_type\": \"at\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"allow_notification\": true\n}"
+                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"fugiat\",\n    \"schedule_type\": \"vel\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"allow_notification\": true\n}"
                         },
                         "description": "",
                         "response": []
@@ -432,7 +432,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/follow-ups\/:follow_up",
                             "query": [],
                             "variable": [
@@ -472,7 +472,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/follow-ups\/:follow_up",
                             "query": [],
                             "variable": [
@@ -501,7 +501,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"sed\",\n    \"schedule_type\": \"mollitia\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"allow_notification\": true\n}"
+                            "raw": "{\n    \"title\": \"Meeting with client\",\n    \"contact_id\": 2,\n    \"description\": \"quae\",\n    \"schedule_type\": \"ut\",\n    \"user_id\": \"[2,3,5]\",\n    \"notify_before\": 5,\n    \"notify_type\": \"minute\",\n    \"status\": \"open\",\n    \"notify_via\": \"['sms' => 0 ,'mail' => 1]\",\n    \"followup_additional_info\": \"['call duration' => '1 hour']\",\n    \"start_datetime\": \"2021-01-06 13:05:00\",\n    \"end_datetime\": \"2021-01-06 13:05:00\",\n    \"allow_notification\": true\n}"
                         },
                         "description": "",
                         "response": []
@@ -512,7 +512,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/follow-up-resources",
                             "query": []
                         },
@@ -544,7 +544,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/leads",
                             "query": [
                                 {
@@ -555,31 +555,31 @@
                                 },
                                 {
                                     "key": "name",
-                                    "value": "qui",
+                                    "value": "fugit",
                                     "description": "Search term for lead name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "biz_name",
-                                    "value": "ut",
+                                    "value": "sit",
                                     "description": "Search term for lead's business name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "mobile_num",
-                                    "value": "2",
+                                    "value": "5",
                                     "description": "Search term for lead's mobile number",
                                     "disabled": false
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "nulla",
+                                    "value": "quia",
                                     "description": "Search term for lead's contact_id. Ex(CO0005)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_by",
-                                    "value": "adipisci",
+                                    "value": "ab",
                                     "description": "Column name to sort the result, Column: name, supplier_business_name",
                                     "disabled": false
                                 },
@@ -625,7 +625,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/crm\/call-logs",
                             "query": []
                         },
@@ -646,7 +646,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"call_logs\": [\n        {\n            \"mobile_number\": \"aliquam\",\n            \"mobile_name\": \"fugiat\",\n            \"call_type\": \"call\",\n            \"start_time\": \"dolorum\",\n            \"end_time\": \"aut\",\n            \"duration\": \"in\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"call_logs\": [\n        {\n            \"mobile_number\": \"maiores\",\n            \"mobile_name\": \"blanditiis\",\n            \"call_type\": \"call\",\n            \"start_time\": \"officiis\",\n            \"end_time\": \"quod\",\n            \"duration\": \"dicta\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -663,7 +663,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/cash-register",
                             "query": [
                                 {
@@ -732,7 +732,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/cash-register",
                             "query": []
                         },
@@ -753,7 +753,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"location_id\": 1,\n    \"initial_amount\": 1734.79548842,\n    \"created_at\": \"2020-5-7 15:20:22\",\n    \"closed_at\": \"2020-5-7 15:20:22\",\n    \"status\": \"close\",\n    \"closing_amount\": 1.3849,\n    \"total_card_slips\": 3,\n    \"total_cheques\": 20,\n    \"closing_note\": \"accusantium\",\n    \"transaction_ids\": \"1,2,3\"\n}"
+                            "raw": "{\n    \"location_id\": 1,\n    \"initial_amount\": 10515.69776722,\n    \"created_at\": \"2020-5-7 15:20:22\",\n    \"closed_at\": \"2020-5-7 15:20:22\",\n    \"status\": \"close\",\n    \"closing_amount\": 366.6862539,\n    \"total_card_slips\": 15,\n    \"total_cheques\": 19,\n    \"closing_note\": \"voluptatem\",\n    \"transaction_ids\": \"1,2,3\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -764,7 +764,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/cash-register\/:cash_register",
                             "query": [],
                             "variable": [
@@ -810,12 +810,12 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/contactapi",
                             "query": [
                                 {
                                     "key": "type",
-                                    "value": "officiis",
+                                    "value": "distinctio",
                                     "description": "Type of contact (supplier, customer)",
                                     "disabled": false
                                 },
@@ -827,31 +827,31 @@
                                 },
                                 {
                                     "key": "biz_name",
-                                    "value": "officia",
+                                    "value": "numquam",
                                     "description": "Search term for contact's business name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "mobile_num",
-                                    "value": "3",
+                                    "value": "10",
                                     "description": "Search term for contact's mobile number",
                                     "disabled": false
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "ipsum",
+                                    "value": "dolorum",
                                     "description": "Search term for contact's contact_id. Ex(CO0005)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_by",
-                                    "value": "libero",
+                                    "value": "nam",
                                     "description": "Column name to sort the result, Column: name, supplier_business_name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "direction",
-                                    "value": "impedit",
+                                    "value": "nihil",
                                     "description": "Direction to sort the result, Direction: desc, asc",
                                     "disabled": false
                                 },
@@ -891,7 +891,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/contactapi",
                             "query": []
                         },
@@ -912,7 +912,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"cumque\",\n    \"prefix\": \"ut\",\n    \"first_name\": \"modi\",\n    \"middle_name\": \"magni\",\n    \"last_name\": \"delectus\",\n    \"tax_number\": \"8787fefef\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"4578691009\",\n    \"landline\": \"5487-8454-4145\",\n    \"alternate_number\": \"841847541222\",\n    \"address_line_1\": \"accusantium\",\n    \"address_line_2\": \"eos\",\n    \"city\": \"reiciendis\",\n    \"state\": \"dolorem\",\n    \"country\": \"laboriosam\",\n    \"zip_code\": \"et\",\n    \"customer_group_id\": \"rem\",\n    \"contact_id\": \"est\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"non\",\n    \"custom_field2\": \"modi\",\n    \"custom_field3\": \"aut\",\n    \"custom_field4\": \"corrupti\",\n    \"email\": \"eveniet\",\n    \"shipping_address\": \"eum\",\n    \"position\": \"repellendus\",\n    \"opening_balance\": 0,\n    \"source_id\": 5,\n    \"life_stage_id\": 16,\n    \"assigned_to\": []\n}"
+                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"consequatur\",\n    \"prefix\": \"soluta\",\n    \"first_name\": \"ut\",\n    \"middle_name\": \"nisi\",\n    \"last_name\": \"in\",\n    \"tax_number\": \"8787fefef\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"4578691009\",\n    \"landline\": \"5487-8454-4145\",\n    \"alternate_number\": \"841847541222\",\n    \"address_line_1\": \"eaque\",\n    \"address_line_2\": \"alias\",\n    \"city\": \"qui\",\n    \"state\": \"consectetur\",\n    \"country\": \"dolores\",\n    \"zip_code\": \"totam\",\n    \"customer_group_id\": \"est\",\n    \"contact_id\": \"qui\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"natus\",\n    \"custom_field2\": \"ipsam\",\n    \"custom_field3\": \"mollitia\",\n    \"custom_field4\": \"id\",\n    \"email\": \"voluptatem\",\n    \"shipping_address\": \"dolores\",\n    \"position\": \"aut\",\n    \"opening_balance\": 0,\n    \"source_id\": 6,\n    \"life_stage_id\": 19,\n    \"assigned_to\": []\n}"
                         },
                         "description": "",
                         "response": []
@@ -923,7 +923,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/contactapi\/:contactapi",
                             "query": []
                         },
@@ -955,7 +955,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/contactapi\/:contactapi",
                             "query": []
                         },
@@ -976,7 +976,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"vitae\",\n    \"prefix\": \"natus\",\n    \"first_name\": \"exercitationem\",\n    \"middle_name\": \"ea\",\n    \"last_name\": \"quo\",\n    \"tax_number\": \"488744dwd\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"8795461009\",\n    \"landline\": \"65484-848-848\",\n    \"alternate_number\": \"9898795220\",\n    \"address_line_1\": \"suscipit\",\n    \"address_line_2\": \"quia\",\n    \"city\": \"eius\",\n    \"state\": \"suscipit\",\n    \"country\": \"dignissimos\",\n    \"zip_code\": \"rerum\",\n    \"customer_group_id\": \"voluptas\",\n    \"contact_id\": \"est\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"laudantium\",\n    \"custom_field2\": \"voluptas\",\n    \"custom_field3\": \"voluptas\",\n    \"custom_field4\": \"facere\",\n    \"email\": \"et\",\n    \"shipping_address\": \"odit\",\n    \"position\": \"quae\",\n    \"opening_balance\": 10.3,\n    \"source_id\": 15,\n    \"life_stage_id\": 18,\n    \"assigned_to\": []\n}"
+                            "raw": "{\n    \"type\": \"customer\",\n    \"supplier_business_name\": \"voluptatem\",\n    \"prefix\": \"quo\",\n    \"first_name\": \"sint\",\n    \"middle_name\": \"et\",\n    \"last_name\": \"suscipit\",\n    \"tax_number\": \"488744dwd\",\n    \"pay_term_number\": 3,\n    \"pay_term_type\": \"months\",\n    \"mobile\": \"8795461009\",\n    \"landline\": \"65484-848-848\",\n    \"alternate_number\": \"9898795220\",\n    \"address_line_1\": \"sed\",\n    \"address_line_2\": \"velit\",\n    \"city\": \"debitis\",\n    \"state\": \"error\",\n    \"country\": \"vel\",\n    \"zip_code\": \"fugit\",\n    \"customer_group_id\": \"facilis\",\n    \"contact_id\": \"iusto\",\n    \"dob\": \"2000-06-13\",\n    \"custom_field1\": \"vero\",\n    \"custom_field2\": \"aut\",\n    \"custom_field3\": \"optio\",\n    \"custom_field4\": \"magnam\",\n    \"email\": \"et\",\n    \"shipping_address\": \"ad\",\n    \"position\": \"labore\",\n    \"opening_balance\": 10.3,\n    \"source_id\": 5,\n    \"life_stage_id\": 2,\n    \"assigned_to\": []\n}"
                         },
                         "description": "",
                         "response": []
@@ -987,7 +987,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/contactapi-payment",
                             "query": []
                         },
@@ -1008,7 +1008,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"contact_id\": 17,\n    \"amount\": 453.13,\n    \"method\": \"cash\",\n    \"paid_on\": \"2020-07-22 15:48:29\",\n    \"account_id\": 14,\n    \"card_number\": \"ratione\",\n    \"card_holder_name\": \"quia\",\n    \"card_transaction_number\": \"cumque\",\n    \"card_type\": \"labore\",\n    \"card_month\": \"ea\",\n    \"card_year\": \"praesentium\",\n    \"card_security\": \"aut\",\n    \"transaction_no_1\": \"soluta\",\n    \"transaction_no_2\": \"temporibus\",\n    \"transaction_no_3\": \"minima\",\n    \"cheque_number\": \"qui\",\n    \"bank_account_number\": \"laborum\",\n    \"note\": \"repellendus\"\n}"
+                            "raw": "{\n    \"contact_id\": 17,\n    \"amount\": 453.13,\n    \"method\": \"cash\",\n    \"paid_on\": \"2020-07-22 15:48:29\",\n    \"account_id\": 11,\n    \"card_number\": \"sunt\",\n    \"card_holder_name\": \"enim\",\n    \"card_transaction_number\": \"et\",\n    \"card_type\": \"aliquam\",\n    \"card_month\": \"non\",\n    \"card_year\": \"rem\",\n    \"card_security\": \"reiciendis\",\n    \"transaction_no_1\": \"dolorem\",\n    \"transaction_no_2\": \"ut\",\n    \"transaction_no_3\": \"et\",\n    \"cheque_number\": \"minima\",\n    \"bank_account_number\": \"ut\",\n    \"note\": \"quis\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -1025,8 +1025,181 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/expense",
+                            "query": [
+                                {
+                                    "key": "location_id",
+                                    "value": "1",
+                                    "description": "id of the location",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "payment_status",
+                                    "value": "paid",
+                                    "description": "payment status",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "start_date",
+                                    "value": "2018-06-25",
+                                    "description": "format:Y-m-d",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "end_date",
+                                    "value": "2018-06-25",
+                                    "description": "format:Y-m-d",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "expense_for",
+                                    "value": "rerum",
+                                    "description": "id of the user for which expense is created",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "15",
+                                    "description": "Total records per page. default: 10, Set -1 for no pagination",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create expense \/ expense refund",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8000",
+                            "path": "connector\/api\/expense",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"location_id\": 1,\n    \"final_total\": 1638550.1785056,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 6,\n    \"expense_for\": 20,\n    \"contact_id\": 20,\n    \"expense_category_id\": 13,\n    \"expense_sub_category_id\": 16,\n    \"additional_notes\": \"laboriosam\",\n    \"is_refund\": 0,\n    \"is_recurring\": 0,\n    \"recur_interval\": 1,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"placeat\",\n    \"recur_repetitions\": 20,\n    \"payment\": [\n        {\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 10,\n            \"card_number\": \"fuga\",\n            \"card_holder_name\": \"ut\",\n            \"card_transaction_number\": \"blanditiis\",\n            \"card_type\": \"est\",\n            \"card_month\": \"ullam\",\n            \"card_year\": \"blanditiis\",\n            \"card_security\": \"ut\",\n            \"transaction_no_1\": \"ab\",\n            \"transaction_no_2\": \"ipsum\",\n            \"transaction_no_3\": \"quae\",\n            \"note\": \"maxime\",\n            \"cheque_number\": \"enim\"\n        }\n    ]\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get the specified expense \/ expense refund",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8000",
+                            "path": "connector\/api\/expense\/:expense",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "expense",
+                                    "key": "expense",
+                                    "value": "59",
+                                    "description": "comma separated ids of the expenses"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update expense \/ expense refund",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8000",
+                            "path": "connector\/api\/expense\/:expense",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"final_total\": 38461.957,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 3,\n    \"expense_for\": 9,\n    \"contact_id\": 11,\n    \"expense_category_id\": 4,\n    \"expense_sub_category_id\": 15,\n    \"additional_notes\": \"sapiente\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 5,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"accusantium\",\n    \"recur_repetitions\": 15,\n    \"payment\": []\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "List expense refunds",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost:8000",
+                            "path": "connector\/api\/expense-refund",
                             "query": [
                                 {
                                     "key": "location_id",
@@ -1090,184 +1263,11 @@
                     }
                 },
                 {
-                    "name": "Create expense \/ expense refund",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "localhost\/pos\/public",
-                            "path": "connector\/api\/expense",
-                            "query": []
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Authorization",
-                                "value": "Bearer {token}"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"location_id\": 1,\n    \"final_total\": 58862.1649,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 17,\n    \"expense_for\": 5,\n    \"contact_id\": 14,\n    \"expense_category_id\": 3,\n    \"expense_sub_category_id\": 3,\n    \"additional_notes\": \"voluptates\",\n    \"is_refund\": 0,\n    \"is_recurring\": 0,\n    \"recur_interval\": 11,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"at\",\n    \"recur_repetitions\": 19,\n    \"payment\": [\n        {\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 10,\n            \"card_number\": \"fuga\",\n            \"card_holder_name\": \"excepturi\",\n            \"card_transaction_number\": \"amet\",\n            \"card_type\": \"et\",\n            \"card_month\": \"neque\",\n            \"card_year\": \"nesciunt\",\n            \"card_security\": \"in\",\n            \"transaction_no_1\": \"eius\",\n            \"transaction_no_2\": \"accusamus\",\n            \"transaction_no_3\": \"dolores\",\n            \"note\": \"reprehenderit\",\n            \"cheque_number\": \"sint\"\n        }\n    ]\n}"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Get the specified expense \/ expense refund",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "localhost\/pos\/public",
-                            "path": "connector\/api\/expense\/:expense",
-                            "query": [],
-                            "variable": [
-                                {
-                                    "id": "expense",
-                                    "key": "expense",
-                                    "value": "59",
-                                    "description": "comma separated ids of the expenses"
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Authorization",
-                                "value": "Bearer {token}"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update expense \/ expense refund",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "localhost\/pos\/public",
-                            "path": "connector\/api\/expense\/:expense",
-                            "query": []
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Authorization",
-                                "value": "Bearer {token}"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"final_total\": 321.495161358,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"tax_rate_id\": 14,\n    \"expense_for\": 16,\n    \"contact_id\": 3,\n    \"expense_category_id\": 20,\n    \"expense_sub_category_id\": 6,\n    \"additional_notes\": \"autem\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 12,\n    \"recur_interval_type\": \"months\",\n    \"subscription_repeat_on\": 15,\n    \"subscription_no\": \"animi\",\n    \"recur_repetitions\": 2,\n    \"payment\": []\n}"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "List expense refunds",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "localhost\/pos\/public",
-                            "path": "connector\/api\/expense-refund",
-                            "query": [
-                                {
-                                    "key": "location_id",
-                                    "value": "1",
-                                    "description": "id of the location",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "payment_status",
-                                    "value": "paid",
-                                    "description": "payment status",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "start_date",
-                                    "value": "2018-06-25",
-                                    "description": "format:Y-m-d",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "end_date",
-                                    "value": "2018-06-25",
-                                    "description": "format:Y-m-d",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "expense_for",
-                                    "value": "non",
-                                    "description": "id of the user for which expense is created",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "per_page",
-                                    "value": "15",
-                                    "description": "Total records per page. default: 10, Set -1 for no pagination",
-                                    "disabled": false
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Authorization",
-                                "value": "Bearer {token}"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
                     "name": "List expense categories",
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/expense-categories",
                             "query": []
                         },
@@ -1305,24 +1305,24 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/field-force",
                             "query": [
                                 {
                                     "key": "contact_id",
-                                    "value": "consequuntur",
+                                    "value": "voluptas",
                                     "description": "id of the contact",
                                     "disabled": false
                                 },
                                 {
                                     "key": "assigned_to",
-                                    "value": "voluptatibus",
+                                    "value": "eos",
                                     "description": "id of the assigned user",
                                     "disabled": false
                                 },
                                 {
                                     "key": "status",
-                                    "value": "atque",
+                                    "value": "blanditiis",
                                     "description": "status of the visit (assigned, finished)",
                                     "disabled": false
                                 },
@@ -1380,7 +1380,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/field-force\/create",
                             "query": []
                         },
@@ -1401,7 +1401,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"contact_id\": 16,\n    \"visit_to\": \"occaecati\",\n    \"visit_address\": \"aspernatur\",\n    \"assigned_to\": 16,\n    \"visit_on\": \"2021-12-28 17:23:00\",\n    \"visit_for\": \"aspernatur\"\n}"
+                            "raw": "{\n    \"contact_id\": 9,\n    \"visit_to\": \"et\",\n    \"visit_address\": \"et\",\n    \"assigned_to\": 4,\n    \"visit_on\": \"2021-12-28 17:23:00\",\n    \"visit_for\": \"quia\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -1412,7 +1412,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/field-force\/update-visit-status\/:id",
                             "query": [],
                             "variable": [
@@ -1441,7 +1441,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"status\": \"finished\",\n    \"reason_to_not_meet_contact\": \"est\",\n    \"visited_on\": \"2021-12-28 17:23:00\",\n    \"visited_address\": \"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India\",\n    \"latitude\": \"41.40338\",\n    \"longitude\": \"2.17403\",\n    \"comments\": \"quasi\",\n    \"photo\": \"quibusdam\"\n}"
+                            "raw": "{\n    \"status\": \"finished\",\n    \"reason_to_not_meet_contact\": \"ut\",\n    \"visited_on\": \"2021-12-28 17:23:00\",\n    \"visited_address\": \"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India\",\n    \"latitude\": \"41.40338\",\n    \"longitude\": \"2.17403\",\n    \"comments\": \"quam\",\n    \"photo\": \"ad\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -1458,36 +1458,36 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/new_product",
                             "query": [
                                 {
                                     "key": "order_by",
-                                    "value": "sunt",
+                                    "value": "quia",
                                     "description": "Values: product_name or newest",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_direction",
-                                    "value": "in",
+                                    "value": "placeat",
                                     "description": "Values: asc or desc",
                                     "disabled": false
                                 },
                                 {
                                     "key": "location_custom_field_1",
-                                    "value": "et",
+                                    "value": "labore",
                                     "description": "Custom field 1 of the location",
                                     "disabled": false
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "voluptates",
+                                    "value": "molestias",
                                     "description": "comma separated ids of one or multiple category",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sub_category_id",
-                                    "value": "ea",
+                                    "value": "voluptate",
                                     "description": "comma separated ids of one or multiple sub-category",
                                     "disabled": false
                                 },
@@ -1499,25 +1499,25 @@
                                 },
                                 {
                                     "key": "not_for_sell",
-                                    "value": "molestiae",
+                                    "value": "eum",
                                     "description": "(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_lot_detail",
-                                    "value": "laboriosam",
+                                    "value": "rerum",
                                     "description": "Send lot details in each variation location details(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "inventore",
+                                    "value": "ipsa",
                                     "description": "Search term for product name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sku",
-                                    "value": "laudantium",
+                                    "value": "nesciunt",
                                     "description": "Search term for product sku",
                                     "disabled": false
                                 },
@@ -1563,7 +1563,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/new_sell",
                             "query": [
                                 {
@@ -1574,7 +1574,7 @@
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "praesentium",
+                                    "value": "eos",
                                     "description": "id of the customer",
                                     "disabled": false
                                 },
@@ -1598,13 +1598,13 @@
                                 },
                                 {
                                     "key": "user_id",
-                                    "value": "qui",
+                                    "value": "nisi",
                                     "description": "id of the user who created the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "service_staff_id",
-                                    "value": "sit",
+                                    "value": "unde",
                                     "description": "id of the service staff assigned with the sale",
                                     "disabled": false
                                 },
@@ -1616,55 +1616,55 @@
                                 },
                                 {
                                     "key": "source",
-                                    "value": "dolorum",
+                                    "value": "est",
                                     "description": "Source of the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "customer_group_id",
-                                    "value": "accusamus",
+                                    "value": "saepe",
                                     "description": "id of the customer group",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "aut",
+                                    "value": "repellendus",
                                     "description": "name of the product",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_sku",
-                                    "value": "qui",
+                                    "value": "autem",
                                     "description": "sku of the product or variation",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_custom_field_1",
-                                    "value": "quia",
+                                    "value": "reiciendis",
                                     "description": "custome field 1 of the product",
                                     "disabled": false
                                 },
                                 {
                                     "key": "location_custom_field_1",
-                                    "value": "aspernatur",
+                                    "value": "qui",
                                     "description": "custome field 1 of the location",
                                     "disabled": false
                                 },
                                 {
                                     "key": "location_invoice_scheme_prefix",
-                                    "value": "facilis",
+                                    "value": "culpa",
                                     "description": "Invoice scheme prefix of the location",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_category_id",
-                                    "value": "quae",
+                                    "value": "aut",
                                     "description": "category id of the product",
                                     "disabled": false
                                 },
                                 {
                                     "key": "product_sub_category_id",
-                                    "value": "dolore",
+                                    "value": "ad",
                                     "description": "Sub category id of the product",
                                     "disabled": false
                                 },
@@ -1676,13 +1676,13 @@
                                 },
                                 {
                                     "key": "only_subscriptions",
-                                    "value": "commodi",
+                                    "value": "et",
                                     "description": "Filter only subcription invoices (1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_purchase_details",
-                                    "value": "harum",
+                                    "value": "quo",
                                     "description": "Get purchase details of each sell line (1, 0)",
                                     "disabled": false
                                 },
@@ -1728,24 +1728,24 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/new_contactapi",
                             "query": [
                                 {
                                     "key": "type",
-                                    "value": "numquam",
+                                    "value": "corrupti",
                                     "description": "Type of contact (supplier, customer)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "customer_group_id",
-                                    "value": "omnis",
+                                    "value": "officia",
                                     "description": "id of the customer group",
                                     "disabled": false
                                 },
                                 {
                                     "key": "custom_field_1",
-                                    "value": "nulla",
+                                    "value": "veniam",
                                     "description": "Custom field 1 of the contact",
                                     "disabled": false
                                 },
@@ -1763,31 +1763,31 @@
                                 },
                                 {
                                     "key": "biz_name",
-                                    "value": "sequi",
+                                    "value": "qui",
                                     "description": "Search term for contact's business name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "mobile_num",
-                                    "value": "18",
+                                    "value": "3",
                                     "description": "Search term for contact's mobile number",
                                     "disabled": false
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "eos",
+                                    "value": "ea",
                                     "description": "Search term for contact's contact_id. Ex(CO0005)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_by",
-                                    "value": "et",
+                                    "value": "nam",
                                     "description": "Column name to sort the result, Column: name, supplier_business_name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "direction",
-                                    "value": "non",
+                                    "value": "molestias",
                                     "description": "Direction to sort the result, Direction: desc, asc",
                                     "disabled": false
                                 },
@@ -1833,36 +1833,36 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/product",
                             "query": [
                                 {
                                     "key": "order_by",
-                                    "value": "qui",
+                                    "value": "sunt",
                                     "description": "Values: product_name or newest",
                                     "disabled": false
                                 },
                                 {
                                     "key": "order_direction",
-                                    "value": "aspernatur",
+                                    "value": "voluptate",
                                     "description": "Values: asc or desc",
                                     "disabled": false
                                 },
                                 {
                                     "key": "brand_id",
-                                    "value": "ab",
+                                    "value": "assumenda",
                                     "description": "comma separated ids of one or multiple brands",
                                     "disabled": false
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "dignissimos",
+                                    "value": "corporis",
                                     "description": "comma separated ids of one or multiple category",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sub_category_id",
-                                    "value": "laboriosam",
+                                    "value": "voluptas",
                                     "description": "comma separated ids of one or multiple sub-category",
                                     "disabled": false
                                 },
@@ -1874,25 +1874,25 @@
                                 },
                                 {
                                     "key": "selling_price_group",
-                                    "value": "ut",
+                                    "value": "nobis",
                                     "description": "(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_lot_detail",
-                                    "value": "incidunt",
+                                    "value": "magnam",
                                     "description": "Send lot details in each variation location details(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "non",
+                                    "value": "adipisci",
                                     "description": "Search term for product name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sku",
-                                    "value": "maxime",
+                                    "value": "perferendis",
                                     "description": "Search term for product sku",
                                     "disabled": false
                                 },
@@ -1932,18 +1932,18 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/product\/:product",
                             "query": [
                                 {
                                     "key": "selling_price_group",
-                                    "value": "vero",
+                                    "value": "natus",
                                     "description": "(1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_lot_detail",
-                                    "value": "sapiente",
+                                    "value": "assumenda",
                                     "description": "Send lot details in each variation location details(1, 0)",
                                     "disabled": false
                                 }
@@ -1985,7 +1985,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/selling-price-group",
                             "query": []
                         },
@@ -2017,12 +2017,12 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/variation\/:id",
                             "query": [
                                 {
                                     "key": "product_id",
-                                    "value": "voluptate",
+                                    "value": "est",
                                     "description": "Filter by comma separated products ids",
                                     "disabled": false
                                 },
@@ -2034,37 +2034,37 @@
                                 },
                                 {
                                     "key": "brand_id",
-                                    "value": "sunt",
+                                    "value": "perspiciatis",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": "impedit",
+                                    "value": "rerum",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sub_category_id",
-                                    "value": "ut",
+                                    "value": "et",
                                     "description": "",
                                     "disabled": false
                                 },
                                 {
                                     "key": "not_for_selling",
-                                    "value": "deleniti",
+                                    "value": "ducimus",
                                     "description": "Values: 0 or 1",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "deleniti",
+                                    "value": "fugiat",
                                     "description": "Search term for product name",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sku",
-                                    "value": "voluptatem",
+                                    "value": "quisquam",
                                     "description": "Search term for product sku",
                                     "disabled": false
                                 },
@@ -2110,7 +2110,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/sell",
                             "query": [
                                 {
@@ -2121,7 +2121,7 @@
                                 },
                                 {
                                     "key": "contact_id",
-                                    "value": "id",
+                                    "value": "fuga",
                                     "description": "id of the customer",
                                     "disabled": false
                                 },
@@ -2145,13 +2145,13 @@
                                 },
                                 {
                                     "key": "user_id",
-                                    "value": "ut",
+                                    "value": "nostrum",
                                     "description": "id of the user who created the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "service_staff_id",
-                                    "value": "nihil",
+                                    "value": "est",
                                     "description": "id of the service staff assigned with the sale",
                                     "disabled": false
                                 },
@@ -2163,19 +2163,19 @@
                                 },
                                 {
                                     "key": "source",
-                                    "value": "sed",
+                                    "value": "esse",
                                     "description": "Source of the sale",
                                     "disabled": false
                                 },
                                 {
                                     "key": "only_subscriptions",
-                                    "value": "harum",
+                                    "value": "magnam",
                                     "description": "Filter only subcription invoices (1, 0)",
                                     "disabled": false
                                 },
                                 {
                                     "key": "send_purchase_details",
-                                    "value": "nesciunt",
+                                    "value": "quasi",
                                     "description": "Get purchase details of each sell line (1, 0)",
                                     "disabled": false
                                 },
@@ -2221,7 +2221,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/sell",
                             "query": []
                         },
@@ -2242,7 +2242,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"sells\": [\n        {\n            \"location_id\": 1,\n            \"contact_id\": 7,\n            \"transaction_date\": \"2020-07-22 15:48:29\",\n            \"invoice_no\": \"nisi\",\n            \"source\": \"api, phone, woocommerce\",\n            \"status\": \"final\",\n            \"sub_status\": \"null\",\n            \"is_quotation\": true,\n            \"tax_rate_id\": 17,\n            \"discount_amount\": 10,\n            \"discount_type\": \"fixed\",\n            \"sale_note\": \"recusandae\",\n            \"staff_note\": \"voluptatem\",\n            \"commission_agent\": 6,\n            \"shipping_details\": \"Express Delivery\",\n            \"shipping_address\": \"blanditiis\",\n            \"shipping_status\": \"ordered\",\n            \"delivered_to\": \"'Mr robin'\",\n            \"shipping_charges\": 10,\n            \"packing_charge\": 10,\n            \"exchange_rate\": 1,\n            \"selling_price_group_id\": 6,\n            \"pay_term_number\": 3,\n            \"pay_term_type\": \"months\",\n            \"is_suspend\": false,\n            \"is_recurring\": 0,\n            \"recur_interval\": 8,\n            \"recur_interval_type\": \"months\",\n            \"subscription_repeat_on\": 15,\n            \"subscription_no\": \"rem\",\n            \"recur_repetitions\": 19,\n            \"rp_redeemed\": 2,\n            \"rp_redeemed_amount\": 13.5,\n            \"types_of_service_id\": 4,\n            \"service_custom_field_1\": \"sed\",\n            \"service_custom_field_2\": \"vitae\",\n            \"service_custom_field_3\": \"sed\",\n            \"service_custom_field_4\": \"aliquam\",\n            \"service_custom_field_5\": \"enim\",\n            \"service_custom_field_6\": \"nulla\",\n            \"round_off_amount\": 1519.3338,\n            \"table_id\": 12,\n            \"service_staff_id\": 19,\n            \"change_return\": 0,\n            \"products\": [\n                {\n                    \"product_id\": 17,\n                    \"variation_id\": 58,\n                    \"quantity\": 1,\n                    \"unit_price\": 437.5,\n                    \"tax_rate_id\": 0,\n                    \"discount_amount\": 0,\n                    \"discount_type\": \"percentage\",\n                    \"sub_unit_id\": 15,\n                    \"note\": \"qui\"\n                }\n            ],\n            \"payments\": [\n                {\n                    \"amount\": 453.13,\n                    \"method\": \"cash\",\n                    \"account_id\": 18,\n                    \"card_number\": \"maiores\",\n                    \"card_holder_name\": \"animi\",\n                    \"card_transaction_number\": \"aut\",\n                    \"card_type\": \"occaecati\",\n                    \"card_month\": \"et\",\n                    \"card_year\": \"doloribus\",\n                    \"card_security\": \"dolore\",\n                    \"transaction_no_1\": \"ea\",\n                    \"transaction_no_2\": \"est\",\n                    \"transaction_no_3\": \"ad\",\n                    \"bank_account_number\": \"quis\",\n                    \"note\": \"eaque\",\n                    \"cheque_number\": \"voluptas\"\n                }\n            ]\n        }\n    ]\n}"
+                            "raw": "{\n    \"sells\": [\n        {\n            \"location_id\": 1,\n            \"contact_id\": 12,\n            \"transaction_date\": \"2020-07-22 15:48:29\",\n            \"invoice_no\": \"deleniti\",\n            \"source\": \"api, phone, woocommerce\",\n            \"status\": \"final\",\n            \"sub_status\": \"null\",\n            \"is_quotation\": true,\n            \"tax_rate_id\": 13,\n            \"discount_amount\": 10,\n            \"discount_type\": \"fixed\",\n            \"sale_note\": \"molestiae\",\n            \"staff_note\": \"atque\",\n            \"commission_agent\": 7,\n            \"shipping_details\": \"Express Delivery\",\n            \"shipping_address\": \"sed\",\n            \"shipping_status\": \"ordered\",\n            \"delivered_to\": \"'Mr robin'\",\n            \"shipping_charges\": 10,\n            \"packing_charge\": 10,\n            \"exchange_rate\": 1,\n            \"selling_price_group_id\": 6,\n            \"pay_term_number\": 3,\n            \"pay_term_type\": \"months\",\n            \"is_suspend\": false,\n            \"is_recurring\": 0,\n            \"recur_interval\": 3,\n            \"recur_interval_type\": \"months\",\n            \"subscription_repeat_on\": 15,\n            \"subscription_no\": \"tenetur\",\n            \"recur_repetitions\": 10,\n            \"rp_redeemed\": 6,\n            \"rp_redeemed_amount\": 13.5,\n            \"types_of_service_id\": 3,\n            \"service_custom_field_1\": \"molestiae\",\n            \"service_custom_field_2\": \"quibusdam\",\n            \"service_custom_field_3\": \"enim\",\n            \"service_custom_field_4\": \"ut\",\n            \"service_custom_field_5\": \"rerum\",\n            \"service_custom_field_6\": \"a\",\n            \"round_off_amount\": 24.9816615,\n            \"table_id\": 11,\n            \"service_staff_id\": 5,\n            \"change_return\": 0,\n            \"products\": [\n                {\n                    \"product_id\": 17,\n                    \"variation_id\": 58,\n                    \"quantity\": 1,\n                    \"unit_price\": 437.5,\n                    \"tax_rate_id\": 0,\n                    \"discount_amount\": 0,\n                    \"discount_type\": \"percentage\",\n                    \"sub_unit_id\": 10,\n                    \"note\": \"ab\"\n                }\n            ],\n            \"payments\": [\n                {\n                    \"amount\": 453.13,\n                    \"method\": \"cash\",\n                    \"account_id\": 9,\n                    \"card_number\": \"in\",\n                    \"card_holder_name\": \"consectetur\",\n                    \"card_transaction_number\": \"repudiandae\",\n                    \"card_type\": \"ad\",\n                    \"card_month\": \"officiis\",\n                    \"card_year\": \"vitae\",\n                    \"card_security\": \"aperiam\",\n                    \"transaction_no_1\": \"doloremque\",\n                    \"transaction_no_2\": \"excepturi\",\n                    \"transaction_no_3\": \"rerum\",\n                    \"bank_account_number\": \"excepturi\",\n                    \"note\": \"aut\",\n                    \"cheque_number\": \"consequatur\"\n                }\n            ]\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -2253,12 +2253,12 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/sell\/:sell",
                             "query": [
                                 {
                                     "key": "send_purchase_details",
-                                    "value": "dolores",
+                                    "value": "et",
                                     "description": "Get purchase details of each sell line (1, 0)",
                                     "disabled": false
                                 }
@@ -2300,7 +2300,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/sell\/:sell",
                             "query": [],
                             "variable": [
@@ -2329,7 +2329,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"contact_id\": 9,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"status\": \"final\",\n    \"sub_status\": \"null\",\n    \"is_quotation\": true,\n    \"tax_rate_id\": 15,\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"sale_note\": \"quia\",\n    \"source\": \"facilis\",\n    \"staff_note\": \"tenetur\",\n    \"is_suspend\": false,\n    \"commission_agent\": 10,\n    \"shipping_details\": \"Express Delivery\",\n    \"shipping_address\": \"dolore\",\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"Mr Robin\",\n    \"shipping_charges\": 10,\n    \"packing_charge\": 10,\n    \"exchange_rate\": 1,\n    \"selling_price_group_id\": 17,\n    \"pay_term_number\": 7,\n    \"pay_term_type\": \"months\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 4,\n    \"recur_interval_type\": \"days\",\n    \"subscription_repeat_on\": 7,\n    \"subscription_no\": \"quia\",\n    \"recur_repetitions\": 11,\n    \"rp_redeemed\": 4,\n    \"rp_redeemed_amount\": 13.5,\n    \"types_of_service_id\": 15,\n    \"service_custom_field_1\": \"velit\",\n    \"service_custom_field_2\": \"ex\",\n    \"service_custom_field_3\": \"nostrum\",\n    \"service_custom_field_4\": \"voluptas\",\n    \"service_custom_field_5\": \"culpa\",\n    \"service_custom_field_6\": \"consequatur\",\n    \"round_off_amount\": 114.55078,\n    \"table_id\": 3,\n    \"service_staff_id\": 9,\n    \"change_return\": 0,\n    \"change_return_id\": 20,\n    \"products\": [\n        {\n            \"sell_line_id\": 6,\n            \"product_id\": 17,\n            \"variation_id\": 58,\n            \"quantity\": 1,\n            \"unit_price\": 437.5,\n            \"tax_rate_id\": 1,\n            \"discount_amount\": 0,\n            \"discount_type\": \"percentage\",\n            \"sub_unit_id\": 7,\n            \"note\": \"ab\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"payment_id\": 8,\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 11,\n            \"card_number\": \"ratione\",\n            \"card_holder_name\": \"sed\",\n            \"card_transaction_number\": \"ut\",\n            \"card_type\": \"et\",\n            \"card_month\": \"qui\",\n            \"card_year\": \"veritatis\",\n            \"card_security\": \"earum\",\n            \"transaction_no_1\": \"sequi\",\n            \"transaction_no_2\": \"dolorem\",\n            \"transaction_no_3\": \"aut\",\n            \"note\": \"beatae\",\n            \"cheque_number\": \"aut\",\n            \"bank_account_number\": \"corporis\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"contact_id\": 19,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"status\": \"final\",\n    \"sub_status\": \"null\",\n    \"is_quotation\": true,\n    \"tax_rate_id\": 6,\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"sale_note\": \"aut\",\n    \"source\": \"eaque\",\n    \"staff_note\": \"harum\",\n    \"is_suspend\": false,\n    \"commission_agent\": 1,\n    \"shipping_details\": \"Express Delivery\",\n    \"shipping_address\": \"est\",\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"Mr Robin\",\n    \"shipping_charges\": 10,\n    \"packing_charge\": 10,\n    \"exchange_rate\": 1,\n    \"selling_price_group_id\": 11,\n    \"pay_term_number\": 7,\n    \"pay_term_type\": \"months\",\n    \"is_recurring\": 0,\n    \"recur_interval\": 4,\n    \"recur_interval_type\": \"days\",\n    \"subscription_repeat_on\": 7,\n    \"subscription_no\": \"velit\",\n    \"recur_repetitions\": 8,\n    \"rp_redeemed\": 16,\n    \"rp_redeemed_amount\": 13.5,\n    \"types_of_service_id\": 7,\n    \"service_custom_field_1\": \"nesciunt\",\n    \"service_custom_field_2\": \"sed\",\n    \"service_custom_field_3\": \"commodi\",\n    \"service_custom_field_4\": \"ad\",\n    \"service_custom_field_5\": \"et\",\n    \"service_custom_field_6\": \"dolore\",\n    \"round_off_amount\": 17771240.040777,\n    \"table_id\": 18,\n    \"service_staff_id\": 10,\n    \"change_return\": 0,\n    \"change_return_id\": 17,\n    \"products\": [\n        {\n            \"sell_line_id\": 19,\n            \"product_id\": 17,\n            \"variation_id\": 58,\n            \"quantity\": 1,\n            \"unit_price\": 437.5,\n            \"tax_rate_id\": 20,\n            \"discount_amount\": 0,\n            \"discount_type\": \"percentage\",\n            \"sub_unit_id\": 1,\n            \"note\": \"commodi\"\n        }\n    ],\n    \"payments\": [\n        {\n            \"payment_id\": 9,\n            \"amount\": 453.13,\n            \"method\": \"cash\",\n            \"account_id\": 5,\n            \"card_number\": \"totam\",\n            \"card_holder_name\": \"ut\",\n            \"card_transaction_number\": \"mollitia\",\n            \"card_type\": \"quod\",\n            \"card_month\": \"tempore\",\n            \"card_year\": \"et\",\n            \"card_security\": \"et\",\n            \"transaction_no_1\": \"et\",\n            \"transaction_no_2\": \"voluptatem\",\n            \"transaction_no_3\": \"et\",\n            \"note\": \"voluptatum\",\n            \"cheque_number\": \"vitae\",\n            \"bank_account_number\": \"architecto\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -2340,14 +2340,14 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/sell\/:sell",
                             "query": [],
                             "variable": [
                                 {
                                     "id": "sell",
                                     "key": "sell",
-                                    "value": "veniam",
+                                    "value": "id",
                                     "description": "id of the sell to be deleted"
                                 }
                             ]
@@ -2380,7 +2380,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/sell-return",
                             "query": []
                         },
@@ -2401,7 +2401,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"transaction_id\": 17,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"invoice_no\": \"cumque\",\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"products\": [\n        {\n            \"sell_line_id\": 9,\n            \"quantity\": 1,\n            \"unit_price_inc_tax\": 437.5\n        }\n    ]\n}"
+                            "raw": "{\n    \"transaction_id\": 1,\n    \"transaction_date\": \"2020-5-7 15:20:22\",\n    \"invoice_no\": \"rerum\",\n    \"discount_amount\": 10,\n    \"discount_type\": \"fixed\",\n    \"products\": [\n        {\n            \"sell_line_id\": 2,\n            \"quantity\": 1,\n            \"unit_price_inc_tax\": 437.5\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -2412,7 +2412,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/list-sell-return",
                             "query": []
                         },
@@ -2444,7 +2444,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/update-shipping-status",
                             "query": []
                         },
@@ -2465,7 +2465,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"id\": 3,\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"accusamus\"\n}"
+                            "raw": "{\n    \"id\": 2,\n    \"shipping_status\": \"ordered\",\n    \"delivered_to\": \"qui\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -2482,7 +2482,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/active-subscription",
                             "query": []
                         },
@@ -2514,7 +2514,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/packages",
                             "query": []
                         },
@@ -2552,7 +2552,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/table",
                             "query": [
                                 {
@@ -2591,7 +2591,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/table\/:table",
                             "query": [],
                             "variable": [
@@ -2637,7 +2637,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/tax",
                             "query": []
                         },
@@ -2669,7 +2669,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/tax\/:tax",
                             "query": [],
                             "variable": [
@@ -2715,12 +2715,12 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/taxonomy",
                             "query": [
                                 {
                                     "key": "type",
-                                    "value": "maiores",
+                                    "value": "cupiditate",
                                     "description": "Type of taxonomy (product, device, hrm_department)",
                                     "disabled": false
                                 }
@@ -2754,7 +2754,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/taxonomy\/:taxonomy",
                             "query": [],
                             "variable": [
@@ -2800,7 +2800,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/types-of-service",
                             "query": []
                         },
@@ -2832,7 +2832,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/types-of-service\/:types_of_service",
                             "query": [],
                             "variable": [
@@ -2878,7 +2878,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/unit",
                             "query": []
                         },
@@ -2910,7 +2910,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/unit\/:unit",
                             "query": [],
                             "variable": [
@@ -2956,7 +2956,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/user\/loggedin",
                             "query": []
                         },
@@ -2988,7 +2988,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/user-registration",
                             "query": []
                         },
@@ -3009,7 +3009,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"surname\": \"est\",\n    \"first_name\": \"voluptas\",\n    \"last_name\": \"omnis\",\n    \"email\": \"ipsum\",\n    \"is_active\": \"facilis\",\n    \"user_type\": \"officia\",\n    \"crm_contact_id\": 18,\n    \"allow_login\": true,\n    \"username\": \"qui\",\n    \"password\": \"vel\",\n    \"role\": 5,\n    \"access_all_locations\": true,\n    \"location_permissions\": [],\n    \"cmmsn_percent\": \"veniam\",\n    \"max_sales_discount_percent\": \"fugiat\",\n    \"selected_contacts\": true,\n    \"selected_contact_ids\": [],\n    \"dob\": \"eveniet\",\n    \"gender\": \"dolorem\",\n    \"marital_status\": \"sunt\",\n    \"blood_group\": \"commodi\",\n    \"contact_number\": \"iusto\",\n    \"alt_number\": \"magnam\",\n    \"family_number\": \"nobis\",\n    \"fb_link\": \"iure\",\n    \"twitter_link\": \"repellendus\",\n    \"social_media_1\": \"quia\",\n    \"social_media_2\": \"rerum\",\n    \"custom_field_1\": \"officiis\",\n    \"custom_field_2\": \"dignissimos\",\n    \"custom_field_3\": \"architecto\",\n    \"custom_field_4\": \"quia\",\n    \"guardian_name\": \"veritatis\",\n    \"id_proof_name\": \"adipisci\",\n    \"id_proof_number\": \"rerum\",\n    \"permanent_address\": \"aspernatur\",\n    \"current_address\": \"eius\",\n    \"bank_details\": [\n        {\n            \"account_holder_name\": \"velit\",\n            \"account_number\": \"rerum\",\n            \"bank_name\": \"temporibus\",\n            \"bank_code\": \"modi\",\n            \"branch\": \"ex\",\n            \"tax_payer_id\": \"nisi\"\n        }\n    ]\n}"
+                            "raw": "{\n    \"surname\": \"animi\",\n    \"first_name\": \"expedita\",\n    \"last_name\": \"voluptatem\",\n    \"email\": \"id\",\n    \"is_active\": \"quod\",\n    \"user_type\": \"ea\",\n    \"crm_contact_id\": 15,\n    \"allow_login\": false,\n    \"username\": \"quia\",\n    \"password\": \"rem\",\n    \"role\": 6,\n    \"access_all_locations\": true,\n    \"location_permissions\": [],\n    \"cmmsn_percent\": \"alias\",\n    \"max_sales_discount_percent\": \"enim\",\n    \"selected_contacts\": true,\n    \"selected_contact_ids\": [],\n    \"dob\": \"illo\",\n    \"gender\": \"omnis\",\n    \"marital_status\": \"maxime\",\n    \"blood_group\": \"esse\",\n    \"contact_number\": \"eaque\",\n    \"alt_number\": \"est\",\n    \"family_number\": \"velit\",\n    \"fb_link\": \"modi\",\n    \"twitter_link\": \"est\",\n    \"social_media_1\": \"placeat\",\n    \"social_media_2\": \"earum\",\n    \"custom_field_1\": \"non\",\n    \"custom_field_2\": \"repellat\",\n    \"custom_field_3\": \"ut\",\n    \"custom_field_4\": \"nobis\",\n    \"guardian_name\": \"autem\",\n    \"id_proof_name\": \"deserunt\",\n    \"id_proof_number\": \"odio\",\n    \"permanent_address\": \"laudantium\",\n    \"current_address\": \"eveniet\",\n    \"bank_details\": [\n        {\n            \"account_holder_name\": \"earum\",\n            \"account_number\": \"sed\",\n            \"bank_name\": \"inventore\",\n            \"bank_code\": \"quidem\",\n            \"branch\": \"cupiditate\",\n            \"tax_payer_id\": \"id\"\n        }\n    ]\n}"
                         },
                         "description": "",
                         "response": []
@@ -3020,12 +3020,12 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/user",
                             "query": [
                                 {
                                     "key": "service_staff",
-                                    "value": "vero",
+                                    "value": "porro",
                                     "description": "boolean Filter service staffs from users list (0, 1)",
                                     "disabled": false
                                 }
@@ -3059,7 +3059,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/user\/:user",
                             "query": [],
                             "variable": [
@@ -3099,7 +3099,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/update-password",
                             "query": []
                         },
@@ -3120,7 +3120,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"current_password\": \"iusto\",\n    \"new_password\": \"amet\"\n}"
+                            "raw": "{\n    \"current_password\": \"totam\",\n    \"new_password\": \"quo\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -3131,7 +3131,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/forget-password",
                             "query": []
                         },
@@ -3152,7 +3152,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"ut\"\n}"
+                            "raw": "{\n    \"email\": \"id\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -3169,7 +3169,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/payment-accounts",
                             "query": []
                         },
@@ -3201,7 +3201,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/payment-methods",
                             "query": []
                         },
@@ -3233,7 +3233,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/business-details",
                             "query": []
                         },
@@ -3265,7 +3265,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/profit-loss-report",
                             "query": [
                                 {
@@ -3322,7 +3322,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/product-stock-report",
                             "query": []
                         },
@@ -3354,7 +3354,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/notifications",
                             "query": []
                         },
@@ -3386,7 +3386,7 @@
                     "request": {
                         "url": {
                             "protocol": "http",
-                            "host": "localhost\/pos\/public",
+                            "host": "localhost:8000",
                             "path": "connector\/api\/get-location",
                             "query": []
                         },

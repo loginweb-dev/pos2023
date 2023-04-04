@@ -14,6 +14,7 @@
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png" sizes="16x16"> 
 
         <title>@yield('title') - {{ Session::get('business.name') }}</title> 
 

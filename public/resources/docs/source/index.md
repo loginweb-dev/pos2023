@@ -16,7 +16,7 @@ toc_footers:
 # Info
 
 Welcome to the generated API reference.
-[Get Postman Collection](http://localhost/pos/public/docs/collection.json)
+[Get Postman Collection](http://localhost:8000/docs/collection.json)
 
 <!-- END_INFO -->
 
@@ -31,7 +31,7 @@ Welcome to the generated API reference.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/get-attendance/1" \
+    -G "http://localhost:8000/connector/api/get-attendance/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -39,7 +39,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/get-attendance/1"
+    "http://localhost:8000/connector/api/get-attendance/1"
 );
 
 let headers = {
@@ -98,17 +98,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/clock-in" \
+    "http://localhost:8000/connector/api/clock-in" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"user_id":1,"clock_in_time":"2000-06-13 13:13:00","clock_in_note":"eos","ip_address":"numquam","latitude":"sit","longitude":"et"}'
+    -d '{"user_id":1,"clock_in_time":"2000-06-13 13:13:00","clock_in_note":"laboriosam","ip_address":"ad","latitude":"ipsa","longitude":"et"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/clock-in"
+    "http://localhost:8000/connector/api/clock-in"
 );
 
 let headers = {
@@ -120,9 +120,9 @@ let headers = {
 let body = {
     "user_id": 1,
     "clock_in_time": "2000-06-13 13:13:00",
-    "clock_in_note": "eos",
-    "ip_address": "numquam",
-    "latitude": "sit",
+    "clock_in_note": "laboriosam",
+    "ip_address": "ad",
+    "latitude": "ipsa",
     "longitude": "et"
 }
 
@@ -171,17 +171,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/clock-out" \
+    "http://localhost:8000/connector/api/clock-out" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"user_id":1,"clock_out_time":"2000-06-13 13:13:00","clock_out_note":"beatae","latitude":"facere","longitude":"sint"}'
+    -d '{"user_id":1,"clock_out_time":"2000-06-13 13:13:00","clock_out_note":"quia","latitude":"explicabo","longitude":"voluptatem"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/clock-out"
+    "http://localhost:8000/connector/api/clock-out"
 );
 
 let headers = {
@@ -193,9 +193,9 @@ let headers = {
 let body = {
     "user_id": 1,
     "clock_out_time": "2000-06-13 13:13:00",
-    "clock_out_note": "beatae",
-    "latitude": "facere",
-    "longitude": "sint"
+    "clock_out_note": "quia",
+    "latitude": "explicabo",
+    "longitude": "voluptatem"
 }
 
 fetch(url, {
@@ -240,7 +240,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/holidays?location_id=1&start_date=2020-06-25&end_date=2020-06-25" \
+    -G "http://localhost:8000/connector/api/holidays?location_id=1&start_date=2020-06-25&end_date=2020-06-25" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -248,7 +248,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/holidays"
+    "http://localhost:8000/connector/api/holidays"
 );
 
 let params = {
@@ -318,7 +318,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/brand" \
+    -G "http://localhost:8000/connector/api/brand" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -326,7 +326,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/brand"
+    "http://localhost:8000/connector/api/brand"
 );
 
 let headers = {
@@ -387,7 +387,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/brand/1" \
+    -G "http://localhost:8000/connector/api/brand/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -395,7 +395,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/brand/1"
+    "http://localhost:8000/connector/api/brand/1"
 );
 
 let headers = {
@@ -454,7 +454,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/business-location" \
+    -G "http://localhost:8000/connector/api/business-location" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -462,7 +462,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/business-location"
+    "http://localhost:8000/connector/api/business-location"
 );
 
 let headers = {
@@ -578,7 +578,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/business-location/1" \
+    -G "http://localhost:8000/connector/api/business-location/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -586,7 +586,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/business-location/1"
+    "http://localhost:8000/connector/api/business-location/1"
 );
 
 let headers = {
@@ -710,7 +710,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/crm/follow-ups?start_date=2020-12-16&end_date=2020-12-16&status=et&follow_up_type=magni&order_by=start_datetime&direction=desc&per_page=10" \
+    -G "http://localhost:8000/connector/api/crm/follow-ups?start_date=2020-12-16&end_date=2020-12-16&status=et&follow_up_type=magnam&order_by=start_datetime&direction=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -718,14 +718,14 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/follow-ups"
+    "http://localhost:8000/connector/api/crm/follow-ups"
 );
 
 let params = {
     "start_date": "2020-12-16",
     "end_date": "2020-12-16",
     "status": "et",
-    "follow_up_type": "magni",
+    "follow_up_type": "magnam",
     "order_by": "start_datetime",
     "direction": "desc",
     "per_page": "10",
@@ -949,17 +949,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/crm/follow-ups" \
+    "http://localhost:8000/connector/api/crm/follow-ups" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"title":"Meeting with client","contact_id":2,"description":"suscipit","schedule_type":"at","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","followup_additional_info":"['call duration' => '1 hour']","allow_notification":true}'
+    -d '{"title":"Meeting with client","contact_id":2,"description":"fugiat","schedule_type":"vel","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","followup_additional_info":"['call duration' => '1 hour']","allow_notification":true}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/follow-ups"
+    "http://localhost:8000/connector/api/crm/follow-ups"
 );
 
 let headers = {
@@ -971,8 +971,8 @@ let headers = {
 let body = {
     "title": "Meeting with client",
     "contact_id": 2,
-    "description": "suscipit",
-    "schedule_type": "at",
+    "description": "fugiat",
+    "schedule_type": "vel",
     "user_id": "[2,3,5]",
     "notify_before": 5,
     "notify_type": "minute",
@@ -1052,7 +1052,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/crm/follow-ups/1,2" \
+    -G "http://localhost:8000/connector/api/crm/follow-ups/1,2" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1060,7 +1060,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/follow-ups/1,2"
+    "http://localhost:8000/connector/api/crm/follow-ups/1,2"
 );
 
 let headers = {
@@ -1231,17 +1231,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "http://localhost/pos/public/connector/api/crm/follow-ups/20" \
+    "http://localhost:8000/connector/api/crm/follow-ups/20" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"title":"Meeting with client","contact_id":2,"description":"sed","schedule_type":"mollitia","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","followup_additional_info":"['call duration' => '1 hour']","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","allow_notification":true}'
+    -d '{"title":"Meeting with client","contact_id":2,"description":"quae","schedule_type":"ut","user_id":"[2,3,5]","notify_before":5,"notify_type":"minute","status":"open","notify_via":"['sms' => 0 ,'mail' => 1]","followup_additional_info":"['call duration' => '1 hour']","start_datetime":"2021-01-06 13:05:00","end_datetime":"2021-01-06 13:05:00","allow_notification":true}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/follow-ups/20"
+    "http://localhost:8000/connector/api/crm/follow-ups/20"
 );
 
 let headers = {
@@ -1253,8 +1253,8 @@ let headers = {
 let body = {
     "title": "Meeting with client",
     "contact_id": 2,
-    "description": "sed",
-    "schedule_type": "mollitia",
+    "description": "quae",
+    "schedule_type": "ut",
     "user_id": "[2,3,5]",
     "notify_before": 5,
     "notify_type": "minute",
@@ -1341,7 +1341,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/crm/follow-up-resources" \
+    -G "http://localhost:8000/connector/api/crm/follow-up-resources" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1349,7 +1349,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/follow-up-resources"
+    "http://localhost:8000/connector/api/crm/follow-up-resources"
 );
 
 let headers = {
@@ -1411,7 +1411,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/crm/leads?assigned_to=1%2C2%2C3&name=qui&biz_name=ut&mobile_num=2&contact_id=nulla&order_by=adipisci&direction=desc&per_page=10" \
+    -G "http://localhost:8000/connector/api/crm/leads?assigned_to=1%2C2%2C3&name=fugit&biz_name=sit&mobile_num=5&contact_id=quia&order_by=ab&direction=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1419,16 +1419,16 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/leads"
+    "http://localhost:8000/connector/api/crm/leads"
 );
 
 let params = {
     "assigned_to": "1,2,3",
-    "name": "qui",
-    "biz_name": "ut",
-    "mobile_num": "2",
-    "contact_id": "nulla",
-    "order_by": "adipisci",
+    "name": "fugit",
+    "biz_name": "sit",
+    "mobile_num": "5",
+    "contact_id": "quia",
+    "order_by": "ab",
     "direction": "desc",
     "per_page": "10",
 };
@@ -1832,17 +1832,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/crm/call-logs" \
+    "http://localhost:8000/connector/api/crm/call-logs" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"call_logs":[{"mobile_number":"aliquam","mobile_name":"fugiat","call_type":"call","start_time":"dolorum","end_time":"aut","duration":"in"}]}'
+    -d '{"call_logs":[{"mobile_number":"maiores","mobile_name":"blanditiis","call_type":"call","start_time":"officiis","end_time":"quod","duration":"dicta"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/crm/call-logs"
+    "http://localhost:8000/connector/api/crm/call-logs"
 );
 
 let headers = {
@@ -1854,12 +1854,12 @@ let headers = {
 let body = {
     "call_logs": [
         {
-            "mobile_number": "aliquam",
-            "mobile_name": "fugiat",
+            "mobile_number": "maiores",
+            "mobile_name": "blanditiis",
             "call_type": "call",
-            "start_time": "dolorum",
-            "end_time": "aut",
-            "duration": "in"
+            "start_time": "officiis",
+            "end_time": "quod",
+            "duration": "dicta"
         }
     ]
 }
@@ -1901,7 +1901,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/cash-register?status=open&user_id=10&start_date=2018-06-25&end_date=2018-06-25&location_id=1&per_page=15" \
+    -G "http://localhost:8000/connector/api/cash-register?status=open&user_id=10&start_date=2018-06-25&end_date=2018-06-25&location_id=1&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -1909,7 +1909,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/cash-register"
+    "http://localhost:8000/connector/api/cash-register"
 );
 
 let params = {
@@ -2049,17 +2049,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/cash-register" \
+    "http://localhost:8000/connector/api/cash-register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"location_id":1,"initial_amount":1734.79548842,"created_at":"2020-5-7 15:20:22","closed_at":"2020-5-7 15:20:22","status":"close","closing_amount":1.3849,"total_card_slips":3,"total_cheques":20,"closing_note":"accusantium","transaction_ids":"1,2,3"}'
+    -d '{"location_id":1,"initial_amount":10515.69776722,"created_at":"2020-5-7 15:20:22","closed_at":"2020-5-7 15:20:22","status":"close","closing_amount":366.6862539,"total_card_slips":15,"total_cheques":19,"closing_note":"voluptatem","transaction_ids":"1,2,3"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/cash-register"
+    "http://localhost:8000/connector/api/cash-register"
 );
 
 let headers = {
@@ -2070,14 +2070,14 @@ let headers = {
 
 let body = {
     "location_id": 1,
-    "initial_amount": 1734.79548842,
+    "initial_amount": 10515.69776722,
     "created_at": "2020-5-7 15:20:22",
     "closed_at": "2020-5-7 15:20:22",
     "status": "close",
-    "closing_amount": 1.3849,
-    "total_card_slips": 3,
-    "total_cheques": 20,
-    "closing_note": "accusantium",
+    "closing_amount": 366.6862539,
+    "total_card_slips": 15,
+    "total_cheques": 19,
+    "closing_note": "voluptatem",
     "transaction_ids": "1,2,3"
 }
 
@@ -2119,7 +2119,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/cash-register/59" \
+    -G "http://localhost:8000/connector/api/cash-register/59" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2127,7 +2127,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/cash-register/59"
+    "http://localhost:8000/connector/api/cash-register/59"
 );
 
 let headers = {
@@ -2214,7 +2214,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/contactapi?type=officiis&name=qui&biz_name=officia&mobile_num=3&contact_id=ipsum&order_by=libero&direction=impedit&per_page=10" \
+    -G "http://localhost:8000/connector/api/contactapi?type=distinctio&name=qui&biz_name=numquam&mobile_num=10&contact_id=dolorum&order_by=nam&direction=nihil&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2222,17 +2222,17 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/contactapi"
+    "http://localhost:8000/connector/api/contactapi"
 );
 
 let params = {
-    "type": "officiis",
+    "type": "distinctio",
     "name": "qui",
-    "biz_name": "officia",
-    "mobile_num": "3",
-    "contact_id": "ipsum",
-    "order_by": "libero",
-    "direction": "impedit",
+    "biz_name": "numquam",
+    "mobile_num": "10",
+    "contact_id": "dolorum",
+    "order_by": "nam",
+    "direction": "nihil",
     "per_page": "10",
 };
 Object.keys(params)
@@ -2519,17 +2519,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/contactapi" \
+    "http://localhost:8000/connector/api/contactapi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"type":"customer","supplier_business_name":"cumque","prefix":"ut","first_name":"modi","middle_name":"magni","last_name":"delectus","tax_number":"8787fefef","pay_term_number":3,"pay_term_type":"months","mobile":"4578691009","landline":"5487-8454-4145","alternate_number":"841847541222","address_line_1":"accusantium","address_line_2":"eos","city":"reiciendis","state":"dolorem","country":"laboriosam","zip_code":"et","customer_group_id":"rem","contact_id":"est","dob":"2000-06-13","custom_field1":"non","custom_field2":"modi","custom_field3":"aut","custom_field4":"corrupti","email":"eveniet","shipping_address":"eum","position":"repellendus","opening_balance":0,"source_id":5,"life_stage_id":16,"assigned_to":[]}'
+    -d '{"type":"customer","supplier_business_name":"consequatur","prefix":"soluta","first_name":"ut","middle_name":"nisi","last_name":"in","tax_number":"8787fefef","pay_term_number":3,"pay_term_type":"months","mobile":"4578691009","landline":"5487-8454-4145","alternate_number":"841847541222","address_line_1":"eaque","address_line_2":"alias","city":"qui","state":"consectetur","country":"dolores","zip_code":"totam","customer_group_id":"est","contact_id":"qui","dob":"2000-06-13","custom_field1":"natus","custom_field2":"ipsam","custom_field3":"mollitia","custom_field4":"id","email":"voluptatem","shipping_address":"dolores","position":"aut","opening_balance":0,"source_id":6,"life_stage_id":19,"assigned_to":[]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/contactapi"
+    "http://localhost:8000/connector/api/contactapi"
 );
 
 let headers = {
@@ -2540,36 +2540,36 @@ let headers = {
 
 let body = {
     "type": "customer",
-    "supplier_business_name": "cumque",
-    "prefix": "ut",
-    "first_name": "modi",
-    "middle_name": "magni",
-    "last_name": "delectus",
+    "supplier_business_name": "consequatur",
+    "prefix": "soluta",
+    "first_name": "ut",
+    "middle_name": "nisi",
+    "last_name": "in",
     "tax_number": "8787fefef",
     "pay_term_number": 3,
     "pay_term_type": "months",
     "mobile": "4578691009",
     "landline": "5487-8454-4145",
     "alternate_number": "841847541222",
-    "address_line_1": "accusantium",
-    "address_line_2": "eos",
-    "city": "reiciendis",
-    "state": "dolorem",
-    "country": "laboriosam",
-    "zip_code": "et",
-    "customer_group_id": "rem",
-    "contact_id": "est",
+    "address_line_1": "eaque",
+    "address_line_2": "alias",
+    "city": "qui",
+    "state": "consectetur",
+    "country": "dolores",
+    "zip_code": "totam",
+    "customer_group_id": "est",
+    "contact_id": "qui",
     "dob": "2000-06-13",
-    "custom_field1": "non",
-    "custom_field2": "modi",
-    "custom_field3": "aut",
-    "custom_field4": "corrupti",
-    "email": "eveniet",
-    "shipping_address": "eum",
-    "position": "repellendus",
+    "custom_field1": "natus",
+    "custom_field2": "ipsam",
+    "custom_field3": "mollitia",
+    "custom_field4": "id",
+    "email": "voluptatem",
+    "shipping_address": "dolores",
+    "position": "aut",
     "opening_balance": 0,
-    "source_id": 5,
-    "life_stage_id": 16,
+    "source_id": 6,
+    "life_stage_id": 19,
     "assigned_to": []
 }
 
@@ -2652,7 +2652,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/contactapi/1" \
+    -G "http://localhost:8000/connector/api/contactapi/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -2660,7 +2660,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/contactapi/1"
+    "http://localhost:8000/connector/api/contactapi/1"
 );
 
 let headers = {
@@ -2769,17 +2769,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "http://localhost/pos/public/connector/api/contactapi/1" \
+    "http://localhost:8000/connector/api/contactapi/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"type":"customer","supplier_business_name":"vitae","prefix":"natus","first_name":"exercitationem","middle_name":"ea","last_name":"quo","tax_number":"488744dwd","pay_term_number":3,"pay_term_type":"months","mobile":"8795461009","landline":"65484-848-848","alternate_number":"9898795220","address_line_1":"suscipit","address_line_2":"quia","city":"eius","state":"suscipit","country":"dignissimos","zip_code":"rerum","customer_group_id":"voluptas","contact_id":"est","dob":"2000-06-13","custom_field1":"laudantium","custom_field2":"voluptas","custom_field3":"voluptas","custom_field4":"facere","email":"et","shipping_address":"odit","position":"quae","opening_balance":10.3,"source_id":15,"life_stage_id":18,"assigned_to":[]}'
+    -d '{"type":"customer","supplier_business_name":"voluptatem","prefix":"quo","first_name":"sint","middle_name":"et","last_name":"suscipit","tax_number":"488744dwd","pay_term_number":3,"pay_term_type":"months","mobile":"8795461009","landline":"65484-848-848","alternate_number":"9898795220","address_line_1":"sed","address_line_2":"velit","city":"debitis","state":"error","country":"vel","zip_code":"fugit","customer_group_id":"facilis","contact_id":"iusto","dob":"2000-06-13","custom_field1":"vero","custom_field2":"aut","custom_field3":"optio","custom_field4":"magnam","email":"et","shipping_address":"ad","position":"labore","opening_balance":10.3,"source_id":5,"life_stage_id":2,"assigned_to":[]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/contactapi/1"
+    "http://localhost:8000/connector/api/contactapi/1"
 );
 
 let headers = {
@@ -2790,36 +2790,36 @@ let headers = {
 
 let body = {
     "type": "customer",
-    "supplier_business_name": "vitae",
-    "prefix": "natus",
-    "first_name": "exercitationem",
-    "middle_name": "ea",
-    "last_name": "quo",
+    "supplier_business_name": "voluptatem",
+    "prefix": "quo",
+    "first_name": "sint",
+    "middle_name": "et",
+    "last_name": "suscipit",
     "tax_number": "488744dwd",
     "pay_term_number": 3,
     "pay_term_type": "months",
     "mobile": "8795461009",
     "landline": "65484-848-848",
     "alternate_number": "9898795220",
-    "address_line_1": "suscipit",
-    "address_line_2": "quia",
-    "city": "eius",
-    "state": "suscipit",
-    "country": "dignissimos",
-    "zip_code": "rerum",
-    "customer_group_id": "voluptas",
-    "contact_id": "est",
+    "address_line_1": "sed",
+    "address_line_2": "velit",
+    "city": "debitis",
+    "state": "error",
+    "country": "vel",
+    "zip_code": "fugit",
+    "customer_group_id": "facilis",
+    "contact_id": "iusto",
     "dob": "2000-06-13",
-    "custom_field1": "laudantium",
-    "custom_field2": "voluptas",
-    "custom_field3": "voluptas",
-    "custom_field4": "facere",
+    "custom_field1": "vero",
+    "custom_field2": "aut",
+    "custom_field3": "optio",
+    "custom_field4": "magnam",
     "email": "et",
-    "shipping_address": "odit",
-    "position": "quae",
+    "shipping_address": "ad",
+    "position": "labore",
     "opening_balance": 10.3,
-    "source_id": 15,
-    "life_stage_id": 18,
+    "source_id": 5,
+    "life_stage_id": 2,
     "assigned_to": []
 }
 
@@ -2944,17 +2944,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/contactapi-payment" \
+    "http://localhost:8000/connector/api/contactapi-payment" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":17,"amount":453.13,"method":"cash","paid_on":"2020-07-22 15:48:29","account_id":14,"card_number":"ratione","card_holder_name":"quia","card_transaction_number":"cumque","card_type":"labore","card_month":"ea","card_year":"praesentium","card_security":"aut","transaction_no_1":"soluta","transaction_no_2":"temporibus","transaction_no_3":"minima","cheque_number":"qui","bank_account_number":"laborum","note":"repellendus"}'
+    -d '{"contact_id":17,"amount":453.13,"method":"cash","paid_on":"2020-07-22 15:48:29","account_id":11,"card_number":"sunt","card_holder_name":"enim","card_transaction_number":"et","card_type":"aliquam","card_month":"non","card_year":"rem","card_security":"reiciendis","transaction_no_1":"dolorem","transaction_no_2":"ut","transaction_no_3":"et","cheque_number":"minima","bank_account_number":"ut","note":"quis"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/contactapi-payment"
+    "http://localhost:8000/connector/api/contactapi-payment"
 );
 
 let headers = {
@@ -2968,20 +2968,20 @@ let body = {
     "amount": 453.13,
     "method": "cash",
     "paid_on": "2020-07-22 15:48:29",
-    "account_id": 14,
-    "card_number": "ratione",
-    "card_holder_name": "quia",
-    "card_transaction_number": "cumque",
-    "card_type": "labore",
-    "card_month": "ea",
-    "card_year": "praesentium",
-    "card_security": "aut",
-    "transaction_no_1": "soluta",
-    "transaction_no_2": "temporibus",
-    "transaction_no_3": "minima",
-    "cheque_number": "qui",
-    "bank_account_number": "laborum",
-    "note": "repellendus"
+    "account_id": 11,
+    "card_number": "sunt",
+    "card_holder_name": "enim",
+    "card_transaction_number": "et",
+    "card_type": "aliquam",
+    "card_month": "non",
+    "card_year": "rem",
+    "card_security": "reiciendis",
+    "transaction_no_1": "dolorem",
+    "transaction_no_2": "ut",
+    "transaction_no_3": "et",
+    "cheque_number": "minima",
+    "bank_account_number": "ut",
+    "note": "quis"
 }
 
 fetch(url, {
@@ -3053,7 +3053,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/expense?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=eos&per_page=15" \
+    -G "http://localhost:8000/connector/api/expense?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=rerum&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3061,7 +3061,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/expense"
+    "http://localhost:8000/connector/api/expense"
 );
 
 let params = {
@@ -3069,7 +3069,7 @@ let params = {
     "payment_status": "paid",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "expense_for": "eos",
+    "expense_for": "rerum",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3203,17 +3203,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/expense" \
+    "http://localhost:8000/connector/api/expense" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"location_id":1,"final_total":58862.1649,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":17,"expense_for":5,"contact_id":14,"expense_category_id":3,"expense_sub_category_id":3,"additional_notes":"voluptates","is_refund":0,"is_recurring":0,"recur_interval":11,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"at","recur_repetitions":19,"payment":[{"amount":453.13,"method":"cash","account_id":10,"card_number":"fuga","card_holder_name":"excepturi","card_transaction_number":"amet","card_type":"et","card_month":"neque","card_year":"nesciunt","card_security":"in","transaction_no_1":"eius","transaction_no_2":"accusamus","transaction_no_3":"dolores","note":"reprehenderit","cheque_number":"sint"}]}'
+    -d '{"location_id":1,"final_total":1638550.1785056,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":6,"expense_for":20,"contact_id":20,"expense_category_id":13,"expense_sub_category_id":16,"additional_notes":"laboriosam","is_refund":0,"is_recurring":0,"recur_interval":1,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"placeat","recur_repetitions":20,"payment":[{"amount":453.13,"method":"cash","account_id":10,"card_number":"fuga","card_holder_name":"ut","card_transaction_number":"blanditiis","card_type":"est","card_month":"ullam","card_year":"blanditiis","card_security":"ut","transaction_no_1":"ab","transaction_no_2":"ipsum","transaction_no_3":"quae","note":"maxime","cheque_number":"enim"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/expense"
+    "http://localhost:8000/connector/api/expense"
 );
 
 let headers = {
@@ -3224,38 +3224,38 @@ let headers = {
 
 let body = {
     "location_id": 1,
-    "final_total": 58862.1649,
+    "final_total": 1638550.1785056,
     "transaction_date": "2020-5-7 15:20:22",
-    "tax_rate_id": 17,
-    "expense_for": 5,
-    "contact_id": 14,
-    "expense_category_id": 3,
-    "expense_sub_category_id": 3,
-    "additional_notes": "voluptates",
+    "tax_rate_id": 6,
+    "expense_for": 20,
+    "contact_id": 20,
+    "expense_category_id": 13,
+    "expense_sub_category_id": 16,
+    "additional_notes": "laboriosam",
     "is_refund": 0,
     "is_recurring": 0,
-    "recur_interval": 11,
+    "recur_interval": 1,
     "recur_interval_type": "months",
     "subscription_repeat_on": 15,
-    "subscription_no": "at",
-    "recur_repetitions": 19,
+    "subscription_no": "placeat",
+    "recur_repetitions": 20,
     "payment": [
         {
             "amount": 453.13,
             "method": "cash",
             "account_id": 10,
             "card_number": "fuga",
-            "card_holder_name": "excepturi",
-            "card_transaction_number": "amet",
-            "card_type": "et",
-            "card_month": "neque",
-            "card_year": "nesciunt",
-            "card_security": "in",
-            "transaction_no_1": "eius",
-            "transaction_no_2": "accusamus",
-            "transaction_no_3": "dolores",
-            "note": "reprehenderit",
-            "cheque_number": "sint"
+            "card_holder_name": "ut",
+            "card_transaction_number": "blanditiis",
+            "card_type": "est",
+            "card_month": "ullam",
+            "card_year": "blanditiis",
+            "card_security": "ut",
+            "transaction_no_1": "ab",
+            "transaction_no_2": "ipsum",
+            "transaction_no_3": "quae",
+            "note": "maxime",
+            "cheque_number": "enim"
         }
     ]
 }
@@ -3350,7 +3350,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/expense/59" \
+    -G "http://localhost:8000/connector/api/expense/59" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3358,7 +3358,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/expense/59"
+    "http://localhost:8000/connector/api/expense/59"
 );
 
 let headers = {
@@ -3471,17 +3471,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "http://localhost/pos/public/connector/api/expense/1" \
+    "http://localhost:8000/connector/api/expense/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"final_total":321.495161358,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":14,"expense_for":16,"contact_id":3,"expense_category_id":20,"expense_sub_category_id":6,"additional_notes":"autem","is_recurring":0,"recur_interval":12,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"animi","recur_repetitions":2,"payment":[]}'
+    -d '{"final_total":38461.957,"transaction_date":"2020-5-7 15:20:22","tax_rate_id":3,"expense_for":9,"contact_id":11,"expense_category_id":4,"expense_sub_category_id":15,"additional_notes":"sapiente","is_recurring":0,"recur_interval":5,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"accusantium","recur_repetitions":15,"payment":[]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/expense/1"
+    "http://localhost:8000/connector/api/expense/1"
 );
 
 let headers = {
@@ -3491,20 +3491,20 @@ let headers = {
 };
 
 let body = {
-    "final_total": 321.495161358,
+    "final_total": 38461.957,
     "transaction_date": "2020-5-7 15:20:22",
-    "tax_rate_id": 14,
-    "expense_for": 16,
-    "contact_id": 3,
-    "expense_category_id": 20,
-    "expense_sub_category_id": 6,
-    "additional_notes": "autem",
+    "tax_rate_id": 3,
+    "expense_for": 9,
+    "contact_id": 11,
+    "expense_category_id": 4,
+    "expense_sub_category_id": 15,
+    "additional_notes": "sapiente",
     "is_recurring": 0,
-    "recur_interval": 12,
+    "recur_interval": 5,
     "recur_interval_type": "months",
     "subscription_repeat_on": 15,
-    "subscription_no": "animi",
-    "recur_repetitions": 2,
+    "subscription_no": "accusantium",
+    "recur_repetitions": 15,
     "payment": []
 }
 
@@ -3583,7 +3583,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/expense-refund?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=non&per_page=15" \
+    -G "http://localhost:8000/connector/api/expense-refund?location_id=1&payment_status=paid&start_date=2018-06-25&end_date=2018-06-25&expense_for=eos&per_page=15" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3591,7 +3591,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/expense-refund"
+    "http://localhost:8000/connector/api/expense-refund"
 );
 
 let params = {
@@ -3599,7 +3599,7 @@ let params = {
     "payment_status": "paid",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "expense_for": "non",
+    "expense_for": "eos",
     "per_page": "15",
 };
 Object.keys(params)
@@ -3684,7 +3684,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/expense-categories" \
+    -G "http://localhost:8000/connector/api/expense-categories" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3692,7 +3692,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/expense-categories"
+    "http://localhost:8000/connector/api/expense-categories"
 );
 
 let headers = {
@@ -3780,7 +3780,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/field-force?contact_id=consequuntur&assigned_to=voluptatibus&status=atque&start_date=2018-06-25&end_date=2018-06-25&per_page=15&order_by_date=desc" \
+    -G "http://localhost:8000/connector/api/field-force?contact_id=voluptas&assigned_to=eos&status=blanditiis&start_date=2018-06-25&end_date=2018-06-25&per_page=15&order_by_date=desc" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -3788,13 +3788,13 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/field-force"
+    "http://localhost:8000/connector/api/field-force"
 );
 
 let params = {
-    "contact_id": "consequuntur",
-    "assigned_to": "voluptatibus",
-    "status": "atque",
+    "contact_id": "voluptas",
+    "assigned_to": "eos",
+    "status": "blanditiis",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
     "per_page": "15",
@@ -3851,17 +3851,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/field-force/create" \
+    "http://localhost:8000/connector/api/field-force/create" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":16,"visit_to":"occaecati","visit_address":"aspernatur","assigned_to":16,"visit_on":"2021-12-28 17:23:00","visit_for":"aspernatur"}'
+    -d '{"contact_id":9,"visit_to":"et","visit_address":"et","assigned_to":4,"visit_on":"2021-12-28 17:23:00","visit_for":"quia"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/field-force/create"
+    "http://localhost:8000/connector/api/field-force/create"
 );
 
 let headers = {
@@ -3871,12 +3871,12 @@ let headers = {
 };
 
 let body = {
-    "contact_id": 16,
-    "visit_to": "occaecati",
-    "visit_address": "aspernatur",
-    "assigned_to": 16,
+    "contact_id": 9,
+    "visit_to": "et",
+    "visit_address": "et",
+    "assigned_to": 4,
     "visit_on": "2021-12-28 17:23:00",
-    "visit_for": "aspernatur"
+    "visit_for": "quia"
 }
 
 fetch(url, {
@@ -3931,17 +3931,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/field-force/update-visit-status/17" \
+    "http://localhost:8000/connector/api/field-force/update-visit-status/17" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"status":"finished","reason_to_not_meet_contact":"est","visited_on":"2021-12-28 17:23:00","visited_address":"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India","latitude":"41.40338","longitude":"2.17403","comments":"quasi","photo":"quibusdam"}'
+    -d '{"status":"finished","reason_to_not_meet_contact":"ut","visited_on":"2021-12-28 17:23:00","visited_address":"Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India","latitude":"41.40338","longitude":"2.17403","comments":"quam","photo":"ad"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/field-force/update-visit-status/17"
+    "http://localhost:8000/connector/api/field-force/update-visit-status/17"
 );
 
 let headers = {
@@ -3952,13 +3952,13 @@ let headers = {
 
 let body = {
     "status": "finished",
-    "reason_to_not_meet_contact": "est",
+    "reason_to_not_meet_contact": "ut",
     "visited_on": "2021-12-28 17:23:00",
     "visited_address": "Radhanath Mullick Ln, Tiretta Bazaar, Bow Bazaar, Kolkata, West Bengal, 700 073, India",
     "latitude": "41.40338",
     "longitude": "2.17403",
-    "comments": "quasi",
-    "photo": "quibusdam"
+    "comments": "quam",
+    "photo": "ad"
 }
 
 fetch(url, {
@@ -4024,7 +4024,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/new_product?order_by=sunt&order_direction=in&location_custom_field_1=et&category_id=voluptates&sub_category_id=ea&location_id=1&not_for_sell=molestiae&send_lot_detail=laboriosam&name=inventore&sku=laudantium&product_ids=1%2C2&per_page=10" \
+    -G "http://localhost:8000/connector/api/new_product?order_by=quia&order_direction=placeat&location_custom_field_1=labore&category_id=molestias&sub_category_id=voluptate&location_id=1&not_for_sell=eum&send_lot_detail=rerum&name=ipsa&sku=nesciunt&product_ids=1%2C2&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4032,20 +4032,20 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/new_product"
+    "http://localhost:8000/connector/api/new_product"
 );
 
 let params = {
-    "order_by": "sunt",
-    "order_direction": "in",
-    "location_custom_field_1": "et",
-    "category_id": "voluptates",
-    "sub_category_id": "ea",
+    "order_by": "quia",
+    "order_direction": "placeat",
+    "location_custom_field_1": "labore",
+    "category_id": "molestias",
+    "sub_category_id": "voluptate",
     "location_id": "1",
-    "not_for_sell": "molestiae",
-    "send_lot_detail": "laboriosam",
-    "name": "inventore",
-    "sku": "laudantium",
+    "not_for_sell": "eum",
+    "send_lot_detail": "rerum",
+    "name": "ipsa",
+    "sku": "nesciunt",
     "product_ids": "1,2",
     "per_page": "10",
 };
@@ -4354,7 +4354,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/new_sell?location_id=1&contact_id=praesentium&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=qui&service_staff_id=sit&shipping_status=ordered&source=dolorum&customer_group_id=accusamus&product_name=aut&product_sku=qui&product_custom_field_1=quia&location_custom_field_1=aspernatur&location_invoice_scheme_prefix=facilis&product_category_id=quae&product_sub_category_id=dolore&sell_ids=55%2C64&only_subscriptions=commodi&send_purchase_details=harum&order_by_date=desc&per_page=10" \
+    -G "http://localhost:8000/connector/api/new_sell?location_id=1&contact_id=eos&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=nisi&service_staff_id=unde&shipping_status=ordered&source=est&customer_group_id=saepe&product_name=repellendus&product_sku=autem&product_custom_field_1=reiciendis&location_custom_field_1=qui&location_invoice_scheme_prefix=culpa&product_category_id=aut&product_sub_category_id=ad&sell_ids=55%2C64&only_subscriptions=et&send_purchase_details=quo&order_by_date=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4362,30 +4362,30 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/new_sell"
+    "http://localhost:8000/connector/api/new_sell"
 );
 
 let params = {
     "location_id": "1",
-    "contact_id": "praesentium",
+    "contact_id": "eos",
     "payment_status": "due,partial",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "user_id": "qui",
-    "service_staff_id": "sit",
+    "user_id": "nisi",
+    "service_staff_id": "unde",
     "shipping_status": "ordered",
-    "source": "dolorum",
-    "customer_group_id": "accusamus",
-    "product_name": "aut",
-    "product_sku": "qui",
-    "product_custom_field_1": "quia",
-    "location_custom_field_1": "aspernatur",
-    "location_invoice_scheme_prefix": "facilis",
-    "product_category_id": "quae",
-    "product_sub_category_id": "dolore",
+    "source": "est",
+    "customer_group_id": "saepe",
+    "product_name": "repellendus",
+    "product_sku": "autem",
+    "product_custom_field_1": "reiciendis",
+    "location_custom_field_1": "qui",
+    "location_invoice_scheme_prefix": "culpa",
+    "product_category_id": "aut",
+    "product_sub_category_id": "ad",
     "sell_ids": "55,64",
-    "only_subscriptions": "commodi",
-    "send_purchase_details": "harum",
+    "only_subscriptions": "et",
+    "send_purchase_details": "quo",
     "order_by_date": "desc",
     "per_page": "10",
 };
@@ -4625,7 +4625,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/new_contactapi?type=numquam&customer_group_id=omnis&custom_field_1=nulla&contact_ids=2%2C3&name=qui&biz_name=sequi&mobile_num=18&contact_id=eos&order_by=et&direction=non&per_page=10" \
+    -G "http://localhost:8000/connector/api/new_contactapi?type=corrupti&customer_group_id=officia&custom_field_1=veniam&contact_ids=2%2C3&name=qui&biz_name=qui&mobile_num=3&contact_id=ea&order_by=nam&direction=molestias&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4633,20 +4633,20 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/new_contactapi"
+    "http://localhost:8000/connector/api/new_contactapi"
 );
 
 let params = {
-    "type": "numquam",
-    "customer_group_id": "omnis",
-    "custom_field_1": "nulla",
+    "type": "corrupti",
+    "customer_group_id": "officia",
+    "custom_field_1": "veniam",
     "contact_ids": "2,3",
     "name": "qui",
-    "biz_name": "sequi",
-    "mobile_num": "18",
-    "contact_id": "eos",
-    "order_by": "et",
-    "direction": "non",
+    "biz_name": "qui",
+    "mobile_num": "3",
+    "contact_id": "ea",
+    "order_by": "nam",
+    "direction": "molestias",
     "per_page": "10",
 };
 Object.keys(params)
@@ -4758,7 +4758,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/product?order_by=qui&order_direction=aspernatur&brand_id=ab&category_id=dignissimos&sub_category_id=laboriosam&location_id=1&selling_price_group=ut&send_lot_detail=incidunt&name=non&sku=maxime&per_page=10" \
+    -G "http://localhost:8000/connector/api/product?order_by=sunt&order_direction=voluptate&brand_id=assumenda&category_id=corporis&sub_category_id=voluptas&location_id=1&selling_price_group=nobis&send_lot_detail=magnam&name=adipisci&sku=perferendis&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -4766,20 +4766,20 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/product"
+    "http://localhost:8000/connector/api/product"
 );
 
 let params = {
-    "order_by": "qui",
-    "order_direction": "aspernatur",
-    "brand_id": "ab",
-    "category_id": "dignissimos",
-    "sub_category_id": "laboriosam",
+    "order_by": "sunt",
+    "order_direction": "voluptate",
+    "brand_id": "assumenda",
+    "category_id": "corporis",
+    "sub_category_id": "voluptas",
     "location_id": "1",
-    "selling_price_group": "ut",
-    "send_lot_detail": "incidunt",
-    "name": "non",
-    "sku": "maxime",
+    "selling_price_group": "nobis",
+    "send_lot_detail": "magnam",
+    "name": "adipisci",
+    "sku": "perferendis",
     "per_page": "10",
 };
 Object.keys(params)
@@ -5079,7 +5079,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/product/1?selling_price_group=vero&send_lot_detail=sapiente" \
+    -G "http://localhost:8000/connector/api/product/1?selling_price_group=natus&send_lot_detail=assumenda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5087,12 +5087,12 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/product/1"
+    "http://localhost:8000/connector/api/product/1"
 );
 
 let params = {
-    "selling_price_group": "vero",
-    "send_lot_detail": "sapiente",
+    "selling_price_group": "natus",
+    "send_lot_detail": "assumenda",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -5374,7 +5374,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/selling-price-group" \
+    -G "http://localhost:8000/connector/api/selling-price-group" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5382,7 +5382,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/selling-price-group"
+    "http://localhost:8000/connector/api/selling-price-group"
 );
 
 let headers = {
@@ -5443,7 +5443,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/variation/2?product_id=voluptate&location_id=1&brand_id=sunt&category_id=impedit&sub_category_id=ut&not_for_selling=deleniti&name=deleniti&sku=voluptatem&per_page=10" \
+    -G "http://localhost:8000/connector/api/variation/2?product_id=est&location_id=1&brand_id=perspiciatis&category_id=rerum&sub_category_id=et&not_for_selling=ducimus&name=fugiat&sku=quisquam&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5451,18 +5451,18 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/variation/2"
+    "http://localhost:8000/connector/api/variation/2"
 );
 
 let params = {
-    "product_id": "voluptate",
+    "product_id": "est",
     "location_id": "1",
-    "brand_id": "sunt",
-    "category_id": "impedit",
-    "sub_category_id": "ut",
-    "not_for_selling": "deleniti",
-    "name": "deleniti",
-    "sku": "voluptatem",
+    "brand_id": "perspiciatis",
+    "category_id": "rerum",
+    "sub_category_id": "et",
+    "not_for_selling": "ducimus",
+    "name": "fugiat",
+    "sku": "quisquam",
     "per_page": "10",
 };
 Object.keys(params)
@@ -5758,7 +5758,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/sell?location_id=1&contact_id=id&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=ut&service_staff_id=nihil&shipping_status=ordered&source=sed&only_subscriptions=harum&send_purchase_details=nesciunt&order_by_date=desc&per_page=10" \
+    -G "http://localhost:8000/connector/api/sell?location_id=1&contact_id=fuga&payment_status=due%2Cpartial&start_date=2018-06-25&end_date=2018-06-25&user_id=nostrum&service_staff_id=est&shipping_status=ordered&source=esse&only_subscriptions=magnam&send_purchase_details=quasi&order_by_date=desc&per_page=10" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -5766,21 +5766,21 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell"
+    "http://localhost:8000/connector/api/sell"
 );
 
 let params = {
     "location_id": "1",
-    "contact_id": "id",
+    "contact_id": "fuga",
     "payment_status": "due,partial",
     "start_date": "2018-06-25",
     "end_date": "2018-06-25",
-    "user_id": "ut",
-    "service_staff_id": "nihil",
+    "user_id": "nostrum",
+    "service_staff_id": "est",
     "shipping_status": "ordered",
-    "source": "sed",
-    "only_subscriptions": "harum",
-    "send_purchase_details": "nesciunt",
+    "source": "esse",
+    "only_subscriptions": "magnam",
+    "send_purchase_details": "quasi",
     "order_by_date": "desc",
     "per_page": "10",
 };
@@ -6016,17 +6016,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/sell" \
+    "http://localhost:8000/connector/api/sell" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"sells":[{"location_id":1,"contact_id":7,"transaction_date":"2020-07-22 15:48:29","invoice_no":"nisi","source":"api, phone, woocommerce","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":17,"discount_amount":10,"discount_type":"fixed","sale_note":"recusandae","staff_note":"voluptatem","commission_agent":6,"shipping_details":"Express Delivery","shipping_address":"blanditiis","shipping_status":"ordered","delivered_to":"'Mr robin'","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":6,"pay_term_number":3,"pay_term_type":"months","is_suspend":false,"is_recurring":0,"recur_interval":8,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"rem","recur_repetitions":19,"rp_redeemed":2,"rp_redeemed_amount":13.5,"types_of_service_id":4,"service_custom_field_1":"sed","service_custom_field_2":"vitae","service_custom_field_3":"sed","service_custom_field_4":"aliquam","service_custom_field_5":"enim","service_custom_field_6":"nulla","round_off_amount":1519.3338,"table_id":12,"service_staff_id":19,"change_return":0,"products":[{"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":0,"discount_amount":0,"discount_type":"percentage","sub_unit_id":15,"note":"qui"}],"payments":[{"amount":453.13,"method":"cash","account_id":18,"card_number":"maiores","card_holder_name":"animi","card_transaction_number":"aut","card_type":"occaecati","card_month":"et","card_year":"doloribus","card_security":"dolore","transaction_no_1":"ea","transaction_no_2":"est","transaction_no_3":"ad","bank_account_number":"quis","note":"eaque","cheque_number":"voluptas"}]}]}'
+    -d '{"sells":[{"location_id":1,"contact_id":12,"transaction_date":"2020-07-22 15:48:29","invoice_no":"deleniti","source":"api, phone, woocommerce","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":13,"discount_amount":10,"discount_type":"fixed","sale_note":"molestiae","staff_note":"atque","commission_agent":7,"shipping_details":"Express Delivery","shipping_address":"sed","shipping_status":"ordered","delivered_to":"'Mr robin'","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":6,"pay_term_number":3,"pay_term_type":"months","is_suspend":false,"is_recurring":0,"recur_interval":3,"recur_interval_type":"months","subscription_repeat_on":15,"subscription_no":"tenetur","recur_repetitions":10,"rp_redeemed":6,"rp_redeemed_amount":13.5,"types_of_service_id":3,"service_custom_field_1":"molestiae","service_custom_field_2":"quibusdam","service_custom_field_3":"enim","service_custom_field_4":"ut","service_custom_field_5":"rerum","service_custom_field_6":"a","round_off_amount":24.9816615,"table_id":11,"service_staff_id":5,"change_return":0,"products":[{"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":0,"discount_amount":0,"discount_type":"percentage","sub_unit_id":10,"note":"ab"}],"payments":[{"amount":453.13,"method":"cash","account_id":9,"card_number":"in","card_holder_name":"consectetur","card_transaction_number":"repudiandae","card_type":"ad","card_month":"officiis","card_year":"vitae","card_security":"aperiam","transaction_no_1":"doloremque","transaction_no_2":"excepturi","transaction_no_3":"rerum","bank_account_number":"excepturi","note":"aut","cheque_number":"consequatur"}]}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell"
+    "http://localhost:8000/connector/api/sell"
 );
 
 let headers = {
@@ -6039,21 +6039,21 @@ let body = {
     "sells": [
         {
             "location_id": 1,
-            "contact_id": 7,
+            "contact_id": 12,
             "transaction_date": "2020-07-22 15:48:29",
-            "invoice_no": "nisi",
+            "invoice_no": "deleniti",
             "source": "api, phone, woocommerce",
             "status": "final",
             "sub_status": "null",
             "is_quotation": true,
-            "tax_rate_id": 17,
+            "tax_rate_id": 13,
             "discount_amount": 10,
             "discount_type": "fixed",
-            "sale_note": "recusandae",
-            "staff_note": "voluptatem",
-            "commission_agent": 6,
+            "sale_note": "molestiae",
+            "staff_note": "atque",
+            "commission_agent": 7,
             "shipping_details": "Express Delivery",
-            "shipping_address": "blanditiis",
+            "shipping_address": "sed",
             "shipping_status": "ordered",
             "delivered_to": "'Mr robin'",
             "shipping_charges": 10,
@@ -6064,23 +6064,23 @@ let body = {
             "pay_term_type": "months",
             "is_suspend": false,
             "is_recurring": 0,
-            "recur_interval": 8,
+            "recur_interval": 3,
             "recur_interval_type": "months",
             "subscription_repeat_on": 15,
-            "subscription_no": "rem",
-            "recur_repetitions": 19,
-            "rp_redeemed": 2,
+            "subscription_no": "tenetur",
+            "recur_repetitions": 10,
+            "rp_redeemed": 6,
             "rp_redeemed_amount": 13.5,
-            "types_of_service_id": 4,
-            "service_custom_field_1": "sed",
-            "service_custom_field_2": "vitae",
-            "service_custom_field_3": "sed",
-            "service_custom_field_4": "aliquam",
-            "service_custom_field_5": "enim",
-            "service_custom_field_6": "nulla",
-            "round_off_amount": 1519.3338,
-            "table_id": 12,
-            "service_staff_id": 19,
+            "types_of_service_id": 3,
+            "service_custom_field_1": "molestiae",
+            "service_custom_field_2": "quibusdam",
+            "service_custom_field_3": "enim",
+            "service_custom_field_4": "ut",
+            "service_custom_field_5": "rerum",
+            "service_custom_field_6": "a",
+            "round_off_amount": 24.9816615,
+            "table_id": 11,
+            "service_staff_id": 5,
             "change_return": 0,
             "products": [
                 {
@@ -6091,28 +6091,28 @@ let body = {
                     "tax_rate_id": 0,
                     "discount_amount": 0,
                     "discount_type": "percentage",
-                    "sub_unit_id": 15,
-                    "note": "qui"
+                    "sub_unit_id": 10,
+                    "note": "ab"
                 }
             ],
             "payments": [
                 {
                     "amount": 453.13,
                     "method": "cash",
-                    "account_id": 18,
-                    "card_number": "maiores",
-                    "card_holder_name": "animi",
-                    "card_transaction_number": "aut",
-                    "card_type": "occaecati",
-                    "card_month": "et",
-                    "card_year": "doloribus",
-                    "card_security": "dolore",
-                    "transaction_no_1": "ea",
-                    "transaction_no_2": "est",
-                    "transaction_no_3": "ad",
-                    "bank_account_number": "quis",
-                    "note": "eaque",
-                    "cheque_number": "voluptas"
+                    "account_id": 9,
+                    "card_number": "in",
+                    "card_holder_name": "consectetur",
+                    "card_transaction_number": "repudiandae",
+                    "card_type": "ad",
+                    "card_month": "officiis",
+                    "card_year": "vitae",
+                    "card_security": "aperiam",
+                    "transaction_no_1": "doloremque",
+                    "transaction_no_2": "excepturi",
+                    "transaction_no_3": "rerum",
+                    "bank_account_number": "excepturi",
+                    "note": "aut",
+                    "cheque_number": "consequatur"
                 }
             ]
         }
@@ -6387,7 +6387,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/sell/55?send_purchase_details=dolores" \
+    -G "http://localhost:8000/connector/api/sell/55?send_purchase_details=et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -6395,11 +6395,11 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell/55"
+    "http://localhost:8000/connector/api/sell/55"
 );
 
 let params = {
-    "send_purchase_details": "dolores",
+    "send_purchase_details": "et",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -6613,17 +6613,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X PUT \
-    "http://localhost/pos/public/connector/api/sell/6" \
+    "http://localhost:8000/connector/api/sell/6" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"contact_id":9,"transaction_date":"2020-5-7 15:20:22","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":15,"discount_amount":10,"discount_type":"fixed","sale_note":"quia","source":"facilis","staff_note":"tenetur","is_suspend":false,"commission_agent":10,"shipping_details":"Express Delivery","shipping_address":"dolore","shipping_status":"ordered","delivered_to":"Mr Robin","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":17,"pay_term_number":7,"pay_term_type":"months","is_recurring":0,"recur_interval":4,"recur_interval_type":"days","subscription_repeat_on":7,"subscription_no":"quia","recur_repetitions":11,"rp_redeemed":4,"rp_redeemed_amount":13.5,"types_of_service_id":15,"service_custom_field_1":"velit","service_custom_field_2":"ex","service_custom_field_3":"nostrum","service_custom_field_4":"voluptas","service_custom_field_5":"culpa","service_custom_field_6":"consequatur","round_off_amount":114.55078,"table_id":3,"service_staff_id":9,"change_return":0,"change_return_id":20,"products":[{"sell_line_id":6,"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":1,"discount_amount":0,"discount_type":"percentage","sub_unit_id":7,"note":"ab"}],"payments":[{"payment_id":8,"amount":453.13,"method":"cash","account_id":11,"card_number":"ratione","card_holder_name":"sed","card_transaction_number":"ut","card_type":"et","card_month":"qui","card_year":"veritatis","card_security":"earum","transaction_no_1":"sequi","transaction_no_2":"dolorem","transaction_no_3":"aut","note":"beatae","cheque_number":"aut","bank_account_number":"corporis"}]}'
+    -d '{"contact_id":19,"transaction_date":"2020-5-7 15:20:22","status":"final","sub_status":"null","is_quotation":true,"tax_rate_id":6,"discount_amount":10,"discount_type":"fixed","sale_note":"aut","source":"eaque","staff_note":"harum","is_suspend":false,"commission_agent":1,"shipping_details":"Express Delivery","shipping_address":"est","shipping_status":"ordered","delivered_to":"Mr Robin","shipping_charges":10,"packing_charge":10,"exchange_rate":1,"selling_price_group_id":11,"pay_term_number":7,"pay_term_type":"months","is_recurring":0,"recur_interval":4,"recur_interval_type":"days","subscription_repeat_on":7,"subscription_no":"velit","recur_repetitions":8,"rp_redeemed":16,"rp_redeemed_amount":13.5,"types_of_service_id":7,"service_custom_field_1":"nesciunt","service_custom_field_2":"sed","service_custom_field_3":"commodi","service_custom_field_4":"ad","service_custom_field_5":"et","service_custom_field_6":"dolore","round_off_amount":17771240.040777,"table_id":18,"service_staff_id":10,"change_return":0,"change_return_id":17,"products":[{"sell_line_id":19,"product_id":17,"variation_id":58,"quantity":1,"unit_price":437.5,"tax_rate_id":20,"discount_amount":0,"discount_type":"percentage","sub_unit_id":1,"note":"commodi"}],"payments":[{"payment_id":9,"amount":453.13,"method":"cash","account_id":5,"card_number":"totam","card_holder_name":"ut","card_transaction_number":"mollitia","card_type":"quod","card_month":"tempore","card_year":"et","card_security":"et","transaction_no_1":"et","transaction_no_2":"voluptatem","transaction_no_3":"et","note":"voluptatum","cheque_number":"vitae","bank_account_number":"architecto"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell/6"
+    "http://localhost:8000/connector/api/sell/6"
 );
 
 let headers = {
@@ -6633,82 +6633,82 @@ let headers = {
 };
 
 let body = {
-    "contact_id": 9,
+    "contact_id": 19,
     "transaction_date": "2020-5-7 15:20:22",
     "status": "final",
     "sub_status": "null",
     "is_quotation": true,
-    "tax_rate_id": 15,
+    "tax_rate_id": 6,
     "discount_amount": 10,
     "discount_type": "fixed",
-    "sale_note": "quia",
-    "source": "facilis",
-    "staff_note": "tenetur",
+    "sale_note": "aut",
+    "source": "eaque",
+    "staff_note": "harum",
     "is_suspend": false,
-    "commission_agent": 10,
+    "commission_agent": 1,
     "shipping_details": "Express Delivery",
-    "shipping_address": "dolore",
+    "shipping_address": "est",
     "shipping_status": "ordered",
     "delivered_to": "Mr Robin",
     "shipping_charges": 10,
     "packing_charge": 10,
     "exchange_rate": 1,
-    "selling_price_group_id": 17,
+    "selling_price_group_id": 11,
     "pay_term_number": 7,
     "pay_term_type": "months",
     "is_recurring": 0,
     "recur_interval": 4,
     "recur_interval_type": "days",
     "subscription_repeat_on": 7,
-    "subscription_no": "quia",
-    "recur_repetitions": 11,
-    "rp_redeemed": 4,
+    "subscription_no": "velit",
+    "recur_repetitions": 8,
+    "rp_redeemed": 16,
     "rp_redeemed_amount": 13.5,
-    "types_of_service_id": 15,
-    "service_custom_field_1": "velit",
-    "service_custom_field_2": "ex",
-    "service_custom_field_3": "nostrum",
-    "service_custom_field_4": "voluptas",
-    "service_custom_field_5": "culpa",
-    "service_custom_field_6": "consequatur",
-    "round_off_amount": 114.55078,
-    "table_id": 3,
-    "service_staff_id": 9,
+    "types_of_service_id": 7,
+    "service_custom_field_1": "nesciunt",
+    "service_custom_field_2": "sed",
+    "service_custom_field_3": "commodi",
+    "service_custom_field_4": "ad",
+    "service_custom_field_5": "et",
+    "service_custom_field_6": "dolore",
+    "round_off_amount": 17771240.040777,
+    "table_id": 18,
+    "service_staff_id": 10,
     "change_return": 0,
-    "change_return_id": 20,
+    "change_return_id": 17,
     "products": [
         {
-            "sell_line_id": 6,
+            "sell_line_id": 19,
             "product_id": 17,
             "variation_id": 58,
             "quantity": 1,
             "unit_price": 437.5,
-            "tax_rate_id": 1,
+            "tax_rate_id": 20,
             "discount_amount": 0,
             "discount_type": "percentage",
-            "sub_unit_id": 7,
-            "note": "ab"
+            "sub_unit_id": 1,
+            "note": "commodi"
         }
     ],
     "payments": [
         {
-            "payment_id": 8,
+            "payment_id": 9,
             "amount": 453.13,
             "method": "cash",
-            "account_id": 11,
-            "card_number": "ratione",
-            "card_holder_name": "sed",
-            "card_transaction_number": "ut",
-            "card_type": "et",
-            "card_month": "qui",
-            "card_year": "veritatis",
-            "card_security": "earum",
-            "transaction_no_1": "sequi",
-            "transaction_no_2": "dolorem",
-            "transaction_no_3": "aut",
-            "note": "beatae",
-            "cheque_number": "aut",
-            "bank_account_number": "corporis"
+            "account_id": 5,
+            "card_number": "totam",
+            "card_holder_name": "ut",
+            "card_transaction_number": "mollitia",
+            "card_type": "quod",
+            "card_month": "tempore",
+            "card_year": "et",
+            "card_security": "et",
+            "transaction_no_1": "et",
+            "transaction_no_2": "voluptatem",
+            "transaction_no_3": "et",
+            "note": "voluptatum",
+            "cheque_number": "vitae",
+            "bank_account_number": "architecto"
         }
     ]
 }
@@ -6958,7 +6958,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X DELETE \
-    "http://localhost/pos/public/connector/api/sell/veniam" \
+    "http://localhost:8000/connector/api/sell/id" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -6966,7 +6966,7 @@ curl -X DELETE \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell/veniam"
+    "http://localhost:8000/connector/api/sell/id"
 );
 
 let headers = {
@@ -7004,17 +7004,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/sell-return" \
+    "http://localhost:8000/connector/api/sell-return" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"transaction_id":17,"transaction_date":"2020-5-7 15:20:22","invoice_no":"cumque","discount_amount":10,"discount_type":"fixed","products":[{"sell_line_id":9,"quantity":1,"unit_price_inc_tax":437.5}]}'
+    -d '{"transaction_id":1,"transaction_date":"2020-5-7 15:20:22","invoice_no":"rerum","discount_amount":10,"discount_type":"fixed","products":[{"sell_line_id":2,"quantity":1,"unit_price_inc_tax":437.5}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/sell-return"
+    "http://localhost:8000/connector/api/sell-return"
 );
 
 let headers = {
@@ -7024,14 +7024,14 @@ let headers = {
 };
 
 let body = {
-    "transaction_id": 17,
+    "transaction_id": 1,
     "transaction_date": "2020-5-7 15:20:22",
-    "invoice_no": "cumque",
+    "invoice_no": "rerum",
     "discount_amount": 10,
     "discount_type": "fixed",
     "products": [
         {
-            "sell_line_id": 9,
+            "sell_line_id": 2,
             "quantity": 1,
             "unit_price_inc_tax": 437.5
         }
@@ -7179,7 +7179,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/list-sell-return" \
+    -G "http://localhost:8000/connector/api/list-sell-return" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7187,7 +7187,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/list-sell-return"
+    "http://localhost:8000/connector/api/list-sell-return"
 );
 
 let headers = {
@@ -7506,17 +7506,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/update-shipping-status" \
+    "http://localhost:8000/connector/api/update-shipping-status" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"id":3,"shipping_status":"ordered","delivered_to":"accusamus"}'
+    -d '{"id":2,"shipping_status":"ordered","delivered_to":"qui"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/update-shipping-status"
+    "http://localhost:8000/connector/api/update-shipping-status"
 );
 
 let headers = {
@@ -7526,9 +7526,9 @@ let headers = {
 };
 
 let body = {
-    "id": 3,
+    "id": 2,
     "shipping_status": "ordered",
-    "delivered_to": "accusamus"
+    "delivered_to": "qui"
 }
 
 fetch(url, {
@@ -7565,7 +7565,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/active-subscription" \
+    -G "http://localhost:8000/connector/api/active-subscription" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7573,7 +7573,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/active-subscription"
+    "http://localhost:8000/connector/api/active-subscription"
 );
 
 let headers = {
@@ -7641,7 +7641,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/packages" \
+    -G "http://localhost:8000/connector/api/packages" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7649,7 +7649,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/packages"
+    "http://localhost:8000/connector/api/packages"
 );
 
 let headers = {
@@ -7802,7 +7802,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/table?location_id=1" \
+    -G "http://localhost:8000/connector/api/table?location_id=1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7810,7 +7810,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/table"
+    "http://localhost:8000/connector/api/table"
 );
 
 let params = {
@@ -7873,7 +7873,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/table/5" \
+    -G "http://localhost:8000/connector/api/table/5" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7881,7 +7881,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/table/5"
+    "http://localhost:8000/connector/api/table/5"
 );
 
 let headers = {
@@ -7941,7 +7941,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/tax" \
+    -G "http://localhost:8000/connector/api/tax" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -7949,7 +7949,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/tax"
+    "http://localhost:8000/connector/api/tax"
 );
 
 let headers = {
@@ -8038,7 +8038,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/tax/1" \
+    -G "http://localhost:8000/connector/api/tax/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8046,7 +8046,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/tax/1"
+    "http://localhost:8000/connector/api/tax/1"
 );
 
 let headers = {
@@ -8107,7 +8107,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/taxonomy?type=maiores" \
+    -G "http://localhost:8000/connector/api/taxonomy?type=cupiditate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8115,11 +8115,11 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/taxonomy"
+    "http://localhost:8000/connector/api/taxonomy"
 );
 
 let params = {
-    "type": "maiores",
+    "type": "cupiditate",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -8230,7 +8230,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/taxonomy/1" \
+    -G "http://localhost:8000/connector/api/taxonomy/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8238,7 +8238,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/taxonomy/1"
+    "http://localhost:8000/connector/api/taxonomy/1"
 );
 
 let headers = {
@@ -8334,7 +8334,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/types-of-service" \
+    -G "http://localhost:8000/connector/api/types-of-service" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8342,7 +8342,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/types-of-service"
+    "http://localhost:8000/connector/api/types-of-service"
 );
 
 let headers = {
@@ -8397,7 +8397,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/types-of-service/1" \
+    -G "http://localhost:8000/connector/api/types-of-service/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8405,7 +8405,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/types-of-service/1"
+    "http://localhost:8000/connector/api/types-of-service/1"
 );
 
 let headers = {
@@ -8468,7 +8468,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/unit" \
+    -G "http://localhost:8000/connector/api/unit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8476,7 +8476,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/unit"
+    "http://localhost:8000/connector/api/unit"
 );
 
 let headers = {
@@ -8571,7 +8571,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/unit/1" \
+    -G "http://localhost:8000/connector/api/unit/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8579,7 +8579,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/unit/1"
+    "http://localhost:8000/connector/api/unit/1"
 );
 
 let headers = {
@@ -8642,7 +8642,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/user/loggedin" \
+    -G "http://localhost:8000/connector/api/user/loggedin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8650,7 +8650,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/user/loggedin"
+    "http://localhost:8000/connector/api/user/loggedin"
 );
 
 let headers = {
@@ -8733,17 +8733,17 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/user-registration" \
+    "http://localhost:8000/connector/api/user-registration" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"surname":"est","first_name":"voluptas","last_name":"omnis","email":"ipsum","is_active":"facilis","user_type":"officia","crm_contact_id":18,"allow_login":true,"username":"qui","password":"vel","role":5,"access_all_locations":true,"location_permissions":[],"cmmsn_percent":"veniam","max_sales_discount_percent":"fugiat","selected_contacts":true,"selected_contact_ids":[],"dob":"eveniet","gender":"dolorem","marital_status":"sunt","blood_group":"commodi","contact_number":"iusto","alt_number":"magnam","family_number":"nobis","fb_link":"iure","twitter_link":"repellendus","social_media_1":"quia","social_media_2":"rerum","custom_field_1":"officiis","custom_field_2":"dignissimos","custom_field_3":"architecto","custom_field_4":"quia","guardian_name":"veritatis","id_proof_name":"adipisci","id_proof_number":"rerum","permanent_address":"aspernatur","current_address":"eius","bank_details":[{"account_holder_name":"velit","account_number":"rerum","bank_name":"temporibus","bank_code":"modi","branch":"ex","tax_payer_id":"nisi"}]}'
+    -d '{"surname":"animi","first_name":"expedita","last_name":"voluptatem","email":"id","is_active":"quod","user_type":"ea","crm_contact_id":15,"allow_login":false,"username":"quia","password":"rem","role":6,"access_all_locations":true,"location_permissions":[],"cmmsn_percent":"alias","max_sales_discount_percent":"enim","selected_contacts":true,"selected_contact_ids":[],"dob":"illo","gender":"omnis","marital_status":"maxime","blood_group":"esse","contact_number":"eaque","alt_number":"est","family_number":"velit","fb_link":"modi","twitter_link":"est","social_media_1":"placeat","social_media_2":"earum","custom_field_1":"non","custom_field_2":"repellat","custom_field_3":"ut","custom_field_4":"nobis","guardian_name":"autem","id_proof_name":"deserunt","id_proof_number":"odio","permanent_address":"laudantium","current_address":"eveniet","bank_details":[{"account_holder_name":"earum","account_number":"sed","bank_name":"inventore","bank_code":"quidem","branch":"cupiditate","tax_payer_id":"id"}]}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/user-registration"
+    "http://localhost:8000/connector/api/user-registration"
 );
 
 let headers = {
@@ -8753,51 +8753,51 @@ let headers = {
 };
 
 let body = {
-    "surname": "est",
-    "first_name": "voluptas",
-    "last_name": "omnis",
-    "email": "ipsum",
-    "is_active": "facilis",
-    "user_type": "officia",
-    "crm_contact_id": 18,
-    "allow_login": true,
-    "username": "qui",
-    "password": "vel",
-    "role": 5,
+    "surname": "animi",
+    "first_name": "expedita",
+    "last_name": "voluptatem",
+    "email": "id",
+    "is_active": "quod",
+    "user_type": "ea",
+    "crm_contact_id": 15,
+    "allow_login": false,
+    "username": "quia",
+    "password": "rem",
+    "role": 6,
     "access_all_locations": true,
     "location_permissions": [],
-    "cmmsn_percent": "veniam",
-    "max_sales_discount_percent": "fugiat",
+    "cmmsn_percent": "alias",
+    "max_sales_discount_percent": "enim",
     "selected_contacts": true,
     "selected_contact_ids": [],
-    "dob": "eveniet",
-    "gender": "dolorem",
-    "marital_status": "sunt",
-    "blood_group": "commodi",
-    "contact_number": "iusto",
-    "alt_number": "magnam",
-    "family_number": "nobis",
-    "fb_link": "iure",
-    "twitter_link": "repellendus",
-    "social_media_1": "quia",
-    "social_media_2": "rerum",
-    "custom_field_1": "officiis",
-    "custom_field_2": "dignissimos",
-    "custom_field_3": "architecto",
-    "custom_field_4": "quia",
-    "guardian_name": "veritatis",
-    "id_proof_name": "adipisci",
-    "id_proof_number": "rerum",
-    "permanent_address": "aspernatur",
-    "current_address": "eius",
+    "dob": "illo",
+    "gender": "omnis",
+    "marital_status": "maxime",
+    "blood_group": "esse",
+    "contact_number": "eaque",
+    "alt_number": "est",
+    "family_number": "velit",
+    "fb_link": "modi",
+    "twitter_link": "est",
+    "social_media_1": "placeat",
+    "social_media_2": "earum",
+    "custom_field_1": "non",
+    "custom_field_2": "repellat",
+    "custom_field_3": "ut",
+    "custom_field_4": "nobis",
+    "guardian_name": "autem",
+    "id_proof_name": "deserunt",
+    "id_proof_number": "odio",
+    "permanent_address": "laudantium",
+    "current_address": "eveniet",
     "bank_details": [
         {
-            "account_holder_name": "velit",
-            "account_number": "rerum",
-            "bank_name": "temporibus",
-            "bank_code": "modi",
-            "branch": "ex",
-            "tax_payer_id": "nisi"
+            "account_holder_name": "earum",
+            "account_number": "sed",
+            "bank_name": "inventore",
+            "bank_code": "quidem",
+            "branch": "cupiditate",
+            "tax_payer_id": "id"
         }
     ]
 }
@@ -8920,7 +8920,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/user?service_staff=vero" \
+    -G "http://localhost:8000/connector/api/user?service_staff=porro" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -8928,11 +8928,11 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/user"
+    "http://localhost:8000/connector/api/user"
 );
 
 let params = {
-    "service_staff": "vero",
+    "service_staff": "porro",
 };
 Object.keys(params)
     .forEach(key => url.searchParams.append(key, params[key]));
@@ -9024,7 +9024,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/user/1" \
+    -G "http://localhost:8000/connector/api/user/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9032,7 +9032,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/user/1"
+    "http://localhost:8000/connector/api/user/1"
 );
 
 let headers = {
@@ -9122,17 +9122,17 @@ Parameter | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/update-password" \
+    "http://localhost:8000/connector/api/update-password" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"current_password":"iusto","new_password":"amet"}'
+    -d '{"current_password":"totam","new_password":"quo"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/update-password"
+    "http://localhost:8000/connector/api/update-password"
 );
 
 let headers = {
@@ -9142,8 +9142,8 @@ let headers = {
 };
 
 let body = {
-    "current_password": "iusto",
-    "new_password": "amet"
+    "current_password": "totam",
+    "new_password": "quo"
 }
 
 fetch(url, {
@@ -9184,17 +9184,17 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X POST \
-    "http://localhost/pos/public/connector/api/forget-password" \
+    "http://localhost:8000/connector/api/forget-password" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
-    -d '{"email":"ut"}'
+    -d '{"email":"id"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/forget-password"
+    "http://localhost:8000/connector/api/forget-password"
 );
 
 let headers = {
@@ -9204,7 +9204,7 @@ let headers = {
 };
 
 let body = {
-    "email": "ut"
+    "email": "id"
 }
 
 fetch(url, {
@@ -9247,7 +9247,7 @@ Parameter | Type | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/payment-accounts" \
+    -G "http://localhost:8000/connector/api/payment-accounts" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9255,7 +9255,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/payment-accounts"
+    "http://localhost:8000/connector/api/payment-accounts"
 );
 
 let headers = {
@@ -9309,7 +9309,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/payment-methods" \
+    -G "http://localhost:8000/connector/api/payment-methods" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9317,7 +9317,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/payment-methods"
+    "http://localhost:8000/connector/api/payment-methods"
 );
 
 let headers = {
@@ -9364,7 +9364,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/business-details" \
+    -G "http://localhost:8000/connector/api/business-details" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9372,7 +9372,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/business-details"
+    "http://localhost:8000/connector/api/business-details"
 );
 
 let headers = {
@@ -9717,7 +9717,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/profit-loss-report?location_id=1&start_date=2018-06-25&end_date=2018-06-25&user_id=1" \
+    -G "http://localhost:8000/connector/api/profit-loss-report?location_id=1&start_date=2018-06-25&end_date=2018-06-25&user_id=1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9725,7 +9725,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/profit-loss-report"
+    "http://localhost:8000/connector/api/profit-loss-report"
 );
 
 let params = {
@@ -9815,7 +9815,7 @@ Parameter | Status | Description
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/product-stock-report" \
+    -G "http://localhost:8000/connector/api/product-stock-report" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9823,7 +9823,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/product-stock-report"
+    "http://localhost:8000/connector/api/product-stock-report"
 );
 
 let headers = {
@@ -9936,7 +9936,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/notifications" \
+    -G "http://localhost:8000/connector/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}"
@@ -9944,7 +9944,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/notifications"
+    "http://localhost:8000/connector/api/notifications"
 );
 
 let headers = {
@@ -9992,7 +9992,7 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/pos/public/connector/api/get-location" \
+    -G "http://localhost:8000/connector/api/get-location" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer {token}" \
@@ -10002,7 +10002,7 @@ curl -X GET \
 
 ```javascript
 const url = new URL(
-    "http://localhost/pos/public/connector/api/get-location"
+    "http://localhost:8000/connector/api/get-location"
 );
 
 let headers = {

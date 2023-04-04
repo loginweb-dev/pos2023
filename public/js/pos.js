@@ -175,6 +175,7 @@ $(document).ready(function() {
                         toastr.error(LANG.no_products_found);
                         $('input#search_product').select();
                     }
+                    // console.log(ui)
                 },
                 focus: function(event, ui) {
                     if (ui.item.qty_available <= 0) {
@@ -231,13 +232,20 @@ $(document).ready(function() {
                 if (item.variation_group_price) {
                     selling_price = item.variation_group_price;
                 }
-
-                string += ' (' + item.sub_sku + ')' + '<br> Price: ' + selling_price;
+                // console.log(Number(selling_price).toFixed(2))
+                string += ' (Codigo: ' + item.sub_sku + ')' + '<br>Precio: ' + Number(selling_price).toFixed(2) +' | Categoria: '+item.category_id+' | Marca: '+item.brand_id;
+                console.log(item)
                 if (item.enable_stock == 1) {
                     var qty_available = __currency_trans_from_en(item.qty_available, false, false, __currency_precision, true);
-                    string += ' - ' + qty_available + item.unit;
+                    string += ' | Stock: ' + qty_available + item.unit;
                 }
-                string += '</div>';
+                if(item.product_custom_field1){
+                    string += '<br>'+item.product_custom_field1+' (CP1)';
+                }
+                if(item.product_custom_field2){
+                    string += '<br>'+item.product_custom_field2+' (CP2)';
+                }
+                string += '</div><br>';
 
                 return $('<li>')
                     .append(string)

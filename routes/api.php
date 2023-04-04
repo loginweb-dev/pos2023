@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use App\Events\NewMessage;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -47,8 +47,12 @@ Route::prefix('extras')->group(function () {
 
 //rutas de chatbots
 Route::prefix('chatbots')->group(function () {
-    Route::get('/busine/start/{id}', function ($id) {
+    Route::get('/start/{id}', function ($id) {
         return App\Chatbots::where('busine_id', $id)->where('type', 'start')->first();
+    });
+
+    Route::get('/init/{id}', function ($id) {
+        return App\Chatbots::where('busine_id', $id)->where('type', 'init')->first();
     });
 
     Route::post('/save', function (Request $request) {
@@ -62,5 +66,13 @@ Route::prefix('chatbots')->group(function () {
         return App\Chatbots::where("phone", $request->phone)->get();
     });
 
-    
+    Route::get('/start/delete/{id}', function ($id) {
+        return App\Chatbots::where('busine_id', $id)->where('type', 'start')->delete();
+    });
+
+    Route::post('/send', function (Request $request) {
+        event(new NewMessage($request->message, $request->phone, $request->type, $request->busine));
+    });
+
+
 });

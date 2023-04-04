@@ -1,42 +1,47 @@
 @php 
-    $colspan = 15;
+    $colspan = 13;
     $custom_labels = json_decode(session('business.custom_labels'), true);
 @endphp
 <table class="table table-bordered table-striped ajax_view hide-footer" id="product_table">
     <thead>
         <tr>
             <th><input type="checkbox" id="select-all-row" data-table-id="product_table"></th>
-            <th>&nbsp;</th>
+            {{-- <th>&nbsp;</th> --}}
             <th>@lang('messages.action')</th>
             <th>@lang('sale.product')</th>
-            <th>@lang('purchase.business_location') @show_tooltip(__('lang_v1.product_business_location_tooltip'))</th>
+            {{-- <th>@lang('purchase.business_location') @show_tooltip(__('lang_v1.product_business_location_tooltip'))</th> --}}
+            {{-- <th>Suscursal</th> --}}
             @can('view_purchase_price')
                 @php 
                     $colspan++;
                 @endphp
-                <th>@lang('lang_v1.unit_perchase_price')</th>
+                {{-- <th>@lang('lang_v1.unit_perchase_price')</th> --}}
+                <th>PrecioC</th>
             @endcan
             @can('access_default_selling_price')
                 @php 
                     $colspan++;
                 @endphp
-                <th>@lang('lang_v1.selling_price')</th>
+                {{-- <th>@lang('lang_v1.selling_price')</th> --}}
+                <th>PrecioV</th>
             @endcan
-            <th>@lang('report.current_stock')</th>
-            <th>@lang('product.product_type')</th>
+            {{-- <th>@lang('report.current_stock')</th> --}}
+            <th>Stock</th>
+            {{-- <th>@lang('product.product_type')</th> --}}
+            {{-- <th>Tipo</th> --}}
             <th>@lang('product.category')</th>
             <th>@lang('product.brand')</th>
-            <th>@lang('product.tax')</th>
+            {{-- <th>@lang('product.tax')</th> --}}
             <th>@lang('product.sku')</th>
-            <th>{{ $custom_labels['product']['custom_field_1'] ?? __('lang_v1.product_custom_field1') }}</th>
+            {{-- <th>{{ $custom_labels['product']['custom_field_1'] ?? __('lang_v1.product_custom_field1') }}</th>
             <th>{{ $custom_labels['product']['custom_field_2'] ?? __('lang_v1.product_custom_field2') }}</th>
             <th>{{ $custom_labels['product']['custom_field_3'] ?? __('lang_v1.product_custom_field3') }}</th>
-            <th>{{ $custom_labels['product']['custom_field_4'] ?? __('lang_v1.product_custom_field4') }}</th>
+            <th>{{ $custom_labels['product']['custom_field_4'] ?? __('lang_v1.product_custom_field4') }}</th> --}}
         </tr>
     </thead>
     <tfoot>
         <tr>
-            <td colspan="{{$colspan}}">
+            <td colspan="{{$colspan-6}}">
             <div style="display: flex; width: 100%;">
                 @can('product.delete')
                     {!! Form::open(['url' => action('ProductController@massDestroy'), 'method' => 'post', 'id' => 'mass_delete_form' ]) !!}

@@ -15,10 +15,10 @@ class CreateChatbotsTable extends Migration
     {
         Schema::create('chatbots', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type');
-            $table->string('busine_id');
-            $table->string('phone');
-            $table->text('message');
+            $table->string('type')->nullable();
+            $table->string('busine_id')->nullable();
+            $table->string('phone')->nullable();
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

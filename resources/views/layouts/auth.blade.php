@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title') - {{ config('app.name', 'POS') }}</title> 
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png" sizes="16x16"> 
 
     @include('layouts.partials.css')
 
