@@ -6,15 +6,16 @@
         <tr>
             <th>@lang('messages.action')</th>
             <th>@lang('messages.date')</th>
-            <th>@lang('sale.invoice_no')</th>
-            <th>@lang('sale.customer_name')</th>
-            <th>@lang('lang_v1.contact_no')</th>
-            <th>@lang('sale.location')</th>
-            <th>@lang('sale.payment_status')</th>
-            <th>@lang('lang_v1.payment_method')</th>
-            <th>@lang('sale.total_amount')</th>
-            <th>@lang('sale.total_paid')</th>
-            <th>@lang('lang_v1.sell_due')</th>
+            <th>Recibo</th>
+            <th>Cliente</th>
+            {{-- <th>@lang('lang_v1.contact_no')</th> --}}
+            <th>Sucursal</th>
+            <th>Estado</th>
+            <th>Metodo</th>
+            <th>Total</th>
+            <th>Pagado</th>
+            {{-- <th>Siat</th> --}}
+            {{-- <th>@lang('lang_v1.sell_due')</th>
             <th>@lang('lang_v1.sell_return_due')</th>
             <th>@lang('lang_v1.shipping_status')</th>
             <th>@lang('lang_v1.total_items')</th>
@@ -25,10 +26,10 @@
             <th>@lang('sale.staff_note')</th>
             <th>@lang('sale.shipping_details')</th>
             <th>@lang('restaurant.table')</th>
-            <th>@lang('restaurant.service_staff')</th>
+            <th>@lang('restaurant.service_staff')</th> --}}
         </tr>
     </thead>
-    <tfoot>
+    {{-- <tfoot>
         <tr class="bg-gray font-17 footer-total text-center">
             <td colspan="6"><strong>@lang('sale.total'):</strong></td>
             <td class="footer_payment_status_count"></td>
@@ -41,5 +42,5 @@
             <td class="service_type_count"></td>
             <td colspan="7"></td>
         </tr>
-    </tfoot>
+    </tfoot> --}}
 </table>

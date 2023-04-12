@@ -468,7 +468,7 @@ class ProductController extends Controller
             $product_details['warranty_id'] = !empty($request->input('warranty_id')) ? $request->input('warranty_id') : null;
 
             DB::beginTransaction();
-
+            // return $product_details;
             $product = Product::create($product_details);
 
             if (empty(trim($request->input('sku')))) {
@@ -730,7 +730,7 @@ class ProductController extends Controller
                     $product->woocommerce_media_id = null;
                 }
             }
-
+            // return $request;
             $product->save();
             $product->touch();
 

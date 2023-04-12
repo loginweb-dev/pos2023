@@ -95,11 +95,11 @@ window.Pusher = require('pusher-js');
 if (typeof APP != 'undefined' && APP.PUSHER_ENABLED) {
 
     window.Echo = new Echo({
-    	authEndpoint: base_path + '/broadcasting/auth',
+    	// authEndpoint: base_path + '/broadcasting/auth',
         broadcaster: 'pusher',
         key: APP.PUSHER_APP_KEY,
         cluster: APP.PUSHER_APP_CLUSTER,
-      	forceTLS: true
+      	// forceTLS: true
         // wsHost: window.location.hostname,
         // wsPort: 6001
     });

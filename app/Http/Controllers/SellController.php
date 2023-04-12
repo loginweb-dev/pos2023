@@ -26,6 +26,7 @@ use Yajra\DataTables\Facades\DataTables;
 use App\Product;
 use App\Media;
 use Spatie\Activitylog\Models\Activity;
+// use Illuminate\Support\Facades\Http;
 
 class SellController extends Controller
 {
@@ -344,6 +345,10 @@ class SellController extends Controller
                                         </span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-left" role="menu">' ;
+
+                            // $html .= '<li><a href="'. action("SellController@siat", [$row->id]) . '" class=""><i class="fas fa-eye" aria-hidden="true"></i>Enviar al SIAT </a></li>';
+
+                            $html .= '<li><a href="#" onclick="siat('.$row->id.')" class="btn-modal" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-eye" aria-hidden="true"></i> Enviar al SIAT</a></li>';
 
                         if (auth()->user()->can("sell.view") || auth()->user()->can("direct_sell.view") || auth()->user()->can("view_own_sell_only")) {
                             $html .= '<li><a href="#" data-href="' . action("SellController@show", [$row->id]) . '" class="btn-modal" data-container=".view_modal"><i class="fas fa-eye" aria-hidden="true"></i> ' . __("messages.view") . '</a></li>';
@@ -760,6 +765,12 @@ class SellController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+          
+    public function siat2($id)
+    {
+        return view('sale_pos.siat2', compact("id"));
+    }
     public function show($id)
     {
         // if (!auth()->user()->can('sell.view') && !auth()->user()->can('direct_sell.access') && !auth()->user()->can('view_own_sell_only')) {

@@ -158,6 +158,14 @@
             </label><button type="button" data-toggle="modal" data-target="#recurringInvoiceModal" class="btn btn-link"><i class="fa fa-external-link-square-alt"></i></button>@show_tooltip(__('lang_v1.recurring_invoice_help'))
 		</div>
 	@endif
+
+	{{-- SIAT --}}
+	{{-- <div class="col-md-4 col-sm-6">
+		<label>
+		  {!! Form::checkbox('is_siat', 1, false, ['class' => 'input-icheck', 'id' => 'is_siat']); !!} SIAT ?
+		</label>
+	</div> --}}
+
 	<!-- Call restaurant module if defined -->
     @if(in_array('tables' ,$enabled_modules) || in_array('service_staff' ,$enabled_modules))
     	<div class="clearfix"></div>

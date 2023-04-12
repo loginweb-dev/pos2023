@@ -62,6 +62,7 @@ use Razorpay\Api\Api;
 use App\TransactionPayment;
 use Stripe\Charge;
 use Stripe\Stripe;
+// use Illuminate\Support\Facades\Http;
 
 class SellPosController extends Controller
 {
@@ -109,8 +110,39 @@ class SellPosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+     public function siat($id){
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //     CURLOPT_URL => "https://example.com",// your preferred link
+        //     CURLOPT_RETURNTRANSFER => true,
+        //     CURLOPT_ENCODING => "",
+        //     CURLOPT_TIMEOUT => 30000,
+        //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //     CURLOPT_CUSTOMREQUEST => "GET",
+        //     CURLOPT_HTTPHEADER => array(
+        //         // Set Here Your Requesred Headers
+        //         'Content-Type: application/json',
+        //     ),
+        // ));
+        // $response = curl_exec($curl);
+        // $err = curl_error($curl);
+        // curl_close($curl);
+        
+        // if ($err) {
+        //     echo "cURL Error #:" . $err;
+        // } else {
+        //     print_r(json_decode($response));
+        // }
+        // return $response;
+        return view("sale_pos.siat", compact("id", "response"));
+     }
+
     public function index()
     {
+        // return true;
         if (!auth()->user()->can('sell.view') && !auth()->user()->can('sell.create')) {
             abort(403, 'Unauthorized action.');
         }
@@ -290,6 +322,7 @@ class SellPosController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         if (!auth()->user()->can('sell.create') && !auth()->user()->can('direct_sell.access') && !auth()->user()->can('so.create') ) {
             abort(403, 'Unauthorized action.');
         }

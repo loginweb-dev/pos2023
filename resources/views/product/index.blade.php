@@ -194,7 +194,7 @@
                 } ],
                 columns: [
                         { data: 'mass_delete'  },
-                        // { data: 'image', name: 'products.image'  },
+                        { data: 'image', name: 'products.image'  },
                         { data: 'action', name: 'action'},
                         { data: 'product', name: 'products.name'  },
                         // { data: 'product_locations', name: 'product_locations'  },

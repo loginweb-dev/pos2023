@@ -61,6 +61,24 @@ class AdminSidebarMenu
                     ['icon' => 'fa fas fa-users']
                 )->order(10);
             }
+            //gosystem
+            $menu->dropdown(
+                "goSystem",
+                function ($sub) {
+                        $sub->url(
+                            action('HomeController@chatbot'),
+                            "Chatbot",
+                            ['icon' => 'fa fas fa-briefcase', 'active' => request()->segment(1) == 'michatbot']
+                        );
+                        $sub->url(
+                            action('HomeController@siat'),
+                            "Siat",
+                            ['icon' => 'fa fas fa-handshake', 'active' => request()->segment(1) == 'siat']
+                        );
+                },
+                ['icon' => 'fa fas fa-comments-dollar']
+            )->order(10);
+
 
             //Contacts dropdown
             if (auth()->user()->can('supplier.view') || auth()->user()->can('customer.view') || auth()->user()->can('supplier.view_own') || auth()->user()->can('customer.view_own')) {
@@ -744,9 +762,7 @@ class AdminSidebarMenu
                 )->order(85);
             }
 
-            //chatbot
-            $menu->url(action('HomeController@chatbot'), "goSystem", ['icon' => 'fa fas fa-envelope', 'active' => request()->segment(1) == 'chatbot'])->order(120);
-
+   
             //$menu->url(action('HomeController@index'), 'Chatbot2', ['icon' => 'fa fas fa-hdd', 'active' => 1])->order(100);
             //$menu->url(action('HomeController@index'), __('home.home'), ['icon' => 'fa fas fa-tachometer-alt', 'active' => request()->segment(1) == 'home2'])->order(10);
 

@@ -9,3 +9,6 @@
 /.idea
 /.vagrant
 /.env
+/public/uploads/media/
+/public/uploads/invoice_logos/
+/public/uploads/img/
