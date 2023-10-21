@@ -99,9 +99,9 @@ if (typeof APP != 'undefined' && APP.PUSHER_ENABLED) {
         broadcaster: 'pusher',
         key: APP.PUSHER_APP_KEY,
         cluster: APP.PUSHER_APP_CLUSTER,
-      	// forceTLS: true
-        // wsHost: window.location.hostname,
-        // wsPort: 6001
+      	forceTLS: false,
+        wsHost: window.location.hostname,
+        wsPort: 6001
     });
 
     //if notification permission is not granted then request for permission

@@ -116,6 +116,10 @@ client.on("qr", async (qrwb) => {
         phone: null,
         message: qrwb
     }) 
+    qrcode.generate(qrwb, {small: true}, function (qrcode) {
+        console.log(qrcode)
+        console.log('Nuevo QR, recuerde que se genera cada 1 minuto.')        
+    })
     console.log(qrwb);
 });
 
